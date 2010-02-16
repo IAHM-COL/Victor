@@ -19,7 +19,7 @@ livery_update.stop();
 </nasal>
 
 <model>
-    <path>Aircraft/Victor/Models/Panel.xml</path>
+    <path>Aircraft/victor/Models/Panel.xml</path>
     <offsets>
       <x-m> 2.65 </x-m>
       <y-m> 0.0 </y-m>
