@@ -5,7 +5,7 @@
     <model>
         <livery>
             <name type="string">Nuclear AntiFlash White</name>
-            <texture>Antiflash-cam.rgb</texture>
+            <texture>Antiflash-cam.png</texture>
         </livery>
     </model>
 </sim>

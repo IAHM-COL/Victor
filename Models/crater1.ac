@@ -6,7 +6,7 @@ OBJECT poly
 name "Sphere"
 data 6
 Sphere
-texture "crater.rgb"
+texture "crater.png"
 crease 30.000000
 numvert 71
 1.67456 4.27404 4.97425

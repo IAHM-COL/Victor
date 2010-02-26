@@ -6,7 +6,7 @@ kids 3
 OBJECT poly
 name "refuel-hose"
 loc -9.42281 -0.211532 -0.000319958
-texture "camo-victor.rgb"
+texture "camo-victor.png"
 crease 45.000000
 numvert 6394
 -9.9807 0.280543 0.0299531
@@ -50928,7 +50928,7 @@ kids 0
 OBJECT poly
 name "refuel-hose"
 loc -9.81993 -0.0348478 0
-texture "camo-victor.rgb"
+texture "camo-victor.png"
 crease 45.000000
 numvert 540
 11.5475 0.454025 0.0780258

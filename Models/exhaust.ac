@@ -8,7 +8,7 @@ OBJECT poly
 name "noshadow.Exhaust3"
 data 8
 Mesh.172
-texture "hh-noise3.rgb"
+texture "hh-noise3.png"
 texrep 1 1
 crease 61
 numvert 86
@@ -680,7 +680,7 @@ OBJECT poly
 name "noshadow.Exhaust"
 data 8
 Mesh.173
-texture "hh-noise3.rgb"
+texture "hh-noise3.png"
 texrep 1 1
 crease 61
 numvert 26

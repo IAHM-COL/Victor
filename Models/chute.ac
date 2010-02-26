@@ -10,7 +10,7 @@ name "Chute"
 loc -37.726 -0.507524 0
 data 8
 Mesh.016
-texture "intake.rgb"
+texture "intake.png"
 crease 45.000000
 numvert 866
 44.2034 -2.48301 0

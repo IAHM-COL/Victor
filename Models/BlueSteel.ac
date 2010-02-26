@@ -6,7 +6,7 @@ OBJECT poly
 name "BlueSteel"
 data 9
 Plane.002
-texture "weapons.rgb"
+texture "weapons.png"
 crease 30.000000
 numvert 357
 -3.92722 0.128629 -1.1

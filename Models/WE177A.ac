@@ -6,7 +6,7 @@ OBJECT poly
 name "WE177A"
 data 9
 Plane.001
-texture "weapons.rgb"
+texture "weapons.png"
 crease 30.000000
 numvert 227
 0.076392 0.2 -0.019909

@@ -5,19 +5,48 @@
   <path>victor.ac</path>
 
 <offsets>
-<z-m>-2.60</z-m>
-<pitch-deg>0</pitch-deg>
+  <z-m>-2.60</z-m>
+  <pitch-deg>0</pitch-deg>
 </offsets>
-<nasal>
-<load>
-var livery_update = aircraft.livery_update.new("Aircraft/victor/Models/Liveries");
-</load>
 
-<unload>
-livery_update.stop();
-</unload>
+<nasal>
+  <load>
+    var livery_update = aircraft.livery_update.new("Aircraft/victor/Models/Liveries");
+
+    var self = cmdarg();
+
+    var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+    var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+    var float_2 = self.getNode("sim/multiplay/generic/float[2]", 1);
+    var float_3 = self.getNode("sim/multiplay/generic/float[3]", 1);
+    var float_4 = self.getNode("sim/multiplay/generic/float[4]", 1);
+
+    var drogue_pos = self.getNode("controls/refuelling/refuelling-drogues-pos-norm", 1);
+    var cockpit_door = self.getNode("controls/doors/cockpit-door-pos-norm", 1);
+    var bb_door = self.getNode("controls/doors/bb-door-pos-norm", 1);
+    var chute_door = self.getNode("controls/doors/chute-door-pos-norm", 1);
+    var chute_pos = self.getNode("controls/chute-pos-norm", 1);
+
+    drogue_pos.alias(float_0);
+    cockpit_door.alias(float_1);
+    bb_door.alias(float_2);
+    chute_door.alias(float_3);
+    chute_pos.alias(float_4);
+  </load>
+
+  <unload>
+    livery_update.stop();
+    drogue_pos.unalias();
+    cockpit_door.unalias();
+    bb_door.unalias();
+    chute_door.unalias();
+    chute_pos.unalias();
+  </unload>
 </nasal>
 
+
+	
+	
 <model>
     <path>Aircraft/victor/Models/Panel.xml</path>
     <offsets>
@@ -35,6 +64,12 @@ livery_update.stop();
 
 <animation>
       <type>material</type>
+      <object-name>lflapsext</object-name>
+      <object-name>lflapsint</object-name>
+      <object-name>laileron</object-name>
+      <object-name>rflapsext</object-name>
+      <object-name>rflapsint</object-name>
+      <object-name>raileron</object-name>
       <object-name>lwing.top</object-name>
       <object-name>rwing.top</object-name>
       <object-name>rudder</object-name>
@@ -53,13 +88,14 @@ livery_update.stop();
       <object-name>rwing.usm2</object-name>
 	<object-name>lwing.usm1</object-name>
 	<object-name>rwing.usm1</object-name>
-      <object-name>elevator</object-name>
+      <object-name>lelevator</object-name>
+      <object-name>relevator</object-name>
       <object-name>rflaps</object-name>
       <object-name>lflaps</object-name>
       <object-name>CockpitDoor</object-name>
       <property-base>sim/model/livery</property-base>
       <texture-prop>texture</texture-prop>
-      <texture>camo-victor.rgb</texture>
+      <texture>camo-victor.png</texture>
     </animation>
 
   <!-- Make the various components disappear when not required -->
@@ -102,139 +138,132 @@ livery_update.stop();
     </condition>
   </animation>
 
+<!-- flight control surfaces -->
+
   <animation>
     <type>rotate</type>
-    <object-name>OuterElevonRight</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>10</factor>
-    <offset-deg>0</offset-deg>
+    <object-name>raileron</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>20</factor>
     <axis>
-      <x1-m>26.04</x1-m>
-      <y1-m>16.01</y1-m>
-      <z1-m>-0.44</z1-m>
-      <x2-m>25.45</x2-m>
-      <y2-m>9.77</y2-m>
-      <z2-m>-0.11</z2-m>
+      <x1-m>24.16</x1-m>
+      <y1-m>16.22</y1-m>
+      <z1-m>2.16</z1-m>
+      <x2-m>20.43</x2-m>
+      <y2-m>10.38</y2-m>
+      <z2-m>2.30</z2-m>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>OuterElevonRight</object-name>
-    <property>controls/flight/elevator</property>
-    <factor>-10</factor>
-    <offset-deg>0</offset-deg>
+    <object-name>laileron</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor>20</factor>
     <axis>
-      <x1-m>26.04</x1-m>
-      <y1-m>16.01</y1-m>
-      <z1-m>-0.44</z1-m>
-      <x2-m>25.45</x2-m>
-      <y2-m>9.77</y2-m>
-      <z2-m>-0.11</z2-m>
+      <x1-m>24.16</x1-m>
+      <y1-m>-16.22</y1-m>
+      <z1-m>2.16</z1-m>
+      <x2-m>20.43</x2-m>
+      <y2-m>-10.38</y2-m>
+      <z2-m>2.30</z2-m>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>OuterElevonLeft</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>10</factor>
-    <offset-deg>0</offset-deg>
+    <object-name>relevator</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor>15</factor>
     <axis>
-      <x1-m>26.04</x1-m>
-      <y1-m>-16.01</y1-m>
-      <z1-m>-0.44</z1-m>
-      <x2-m>25.45</x2-m>
-      <y2-m>-9.77</y2-m>
-      <z2-m>-0.11</z2-m>
+      <x1-m>31.04</x1-m>
+      <y1-m>0.49</y1-m>
+      <z1-m>7.11</z1-m>
+      <x2-m>32.13</x2-m>
+      <y2-m>2.10</y2-m>
+      <z2-m>7.61</z2-m>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>OuterElevonLeft</object-name>
-    <property>controls/flight/elevator</property>
-    <factor>10</factor>
-    <offset-deg>0</offset-deg>
+    <object-name>lelevator</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor>-15</factor>
     <axis>
-      <x1-m>26.04</x1-m>
-      <y1-m>-16.01</y1-m>
-      <z1-m>-0.44</z1-m>
-      <x2-m>25.45</x2-m>
-      <y2-m>-9.77</y2-m>
-      <z2-m>-0.11</z2-m>
+      <x1-m>31.04</x1-m>
+      <y1-m>-0.49</y1-m>
+      <z1-m>7.11</z1-m>
+      <x2-m>32.13</x2-m>
+      <y2-m>-2.10</y2-m>
+      <z2-m>7.61</z2-m>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>InnerElevonRight</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>-8</factor>
-    <offset-deg>0</offset-deg>
+    <object-name>rflapsext</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>-22</factor>
     <axis>
-      <x1-m>23.52</x1-m>
-      <y1-m>3.96</y1-m>
-      <z1-m>-0.19</z1-m>
-      <x2-m>23.77</x2-m>
-      <y2-m>9.78</y2-m>
-      <z2-m>-0.12</z2-m>
+      <x1-m>18.50</x1-m>
+      <y1-m>7.82</y1-m>
+      <z1-m>2.36</z1-m>
+      <x2-m>17.45</x2-m>
+      <y2-m>5.54</y2-m>
+      <z2-m>2.35</z2-m>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>InnerElevonRight</object-name>
-    <property>controls/flight/elevator</property>
-    <factor>8</factor>
-    <offset-deg>0</offset-deg>
+    <object-name>lflapsext</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>22</factor>
     <axis>
-      <x1-m>23.52</x1-m>
-      <y1-m>3.96</y1-m>
-      <z1-m>-0.19</z1-m>
-      <x2-m>23.77</x2-m>
-      <y2-m>9.78</y2-m>
-      <z2-m>-0.12</z2-m>
+      <x1-m>18.50</x1-m>
+      <y1-m>-7.82</y1-m>
+      <z1-m>2.36</z1-m>
+      <x2-m>17.45</x2-m>
+      <y2-m>-5.54</y2-m>
+      <z2-m>2.35</z2-m>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>InnerElevonLeft</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>-8</factor>
-    <offset-deg>0</offset-deg>
+    <object-name>rflapsint</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>-35</factor>
     <axis>
-      <x1-m>23.52</x1-m>
-      <y1-m>-3.96</y1-m>
-      <z1-m>-0.19</z1-m>
-      <x2-m>23.77</x2-m>
-      <y2-m>-9.78</y2-m>
-      <z2-m>-0.12</z2-m>
+      <x1-m>17.46</x1-m>
+      <y1-m>5.49</y1-m>
+      <z1-m>2.35</z1-m>
+      <x2-m>15.55</x2-m>
+      <y2-m>1.69</y2-m>
+      <z2-m>2.44</z2-m>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>InnerElevonLeft</object-name>
-    <property>controls/flight/elevator</property>
-    <factor>-8</factor>
-    <offset-deg>0</offset-deg>
+    <object-name>lflapsint</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>35</factor>
     <axis>
-      <x1-m>23.52</x1-m>
-      <y1-m>-3.96</y1-m>
-      <z1-m>-0.19</z1-m>
-      <x2-m>23.77</x2-m>
-      <y2-m>-9.78</y2-m>
-      <z2-m>-0.12</z2-m>
+      <x1-m>17.46</x1-m>
+      <y1-m>-5.49</y1-m>
+      <z1-m>2.35</z1-m>
+      <x2-m>15.55</x2-m>
+      <y2-m>-1.69</y2-m>
+      <z2-m>2.44</z2-m>
     </axis>
   </animation>
-
 
   <animation>
     <type>rotate</type>
     <object-name>rudder</object-name>
-    <property>controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <factor>-18</factor>
     <offset-deg>0</offset-deg>
     <axis>
@@ -810,7 +839,7 @@ livery_update.stop();
 	<animation>
 		<type>rotate</type>
 		<object-name>l.speedbrake</object-name>
-        <property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
+                <property>surface-positions/speedbrake-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -839,7 +868,7 @@ livery_update.stop();
 <animation>
 		<type>rotate</type>
 		<object-name>lspeedbrake.ram1</object-name>
-        <property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
+        <property>surface-positions/speedbrake-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -870,7 +899,7 @@ livery_update.stop();
 <animation>
 		<type>rotate</type>
 		<object-name>r.speedbrake</object-name>
-        <property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
+        <property>surface-positions/speedbrake-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -899,7 +928,7 @@ livery_update.stop();
 <animation>
 		<type>rotate</type>
 		<object-name>rspeedbrake.ram1</object-name>
-        <property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
+        <property>surface-positions/speedbrake-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -1142,7 +1171,7 @@ livery_update.stop();
     <y-offset>1.0</y-offset>
     <z-offset>1.0</z-offset>
   </animation>
-<animation>
+  <animation>
     <type>select</type>
     <object-name>rfuel.hose</object-name>
     <object-name>lfuel.hose</object-name>
@@ -1154,28 +1183,30 @@ livery_update.stop();
 	    <value>Leftrefuel-hose</value>
         </equals>
     </condition>
-</animation>
+  </animation>
 
-<animation>
+  <animation>
     <type>select</type>
     <object-name>Leftrefuel-hose</object-name>
     <object-name>Rightrefuel-hose</object-name>
-<condition>
+  <condition>
     <greater-than>
     <property>controls/refuelling/refuelling-drogues-pos-norm</property>
         <value>0.5</value>
       </greater-than>
     </condition>
     </animation>
-<multiplay>
-<refuel>
-<type>probe</type>
-</refuel>
-</multiplay>
 
-<model>
+  <multiplay>
+    <refuel>
+      <type>probe</type>
+    </refuel>
+    <tanker>true</tanker>
+  </multiplay>
+
+     <model>
 	<name>rear_panels</name>
-<path>Aircraft/victor/Models/rear_panels.xml</path>
+        <path>Aircraft/victor/Models/rear_panels.xml</path>
         <offsets>
             <x-m>5.8419</x-m>
             <y-m>-0.0212</y-m>

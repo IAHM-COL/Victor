@@ -343,6 +343,20 @@ Handley page Victor tanker K2        </description>
               <output>fcs/elevator-pos-rad</output>
             </aerosurface_scale>
 
+            <aerosurface_scale name="Elevator Normalized">
+                <input>fcs/elevator-pos-rad</input>
+                <domain>
+                    <min>-0.35</min>
+                    <max> 0.3</max>
+                </domain>
+                <range>
+                    <min>-1</min>
+                    <max> 1</max>
+                </range>
+                <output>fcs/elevator-pos-norm</output>
+            
+            </aerosurface_scale>
+
         </channel>
 
         <channel name="Roll">
@@ -372,6 +386,32 @@ Handley page Victor tanker K2        </description>
                 <max>0.35</max>
               </range>
               <output>fcs/right-aileron-pos-rad</output>
+            </aerosurface_scale>
+
+            <aerosurface_scale name="Left aileron Normalized">
+                <input>fcs/left-aileron-pos-rad</input>
+                <domain>
+                    <min>-0.35</min>
+                    <max> 0.35</max>
+                </domain>
+                <range>
+                    <min>-1</min>
+                    <max> 1</max>
+                </range>
+                <output>fcs/left-aileron-pos-norm</output>
+            </aerosurface_scale>
+
+            <aerosurface_scale name="Right aileron Normalized">
+                <input>fcs/right-aileron-pos-rad</input>
+                <domain>
+                    <min>-0.35</min>
+                    <max> 0.35</max>
+                </domain>
+                <range>
+                    <min>-1</min>
+                    <max> 1</max>
+                </range>
+                <output>fcs/right-aileron-pos-norm</output>
             </aerosurface_scale>
 
         </channel>
@@ -435,6 +475,19 @@ Handley page Victor tanker K2        </description>
               <output>fcs/rudder-pos-rad</output>
             </aerosurface_scale>
 
+            <aerosurface_scale name="Rudder Normalized">
+                <input>fcs/rudder-pos-rad</input>
+                <domain>
+                    <min>-0.35</min>
+                    <max> 0.35</max>
+                </domain>
+                <range>
+                    <min>-1</min>
+                    <max> 1</max>
+                </range>
+                <output>fcs/rudder-pos-norm</output>
+            </aerosurface_scale>
+
         </channel>
 
         <channel name="Flaps">
@@ -447,15 +500,15 @@ Handley page Victor tanker K2        </description>
                   <time>0</time>
                 </setting>
                 <setting>
-                  <position>15</position>
+                  <position>0.5</position>
                   <time>4</time>
                 </setting>
                 <setting>
-                  <position>30</position>
+                  <position>1</position>
                   <time>3</time>
                 </setting>
               </traverse>
-              <output>fcs/flap-pos-deg</output>
+              <output>fcs/flap-pos-norm</output>
             </kinematic>
 
         </channel>
@@ -487,14 +540,14 @@ Handley page Victor tanker K2        </description>
                 <setting>
                   <position>0</position>
                   <time>0</time>
-                </setting>
+                </setting> 
                 <setting>
                   <position>0.5</position>
-                  <time>5</time>
+                  <time>1.5</time>
                 </setting>
                 <setting>
                   <position>1</position>
-                  <time>3</time>
+                  <time>1.5</time>
                 </setting>
               </traverse>
               <output>fcs/speedbrake-pos-norm</output>
@@ -650,7 +703,7 @@ Handley page Victor tanker K2        </description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>fcs/elevator-pos-norm</property>
+                    <abs><property>fcs/elevator-pos-norm</property></abs>
                     <value>0.04</value>
                 </product>
             </function>

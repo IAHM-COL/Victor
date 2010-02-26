@@ -7,7 +7,7 @@ OBJECT poly
 name "fire2"
 data 10
 Sphere.004
-texture "//fire2.rgb"
+texture "fire2.png"
 texrep 1 1
 crease 30.000000
 numvert 47
@@ -424,7 +424,7 @@ OBJECT poly
 name "fire3"
 data 10
 Sphere.005
-texture "//fire2.rgb"
+texture "fire2.png"
 texrep 1 1
 crease 30.000000
 numvert 47
@@ -841,7 +841,7 @@ OBJECT poly
 name "fire1"
 data 10
 Sphere.006
-texture "//fire.rgb"
+texture "fire.png"
 texrep 1 1
 crease 30.000000
 numvert 47
@@ -1258,7 +1258,7 @@ OBJECT poly
 name "fire4"
 data 10
 Sphere.007
-texture "//fire2.rgb"
+texture "fire2.png"
 texrep 1 1
 crease 30.000000
 numvert 47

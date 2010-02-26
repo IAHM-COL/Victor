@@ -5,7 +5,7 @@ OBJECT world
 kids 1
 OBJECT poly
 name "RedBeardAi"
-texture "fixtures.rgb"
+texture "fixtures.png"
 texrep 1 1
 crease 30
 numvert 218

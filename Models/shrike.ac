@@ -7,7 +7,7 @@ OBJECT poly
 name "Smoke"
 data 4
 Cone
-texture "hh-noise3.rgb"
+texture "hh-noise3.png"
 crease 30.000000
 numvert 18
 5.47573 -0.460754 -0.456043
@@ -226,7 +226,7 @@ OBJECT poly
 name "Shrike"
 data 8
 Cube.005
-texture "weapons.rgb"
+texture "weapons.png"
 crease 30.000000
 numvert 146
 1.28304 -0.19727 -0.199839

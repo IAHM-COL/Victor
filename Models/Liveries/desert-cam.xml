@@ -5,7 +5,7 @@
     <model>
         <livery>
             <name type="string">Desert-camo</name>
-            <texture>desert-cam.rgb</texture>
+            <texture>desert-cam.png</texture>
         </livery>
     </model>
 </sim>
