@@ -267,6 +267,7 @@ scaleRadarShift = func{
 						multiplayer_x_shift_scaled_node = m.getNode("radar/x-shift-scaled" , 1 );
 						multiplayer_y_shift_scaled_node = m.getNode("radar/y-shift-scaled" , 1 );
 						multiplayer_in_view_node = m.getNode( "radar/in-view" , 1 );
+						radar_mode_control = radar_mode_control_node.getValue();
 						
 						bearing = multiplayer_bearing_deg_node.getValue() ;
 						distance_nm = multiplayer_distance_nm_node.getValue();

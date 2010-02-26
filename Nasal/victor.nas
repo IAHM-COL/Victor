@@ -21,8 +21,8 @@ toggle_chute = func {
   
   if (chute_state == 0)
   {
-    # Open the door and stream the chute - 2 second.
-    interpolate("controls/chute-pos-norm", 1, 2);
+    # Open the door -2 second- and stream the chute - 4 second. (chute is visible if chute-pos-norm> 0.5, after 2s )
+    interpolate("controls/chute-pos-norm", 1, 4);
     interpolate("controls/doors/chute-door-pos-norm", 1, 2);
     chute_state = 1;
   }
@@ -259,7 +259,7 @@ settimer(func {
   
   # Update the aircraft texture based on the variant    
   setlistener("sim/variant", func {
-	  setprop("sim/model/livery/material/texture", cmdarg().getValue() ~  ".rgb");
+	  setprop("sim/model/livery/material/texture", cmdarg().getValue() ~  ".png");
   });
 
   # Add listener for bomb impact

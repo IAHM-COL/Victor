@@ -19,14 +19,14 @@ Started Feb 2009 by Alex Park,
     <aero archive="y">victor</aero>
 
     <startup>
-      <splash-texture>Aircraft/victor/victork2-splash.rgb</splash-texture>
+      <splash-texture>Aircraft/victor/victork2-splash.png</splash-texture>
     </startup>
 
     <model>
       <path archive="y">Aircraft/victor/Models/victor.xml</path>
       <livery> 
-<file type="string"/> 
-</livery> 
+        <file type="string"/> 
+      </livery> 
 
     </model>
 
@@ -42,7 +42,7 @@ Started Feb 2009 by Alex Park,
       <path>Aircraft/victor/Sounds/victor-sounds.xml</path>
     </sound>
 
-<menubar>
+    <menubar>
         <default>
             <menu n="10">
                 <label>Victor</label>
@@ -178,12 +178,12 @@ Started Feb 2009 by Alex Park,
    1.0 - Fully extended - 55/80 degrees undercarriage up/down.
    
    We simplify the fully out position 
+   
  -->
     <spoilers>
       <setting>0.00</setting>
       <setting>0.5</setting>
       <setting>1.0</setting>
-      <chute-pos-norm>0.0</chute-pos-norm>
     </spoilers>
 
     <systems>
@@ -191,6 +191,16 @@ Started Feb 2009 by Alex Park,
         <path>Aircraft/victor/Systems/victor-electrical.xml</path>
       </electrical>
     </systems>
+
+    <multiplay>
+      <generic>
+        <float n="0" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
+        <float n="1" alias="/controls/doors/cockpit-door-pos-norm"/>
+        <float n="2" alias="/controls/doors/bb-door-pos-norm"/>
+        <float n="3" alias="/controls/doors/chute-door-pos-norm"/>
+        <float n="4" alias="/controls/chute-pos-norm"/>
+      </generic>
+    </multiplay>
   </sim>
 
   <consumables>
@@ -238,10 +248,10 @@ Started Feb 2009 by Alex Park,
     </doors>
 
     <refuelling>
-    <refuelling-drogues-pos-norm type="float">0.0</refuelling-drogues-pos-norm>
+      <refuelling-drogues-pos-norm type="float">0.0</refuelling-drogues-pos-norm>
     </refuelling>
 
-
+    <chute-pos-norm type="float">0.0</chute-pos-norm>
     <!-- trim for level cruise -->
 
     <flight>
@@ -332,23 +342,23 @@ Started Feb 2009 by Alex Park,
           <script>victor.toggle_refuelling_drogues()</script>
         </binding>
       </key>
-<systems>
-<refuel>
-<serviceable type="bool">true</serviceable>
-<type>probe</type>
-</refuel>
-</systems>
-
-
-
     </keyboard>
-  </input>
 
+
+ 
+  </input>
+  
+  <systems>
+    <refuel>
+      <serviceable type="bool">true</serviceable>
+      <type>probe</type>
+    </refuel>
+  </systems>
   <!-- Nasal files/scripts -->
   <nasal>
     <victor>
       <file>Aircraft/victor/Nasal/victor.nas</file>
-      <file>Aircraft/victor/Nasal/aar.nas</file>
+     <!-- <file>Aircraft/victor/Nasal/aar.nas</file> -->
     </victor>
     <failures>
       <file>Aircraft/Generic/limits.nas</file>
