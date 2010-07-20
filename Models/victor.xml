@@ -1171,17 +1171,17 @@
     <y-offset>1.0</y-offset>
     <z-offset>1.0</z-offset>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>rfuel.hose</object-name>
     <object-name>lfuel.hose</object-name>
     <property>controls/refuelling/refuelling-drogues-pos-norm</property>
     <condition>
-        <equals>
-    <property>controls/refuelling/refuelling-drogues-pos-norm</property>
-          <value>Leftrefuel-hose</value>
-	    <value>Leftrefuel-hose</value>
-        </equals>
+      <equals>
+        <property>controls/refuelling/refuelling-drogues-pos-norm</property>
+        <value>Leftrefuel-hose</value>
+      </equals>
     </condition>
   </animation>
 
@@ -1189,13 +1189,13 @@
     <type>select</type>
     <object-name>Leftrefuel-hose</object-name>
     <object-name>Rightrefuel-hose</object-name>
-  <condition>
-    <greater-than>
-    <property>controls/refuelling/refuelling-drogues-pos-norm</property>
+    <condition>
+      <greater-than>
+        <property>controls/refuelling/refuelling-drogues-pos-norm</property>
         <value>0.5</value>
       </greater-than>
     </condition>
-    </animation>
+  </animation>
 
   <multiplay>
     <refuel>
@@ -1204,16 +1204,16 @@
     <tanker>true</tanker>
   </multiplay>
 
-     <model>
-	<name>rear_panels</name>
-        <path>Aircraft/victor/Models/rear_panels.xml</path>
-        <offsets>
-            <x-m>5.8419</x-m>
-            <y-m>-0.0212</y-m>
-            <z-m>3.5137</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+  <model>
+    <name>rear_panels</name>
+    <path>Aircraft/victor/Models/rear_panels.xml</path>
+    <offsets>
+      <x-m>5.8419</x-m>
+      <y-m>-0.0212</y-m>
+      <z-m>3.5137</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
 
 
 </PropertyList>
