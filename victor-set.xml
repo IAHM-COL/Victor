@@ -190,6 +190,12 @@ Started Feb 2009 by Alex Park,
       <electrical>
         <path>Aircraft/victor/Systems/victor-electrical.xml</path>
       </electrical>
+     
+     <refuel>
+         <type>probe</type>
+      </refuel>
+
+
     </systems>
 
     <multiplay>
