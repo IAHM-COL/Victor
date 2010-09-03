@@ -1,9 +1,9 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.753 0.753 0.753  amb 0.051 0.051 0.051  emis 0 0 0  spec 0 0 0  shi 7  trans 0
-MATERIAL "ac3dmat2" rgb 0.118 0.169 0.239  amb 0.129 0.122 0.078  emis 0 0 0  spec 0 0 0  shi 4  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.753 0.753 0.753  amb 0.753 0.753 0.753  emis 0 0 0  spec 0 0 0  shi 7  trans 0
+MATERIAL "ac3dmat2" rgb 0.118 0.169 0.239  amb 0.118 0.169 0.239  emis 0 0 0  spec 0 0 0  shi 4  trans 0
 MATERIAL "ac3dmat1" rgb 0 0 0  amb 0 0 0  emis 0.788 0.788 0.827  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat0" rgb 0.02 0.02 0.02  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.051 0.051 0.051  shi 27  trans 0
+MATERIAL "ac3dmat0" rgb 0.02 0.02 0.02  amb 0.02 0.02 0.02  emis 0 0 0  spec 0.051 0.051 0.051  shi 27  trans 0
 OBJECT world
 kids 2
 OBJECT poly
@@ -6167,7 +6167,7 @@ kids 0
 OBJECT poly
 name "scale"
 loc -2.01096 0.147195 -0.0328021
-texture "ai23.rgb"
+texture "ai23.png"
 crease 45.000000
 numvert 4
 3.07164 -0.15677 -0.00506189
@@ -6189,7 +6189,7 @@ loc 1.00174 -0.0586463 -0.00225693
 kids 2
 OBJECT poly
 name "main_box"
-texture "aitext.rgb"
+texture "aitext.png"
 crease 45.000000
 numvert 8
 0.0142326 -0.0376628 0.0294822

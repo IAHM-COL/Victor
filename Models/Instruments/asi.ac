@@ -1,14 +1,14 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 0.659 0.663 0.663  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.251 0.282 0.361  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 20  trans 0
-MATERIAL "ac3dmat0" rgb 0.027 0.027 0.02  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.502 0.502 0.502  shi 17  trans 0
+MATERIAL "ac3dmat1" rgb 0.659 0.663 0.663  amb 0.659 0.663 0.663  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.251 0.282 0.361  amb 0.251 0.282 0.361  emis 0 0 0  spec 0 0 0  shi 20  trans 0
+MATERIAL "ac3dmat0" rgb 0.027 0.027 0.02  amb 0.027 0.027 0.02  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82  amb 0.82 0.827 0.82  emis 0 0 0  spec 0.502 0.502 0.502  shi 17  trans 0
 OBJECT world
 kids 10
 OBJECT poly
 name "Face"
 loc 0.00317962 -0.000199498 -3.49086e-05
-texture "asi.rgb"
+texture "asi.png"
 crease 45.000000
 numvert 17
 -3.25963e-09 2.57569e-08 -0.0378488
@@ -4418,7 +4418,7 @@ kids 0
 OBJECT poly
 name "screw_bottom_left"
 loc 0.00383559 -0.0182051 -0.0424574
-texture "slot_screw_med_flat.rgb"
+texture "slot_screw_med_flat.png"
 crease 45.000000
 numvert 4
 0 -0.0189828 0.0694179
@@ -4437,7 +4437,7 @@ kids 0
 OBJECT poly
 name "screw_top"
 loc 0.00383559 -0.0182051 -0.0424574
-texture "slot_screw_med_button_head.rgb"
+texture "slot_screw_med_button_head.png"
 crease 45.000000
 numvert 8
 0 0.0521425 0.0129398

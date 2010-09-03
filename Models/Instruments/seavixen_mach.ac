@@ -1,7 +1,7 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat0" rgb 0.027 0.027 0.02  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.502 0.502 0.502  shi 17  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0.027 0.027 0.02  amb 0.027 0.027 0.02  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82  amb 0.82 0.827 0.82  emis 0 0 0  spec 0.502 0.502 0.502  shi 17  trans 0
 OBJECT world
 kids 3
 OBJECT poly
@@ -1006,7 +1006,7 @@ kids 0
 OBJECT poly
 name "Face"
 loc 0.00317962 4.904e-008 5.32491e-008
-texture "seavixen_mach.rgb"
+texture "seavixen_mach.png"
 crease 45.000000
 numvert 17
 0.000285743 1.35947e-008 -0.0319024

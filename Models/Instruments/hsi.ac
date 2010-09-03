@@ -1,6 +1,6 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0.702 0.2 0.2  spec 0.502 0.502 0.502  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0.702 0.2 0.2  spec 0.502 0.502 0.502  shi 10  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -10,7 +10,7 @@ kids 9
 OBJECT poly
 name "Face-m"
 loc -0.00379016 0.00363905 -0.0189445
-texture "hunter-remote.rgb"
+texture "hunter-remote.png"
 crease 45.000000
 numvert 17
 0 3.04426e-08 -3.84462e-08
@@ -131,7 +131,7 @@ kids 0
 OBJECT poly
 name "Face-t"
 loc -0.00379016 0.00363905 -0.0189445
-texture "hunter-remote.rgb"
+texture "hunter-remote.png"
 crease 45.000000
 numvert 17
 0 3.04426e-08 -3.81842e-08
@@ -1527,7 +1527,7 @@ kids 0
 OBJECT poly
 name "Knob1"
 loc 0.00450957 -0.0382156 0.0217668
-texture "hunter-remotearrow.rgb"
+texture "hunter-remotearrow.png"
 crease 45.000000
 numvert 32
 0.00450983 0.00280414 0.00621714
@@ -1823,7 +1823,7 @@ kids 0
 OBJECT poly
 name "Knob2"
 loc 0.00450957 -0.0382156 0.0217668
-texture "hunter-remotearrow.rgb"
+texture "hunter-remotearrow.png"
 crease 45.000000
 numvert 32
 -0.00829973 0 -0.088152
@@ -2074,7 +2074,7 @@ kids 0
 OBJECT poly
 name "Needle2"
 loc 0.00203873 0.0170229 0.0482358
-texture "hunter-remotearrow.rgb"
+texture "hunter-remotearrow.png"
 crease 45.000000
 numvert 5
 -0.00325287 0.0271249 -0.0671801

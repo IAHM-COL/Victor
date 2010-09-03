@@ -6,7 +6,7 @@ OBJECT poly
 name "LeftOutTrim"
 data 12
 Cylinder.001
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -356,7 +356,7 @@ OBJECT poly
 name "Frame"
 data 4
 Mesh
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 73
@@ -1019,7 +1019,7 @@ OBJECT poly
 name "RightInElevon"
 data 12
 Cylinder.007
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -1369,7 +1369,7 @@ OBJECT poly
 name "RightOutTrim"
 data 12
 Cylinder.009
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -1719,7 +1719,7 @@ OBJECT poly
 name "RightInTrim"
 data 12
 Cylinder.008
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -2069,7 +2069,7 @@ OBJECT poly
 name "LeftOutElevon"
 data 12
 Cylinder.004
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -2419,7 +2419,7 @@ OBJECT poly
 name "Rudder"
 data 12
 Cylinder.012
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -2769,7 +2769,7 @@ OBJECT poly
 name "LeftInElevon"
 data 12
 Cylinder.005
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -3119,7 +3119,7 @@ OBJECT poly
 name "LeftInTrim"
 data 12
 Cylinder.006
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -3477,7 +3477,7 @@ OBJECT poly
 name "RightOutElevon"
 data 12
 Cylinder.010
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36
@@ -3827,7 +3827,7 @@ OBJECT poly
 name "RudderTrim"
 data 12
 Cylinder.011
-texture "//control_pos.rgb"
+texture "control_pos.png"
 texrep 1 1
 crease 30
 numvert 36

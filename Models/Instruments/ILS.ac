@@ -1,10 +1,10 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat0" rgb 0.027 0.027 0.02  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.502 0.502 0.502  shi 17  trans 0
-MATERIAL "ac3dmat1" rgb 0.251 0.282 0.361  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 20  trans 0
-MATERIAL "ac3dmat1" rgb 0.69 0.69 0.69  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0.027 0.027 0.02  amb 0.027 0.027 0.02  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82  amb 0.82 0.827 0.82  emis 0 0 0  spec 0.502 0.502 0.502  shi 17  trans 0
+MATERIAL "ac3dmat1" rgb 0.251 0.282 0.361  amb 0.251 0.282 0.361  emis 0 0 0  spec 0 0 0  shi 20  trans 0
+MATERIAL "ac3dmat1" rgb 0.69 0.69 0.69  amb 0.69 0.69 0.69  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 19
 OBJECT poly
@@ -4274,7 +4274,7 @@ kids 0
 OBJECT poly
 name "rect"
 loc 0.0026305 -3.36298e-10 1.16973e-10
-texture "ILS.rgb"
+texture "ILS.png"
 crease 45.000000
 numvert 4
 0 -0.0220483 -0.0220483
@@ -4293,7 +4293,7 @@ kids 0
 OBJECT poly
 name "GSFlag"
 loc 0.00325475 0.00298423 -0.021869
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0 0 0.0103514
@@ -4312,7 +4312,7 @@ kids 0
 OBJECT poly
 name "LOCFlag"
 loc 0.00325475 -0.0222615 -0.00258618
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0 0 0
@@ -4479,7 +4479,7 @@ kids 0
 OBJECT poly
 name "rect"
 loc 0.0034716 -0.0267595 -3.98505e-10
-texture "ILS-face.rgb"
+texture "ILS-face.png"
 crease 45.000000
 numvert 4
 0 -0.00484396 -0.0161377
@@ -4498,7 +4498,7 @@ kids 0
 OBJECT poly
 name "rect"
 loc 0.0034716 0.0274254 0.0119391
-texture "ILS-face.rgb"
+texture "ILS-face.png"
 crease 45.000000
 numvert 4
 0 -0.00456364 -0.00456364
@@ -4517,7 +4517,7 @@ kids 0
 OBJECT poly
 name "rect"
 loc 0.00762037 0.0114526 0.0270821
-texture "ILS-face.rgb"
+texture "ILS-face.png"
 crease 45.000000
 numvert 4
 0 0.00220739 -0.00606475
@@ -4536,7 +4536,7 @@ kids 0
 OBJECT poly
 name "screw_top"
 loc 0.0034397 0.0308251 0.0331099
-texture "slot_screw_med_button_head.rgb"
+texture "slot_screw_med_button_head.png"
 crease 45.000000
 numvert 8
 0 0.00241023 -0.0623886
@@ -4566,7 +4566,7 @@ kids 0
 OBJECT poly
 name "screw_bottom"
 loc 0.0034397 -0.035437 -0.0331522
-texture "slot_screw_pan_small.rgb"
+texture "slot_screw_pan_small.png"
 crease 45.000000
 numvert 4
 0 0.00234984 0.0041737
