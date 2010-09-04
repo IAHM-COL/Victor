@@ -1,16 +1,16 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.69 0.69 0.69  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.251 0.282 0.361  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 20  trans 0
-MATERIAL "ac3dmat0" rgb 0.027 0.027 0.02  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.502 0.502 0.502  shi 17  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.69 0.69 0.69  amb 0.69 0.69 0.69  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.251 0.282 0.361  amb 0.251 0.282 0.361  emis 0 0 0  spec 0 0 0  shi 20  trans 0
+MATERIAL "ac3dmat0" rgb 0.027 0.027 0.02  amb 0.027 0.027 0.02  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82  amb 0.82 0.827 0.82  emis 0 0 0  spec 0.502 0.502 0.502  shi 17  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 21
 OBJECT poly
 name "Face"
 loc 0.00317962 -0.000199498 -3.49086e-05
-texture "altimeter.rgb"
+texture "altimeter.png"
 crease 45.000000
 numvert 17
 -3.25963e-09 2.56114e-08 -0.0378488
@@ -3819,7 +3819,7 @@ kids 0
 OBJECT poly
 name "inHG2"
 loc 0.00350452 -0.0222936 -6.40284e-10
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0 -0.00355908 -1.48924e-05
@@ -3838,7 +3838,7 @@ kids 0
 OBJECT poly
 name "feet1"
 loc 0.00350452 0.00406848 0.0169066
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0 -0.00628953 -0.00438021
@@ -3857,7 +3857,7 @@ kids 0
 OBJECT poly
 name "feet2"
 loc 0.00315452 0.00406848 0.00724767
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0.000350005 0.00628953 -0.00438021
@@ -3876,7 +3876,7 @@ kids 0
 OBJECT poly
 name "feet3"
 loc 0.00315452 0.00406848 -0.00690377
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0.000350005 -0.00628953 -0.00438021
@@ -3895,7 +3895,7 @@ kids 0
 OBJECT poly
 name "feet4"
 loc 0.00315452 0.00406848 -0.0167873
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0.000350005 0.00628953 -0.00438021
@@ -3914,7 +3914,7 @@ kids 0
 OBJECT poly
 name "feet1"
 loc 0.00315452 0.0177266 0.00825193
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0.000350005 0.00378432 -0.00263551
@@ -3933,7 +3933,7 @@ kids 0
 OBJECT poly
 name "feet1"
 loc 0.00315452 0.0177266 0.000408643
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0.000350005 -0.00378432 -0.00263551
@@ -3952,7 +3952,7 @@ kids 0
 OBJECT poly
 name "feet1"
 loc 0.00315452 0.0177266 -0.00743465
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0.000350005 0.00378432 -0.00263551
@@ -3971,7 +3971,7 @@ kids 0
 OBJECT poly
 name "inHG1"
 loc 0.00350452 -0.0222936 0.00583879
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0 0.00355908 0.0058728
@@ -3990,7 +3990,7 @@ kids 0
 OBJECT poly
 name "inHG3"
 loc 0.00350452 -0.0222936 -0.00590259
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0 -0.00355908 1.99783e-05
@@ -4009,7 +4009,7 @@ kids 0
 OBJECT poly
 name "inHG4"
 loc 0.00350452 -0.0222936 -0.0117354
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 4
 0 0.00355908 0.00585282
@@ -5015,7 +5015,7 @@ kids 0
 OBJECT poly
 name "screw_top"
 loc 0.0034397 0.0294062 0.0335614
-texture "slot_screw_med_button_head.rgb"
+texture "slot_screw_med_button_head.png"
 crease 45.000000
 numvert 8
 0 -0.000661917 -0.0724493
@@ -5045,7 +5045,7 @@ kids 0
 OBJECT poly
 name "screw_top"
 loc 0.0034397 0.0294062 0.0335614
-texture "slot_screw_pan_small.rgb"
+texture "slot_screw_pan_small.png"
 crease 45.000000
 numvert 4
 0.000448962 -0.0634126 -0.0687513

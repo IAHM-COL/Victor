@@ -1,8 +1,8 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0   spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.502 0.502 0.502 shi 17 trans 0
-MATERIAL "ac3dmat0" rgb 0 0 0 amb 0.2 0.2 0.2 emis 0 0 0 spec 0 0 0 shi 10 trans 0
-MATERIAL "ac3dmat0.001" rgb 0.027 0.027 0.02 amb 0.2 0.2 0.2 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "ac3dmat1" rgb 0.82 0.827 0.82 amb 0.82 0.827 0.82 emis 0 0 0 spec 0.502 0.502 0.502 shi 17 trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "ac3dmat0.001" rgb 0.027 0.027 0.02 amb 0.027 0.027 0.02 emis 0 0 0 spec 0 0 0 shi 10 trans 0
 OBJECT world
 kids 4
 OBJECT poly
@@ -596,7 +596,7 @@ OBJECT poly
 name "Face"
 data 4
 Mesh
-texture "oil.rgb"
+texture "oil.png"
 texrep 1 1
 crease 45
 numvert 17

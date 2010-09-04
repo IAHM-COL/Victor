@@ -6,7 +6,7 @@ OBJECT poly
 name "Cube"
 data 4
 Cube
-texture "//chute.rgb"
+texture "chute.png"
 texrep 1 1
 crease 30
 numvert 8
@@ -66,7 +66,7 @@ OBJECT poly
 name "switch"
 data 6
 switch
-texture "//chute.rgb"
+texture "chute.png"
 texrep 1 1
 crease 30
 numvert 16

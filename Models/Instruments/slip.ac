@@ -1,11 +1,11 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 2
 OBJECT poly
 name "ball"
 loc 0.00138858 -0.0016609 -2.067e-05
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 17
 0 1.62981e-09 0.00682219
@@ -126,7 +126,7 @@ kids 0
 OBJECT poly
 name "outer_frame"
 loc 0.00456079 -0.00130931 5.00008e-05
-texture "numbers.rgb"
+texture "numbers.png"
 crease 45.000000
 numvert 136
 7.23936e-05 0.0100191 -0.00163431
