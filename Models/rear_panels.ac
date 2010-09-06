@@ -1,10 +1,10 @@
 AC3Db
-MATERIAL "ac3dmat13" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "default" rgb 0.5 0.5 0.5  amb 0.4 0.4 0.4  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "ac3dmat13" rgb 0.416 0.416 0.4  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 128  trans 0
+MATERIAL "ac3dmat13" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "default" rgb 0.5 0.5 0.5  amb 0.5 0.5 0.5  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "ac3dmat13" rgb 0.416 0.416 0.4  amb 0.416 0.416 0.4  emis 0 0 0  spec 0 0 0  shi 128  trans 0
 OBJECT world
 kids 13
 OBJECT poly
@@ -8219,6 +8219,7 @@ numvert 9778
 -0.0128021 0.24616 -0.0230353
 -0.0125694 0.245627 -0.022565
 -0.0129976 0.246439 -0.0234029
+
 -0.0122828 0.245015 -0.0219958
 -0.0121946 0.247339 -0.0220846
 -0.0121489 0.249897 -0.022153
@@ -18096,6 +18097,7 @@ refs 4
 941 0 0
 946 0 0
 942 0 0
+
 SURF 0x10
 mat 1
 refs 4
@@ -25075,6 +25077,7 @@ refs 4
 1968 0 0
 1964 0 0
 1955 0 0
+
 SURF 0x10
 mat 1
 refs 4
@@ -26813,6 +26816,7 @@ refs 4
 2218 0 0
 SURF 0x10
 mat 1
+
 refs 4
 2222 0 0
 2217 0 0
@@ -28551,6 +28555,7 @@ SURF 0x10
 mat 1
 refs 4
 2449 0 0
+
 2473 0 0
 2474 0 0
 2442 0 0
@@ -32027,6 +32032,7 @@ refs 4
 2974 0 0
 2973 0 0
 SURF 0x10
+
 mat 1
 refs 4
 198 0 0
@@ -45061,6 +45067,7 @@ refs 4
 4873 0 0
 4865 0 0
 SURF 0x10
+
 mat 1
 refs 4
 4879 0 0
@@ -90466,6 +90473,7 @@ refs 4
 1150 0 0
 SURF 0x30
 mat 4
+
 refs 4
 1144 0 0
 1142 0 0
