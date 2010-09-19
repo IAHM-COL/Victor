@@ -190,21 +190,6 @@ Started Feb 2009 by Alex Park,
       <electrical>
         <path>Aircraft/victor/Systems/victor-electrical.xml</path>
       </electrical>
-<<<<<<< HEAD
-    </systems>
-
-    <multiplay>
-      <generic>
-        <float n="0" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
-        <float n="1" alias="/controls/doors/cockpit-door-pos-norm"/>
-        <float n="2" alias="/controls/doors/bb-door-pos-norm"/>
-        <float n="3" alias="/controls/doors/chute-door-pos-norm"/>
-        <float n="4" alias="/controls/chute-pos-norm"/>
-      </generic>
-    </multiplay>
-  </sim>
-
-=======
     </systems>
 
     <multiplay>      
@@ -220,7 +205,6 @@ Started Feb 2009 by Alex Park,
 
   <tanker type="bool">false</tanker>
 
->>>>>>> 31d3f10d87dd9c49230279f2d800a3af60d28a0c
   <consumables>
     <fuel>
       <tank n="0">
@@ -298,14 +282,6 @@ Started Feb 2009 by Alex Park,
     <path>Aircraft/victor/Systems/victor-instrumentation.xml</path>
   </instrumentation>
 
-<<<<<<< HEAD
-  <ai>
-    <scenario>refueling_demo_1</scenario>
-  </ai>
-
-
-=======
->>>>>>> 31d3f10d87dd9c49230279f2d800a3af60d28a0c
   <!-- Key mappings -->
   <input>
     <keyboard>
@@ -379,10 +355,6 @@ Started Feb 2009 by Alex Park,
   <nasal>
     <victor>
       <file>Aircraft/victor/Nasal/victor.nas</file>
-<<<<<<< HEAD
-     <!-- <file>Aircraft/victor/Nasal/aar.nas</file> -->
-=======
->>>>>>> 31d3f10d87dd9c49230279f2d800a3af60d28a0c
     </victor>
     <failures>
       <file>Aircraft/Generic/limits.nas</file>
