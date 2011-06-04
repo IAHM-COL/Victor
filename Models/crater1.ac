@@ -686,7 +686,7 @@ OBJECT poly
 name "Sphere"
 data 6
 Sphere
-texture "E:/sketchup models/Caribbean textures/Monseratt Images/tetxures/lava1.png"
+texture "lava1.png"
 crease 30.000000
 numvert 42
 2.26081 2.24361 -1.50082
