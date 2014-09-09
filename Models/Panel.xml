@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>Panel.ac</path>
+
+ <model>
+  <name>RPM-1</name>
+  <path>Aircraft/victor/Models/Instruments/rpm-1.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.144</y-m>
+   <z-m>0.226</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RPM-2</name>
+  <path>Aircraft/victor/Models/Instruments/rpm-2.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.071</y-m>
+   <z-m>0.226</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RPM-3</name>
+  <path>Aircraft/victor/Models/Instruments/rpm-3.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.071</y-m>
+   <z-m>0.226</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RPM-4</name>
+  <path>Aircraft/victor/Models/Instruments/rpm-4.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.144</y-m>
+   <z-m>0.226</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp-1</name>
+  <path>Aircraft/victor/Models/Instruments/jpt-1.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.144</y-m>
+   <z-m>0.138</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp-2</name>
+  <path>Aircraft/victor/Models/Instruments/jpt-2.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.071</y-m>
+   <z-m>0.138</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp-3</name>
+  <path>Aircraft/victor/Models/Instruments/jpt-3.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.071</y-m>
+   <z-m>0.138</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp-4</name>
+  <path>Aircraft/victor/Models/Instruments/jpt-4.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.144</y-m>
+   <z-m>0.138</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OilPressure-1</name>
+  <path>Aircraft/victor/Models/Instruments/oil-1.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.144</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OilPressure-2</name>
+  <path>Aircraft/victor/Models/Instruments/oil-2.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.071</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OilPressure-3</name>
+  <path>Aircraft/victor/Models/Instruments/oil-3.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.071</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OilPressure-4</name>
+  <path>Aircraft/victor/Models/Instruments/oil-4.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.144</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Left ASI</name>
+  <path>Aircraft/victor/Models/Instruments/asi.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.56</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Left Alt</name>
+  <path>Aircraft/victor/Models/Instruments/altimeter.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.34</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Left HSI</name>
+  <path>Aircraft/victor/Models/Instruments/hsi.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.64</y-m>
+   <z-m>0.035</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Left AI</name>
+  <path>Aircraft/victor/Models/Instruments/ai.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.37</y-m>
+   <z-m>0.035</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Right Alt</name>
+  <path>Aircraft/victor/Models/Instruments/altimeter.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.65</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Right ASI</name>
+  <path>Aircraft/victor/Models/Instruments/asi.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.43</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Right HSI</name>
+  <path>Aircraft/victor/Models/Instruments/hsi.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.64</y-m>
+   <z-m>0.035</z-m>
+  </offsets>
+ </model>
+
+</PropertyList>

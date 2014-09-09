@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<name>victor-config</name>
+	<layout>vbox</layout>
+	<x>-100</x>
+	<y>-100</y>
+  <pref-width>300</pref-width>
+
+  <group>
+		<layout>hbox</layout>
+		<empty><stretch>1</stretch></empty>
+
+		<text>
+			<label>Handley Page Victor Configuration</label>
+		</text>
+
+		<empty><stretch>1</stretch></empty>
+
+		<button>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<legend></legend>
+			<default>1</default>
+			<keynum>27</keynum>
+			<border>2</border>
+
+			<binding>
+				<command>nasal</command>
+				<script>victor.config_dialog.close()</script>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+
+	<hrule><whatever/></hrule>
+
+	<group>
+		<layout>hbox</layout>
+		<empty><pref-width>4</pref-width></empty>
+    <text>
+      <label>Aircraft</label>
+    </text>
+    <combo>
+      <property>/sim/variant</property>
+      <value>XH648</value>
+      <value>XH592</value>
+      <value>XM717</value>
+    </combo>
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+    <text>
+      <label>Armament</label>
+    </text>
+    <combo>
+      <property>/sim/armament</property>
+      <value>WE177A</value>
+      <value>WE177B</value>
+      <value>RedBeard</value>
+      <value>BlueSteel</value>
+      <value>BlackBuck1</value>
+      <value>Shrike</value>
+    </combo>
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Fire</legend>
+      <binding>
+        <command>nasal</command>
+        <script>victor.fire()</script>
+      </binding>
+    </button>
+
+    <empty><pref-width>4</pref-width></empty>
+
+		<button>
+			<halign>center</halign>
+			<legend>Reset Armaments</legend>
+			<binding>
+				<command>nasal</command>
+				<script>victor.reload()</script>
+			</binding>
+		</button>
+
+		<empty><stretch>1</stretch></empty>
+	</group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Open Bomb Bay</legend>
+      <binding>
+        <command>nasal</command>
+        <script>victor.toggle_bb_doors()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Open Crew Door</legend>
+      <binding>
+        <command>nasal</command>
+        <script>victor.toggle_cockpit_door()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Deploy Chute</legend>
+      <binding>
+        <command>nasal</command>
+        <script>victor.toggle_chute()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+<empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Extend Drogues</legend>
+      <binding>
+        <command>nasal</command>
+        <script>victor.toggle_refuelling_drogues()</script>
+      </binding>
+    </button>
+  </group>
+
+  <group>
+		<layout>hbox</layout>
+		<empty><pref-width>4</pref-width></empty>
+
+		<button>
+			<halign>center</halign>
+			<legend>OK</legend>
+			<pref-width>64</pref-width>
+			<pref-height>24</pref-height>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+
+    <button>
+      <halign>center</halign>
+      <legend>Apply</legend>
+      <pref-width>64</pref-width>
+      <pref-height>24</pref-height>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </button>
+
+    <button>
+			<halign>center</halign>
+			<legend>Cancel</legend>
+			<pref-width>64</pref-width>
+			<pref-height>24</pref-height>
+			<binding>
+				<command>nasal</command>
+				<script>victor.config_dialog.close()</script>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+
+		<empty><stretch>1</stretch></empty>
+	</group>
+
+	<empty><pref-height>3</pref-height></empty>
+</PropertyList>
