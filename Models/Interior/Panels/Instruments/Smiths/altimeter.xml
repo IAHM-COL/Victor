@@ -1,0 +1,140 @@
+
+<PropertyList>
+
+ <!-- Smiths Military Flight System - Powered Altimeter -->
+ 
+ <path>altimeter.ac</path>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-std.xml</path>
+ </model>
+ 
+ <!-- Altimeter Needle -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.36</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Pressure Digits -->
+ <animation>
+  <type>textranslate</type>
+  <object-name>hpa.000</object-name>
+  <property>instrumentation/altimeter/setting-hpa</property>
+  <factor>-0.0001</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>hpa.001</object-name>
+  <property>instrumentation/altimeter/setting-hpa</property>
+  <factor>-0.001</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>hpa.002</object-name>
+  <property>instrumentation/altimeter/setting-hpa</property>
+  <factor>-0.01</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>hpa.003</object-name>
+  <property>/instrumentation/altimeter/setting-hpa</property>
+  <factor>-0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Altitude Digits -->
+ <animation>
+  <type>textranslate</type>
+  <object-name>alt.000</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>alt.001</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>alt.002</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>textranslate</type>
+  <object-name>alt.003</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.01</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+  <animation>
+  <type>textranslate</type>
+  <object-name>alt.004</object-name>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.1</factor>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+</PropertyList>

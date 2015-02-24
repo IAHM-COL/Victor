@@ -1,0 +1,206 @@
+
+<PropertyList>
+
+ <!-- Smiths Mk 10 Autopilot -->
+ 
+ <pid-controller>
+  <name>System Command: Pitch</name>
+  <debug>false</debug>
+  <enable>
+   <condition>
+    <or>
+	<equals>
+	 <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	 <value>0</value>
+	</equals>
+	<equals>
+	 <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	 <value>-1</value>
+	</equals>
+   </or>
+   </condition>
+  </enable>
+  <input>
+   <property>/orientation/pitch-deg</property>
+  </input>
+  <reference>
+   <property>/instrumentation/director-horizon[0]/pitch-scale-deg</property>
+   <offset>
+    <property>/instrumentation/director-horizon[0]/pitch-setting-deg</property>
+   </offset>
+  </reference>
+  <output>
+   <property>/systems/mk10-autopilot/commands/elevator</property>
+  </output>
+  <config>
+   <Kp>-0.045</Kp>           
+   <beta>1.0</beta>    <!-- input value weighing factor -->
+   <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+   <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+   <Ti>10.0</Ti>       <!-- integrator time  10.0 -->
+   <Td>0.00001</Td>    <!-- derivator time -->
+   <u_min>-0.5</u_min> <!-- minimum output clamp -->
+   <u_max>0.5</u_max>
+  </config>
+ </pid-controller>
+ 
+  <pid-controller>
+  <name>System Command: Climb</name>
+  <debug>false</debug>
+  <enable>
+   <condition>
+    <property>/instrumentation/mk10-autopilot/glide-switch</property>
+	<equals>
+	 <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	 <value>1</value>
+	</equals>
+   </condition>
+  </enable>
+  <input>
+   <property>/velocities/vertical-speed-fps</property>
+  </input>
+  <reference>
+   <property>/instrumentation/nav[0]/gs-rate-of-climb</property>
+  </reference>
+  <output>
+   <property>/systems/mk10-autopilot/commands/elevator</property>
+  </output>
+  <config>
+   <Kp>-0.003</Kp>           
+   <beta>1.0</beta>    <!-- input value weighing factor -->
+   <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+   <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+   <Ti>10.0</Ti>       <!-- integrator time  10.0 -->
+   <Td>0.00001</Td>    <!-- derivator time -->
+   <u_min>-0.5</u_min> <!-- minimum output clamp -->
+   <u_max>0.5</u_max>
+  </config>
+ </pid-controller>
+ 
+ <pid-controller>
+  <name>System Command: Roll</name>
+  <debug>false</debug>
+  <input>
+   <property>/orientation/roll-deg</property>
+  </input>
+  <reference>
+   <condition>
+    <not><property>/instrumentation/mk10-autopilot/track-switch</property></not>
+   </condition>
+   <property>/instrumentation/mk10-autopilot/bank-selector</property>
+  </reference>
+    <reference>
+   <condition>
+    <property>/instrumentation/mk10-autopilot/track-switch</property>
+   </condition>
+   <property>/instrumentation/director-horizon[0]/bank-pointer-deg</property>
+  </reference>
+  <output>
+   <property>/systems/mk10-autopilot/commands/aileron</property>
+  </output>
+  <config>
+      <Kp>0.02</Kp>      <!-- proportional gain -->
+      <beta>1.0</beta>     <!-- input value weighing factor -->
+      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
+      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
+                           <!-- unfiltered derivative error -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
+      <Td>0.00001</Td>     <!-- derivator time -->
+      <u_min>-0.7</u_min>  <!-- minimum output clamp -->
+      <u_max>0.7</u_max>   <!-- maximum output clamp -->
+   </config>
+  </pid-controller>
+  
+   <pid-controller>
+  <name>System Command: Yaw</name>
+  <debug>false</debug>
+  <input>
+   <property>/orientation/roll-deg</property>
+  </input>
+  <reference>
+   <condition>
+    <not><property>/instrumentation/mk10-autopilot/track-switch</property></not>
+   </condition>
+   <property>/instrumentation/mk10-autopilot/bank-selector</property>
+  </reference>
+    <reference>
+   <condition>
+    <property>/instrumentation/mk10-autopilot/track-switch</property>
+   </condition>
+   <property>/instrumentation/director-horizon[0]/bank-pointer-deg</property>
+  </reference>
+  <output>
+   <property>/systems/mk10-autopilot/commands/rudder</property>
+  </output>
+  <config>
+      <Kp>0.01</Kp>      <!-- proportional gain -->
+      <beta>1.0</beta>     <!-- input value weighing factor -->
+      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
+      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
+                           <!-- unfiltered derivative error -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
+      <Td>0.00001</Td>     <!-- derivator time -->
+      <u_min>-0.75</u_min>  <!-- minimum output clamp -->
+      <u_max>0.75</u_max>   <!-- maximum output clamp -->
+   </config>
+  </pid-controller>
+ 
+ <filter>
+  <name>Rudder Channel Select</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <enable>
+   <condition>
+    <property>/systems/mk10-autopilot/engaged</property>
+    <property>/instrumentation/mk10-autopilot/rudder-channel-switch</property>
+   </condition>
+  </enable>
+  <input>
+   <property>/systems/mk10-autopilot/commands/rudder</property>
+  </input>
+  <output>
+   <property>/controls/flight/rudder</property>
+  </output>
+  <gain>1.0</gain>
+ </filter>
+ 
+  <filter>
+  <name>Aileron Channel Select</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <enable>
+   <condition>
+    <property>/systems/mk10-autopilot/engaged</property>
+    <property>/instrumentation/mk10-autopilot/aileron-channel-switch</property>
+   </condition>
+  </enable>
+  <input>
+   <property>/systems/mk10-autopilot/commands/aileron</property>
+  </input>
+  <output>
+   <property>/controls/flight/aileron</property>
+  </output>
+  <gain>1.0</gain>
+ </filter>
+ 
+  <filter>
+  <name>Elevator Channel Select</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <enable>
+   <condition>
+    <property>/systems/mk10-autopilot/engaged</property>
+    <property>/instrumentation/mk10-autopilot/elevator-channel-switch</property>
+   </condition>
+  </enable>
+  <input>
+   <property>/systems/mk10-autopilot/commands/elevator</property>
+  </input>
+  <output>
+   <property>/controls/flight/elevator</property>
+  </output>
+  <gain>1.0</gain>
+ </filter>
+ 
+
+</PropertyList>

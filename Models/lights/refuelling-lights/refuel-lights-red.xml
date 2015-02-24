@@ -1,0 +1,219 @@
+
+<PropertyList>
+
+ <path>refuel-lights-red.ac</path>
+ 
+  <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <condition>
+    <property>/sim/rendering/rembrandt/enabled</property>
+   </condition>
+   <object-name>red.left.aura</object-name>
+   <object-name>red.right.aura</object-name>
+  </effect>
+ 
+ <animation>
+    <type>light</type>
+    <light-type>point</light-type>
+    <object-name>red.left.beam</object-name>
+	<nopreview/>
+    <position>
+      <x> 0.04173 </x>
+      <y> -0.78388</y>
+      <z> 0.09222 </z>
+    </position>
+    <ambient>
+      <r>  0.2 </r>
+      <g>  0.1 </g>
+      <b>  0.1 </b>
+      <a>  0.8 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.5 </r>
+      <g>  0.2 </g>
+      <b>  0.2 </b>
+      <a>  0.9 </a>
+    </diffuse>
+    <specular>
+      <r>  0.8 </r>
+      <g>  0.3 </g>
+      <b>  0.3 </b>
+      <a>  1.0 </a>
+    </specular>
+     <dim-factor>
+      <property>sim/model/lights/refuelling-lights-centre/red/illumination</property>
+      <factor>1.0</factor>
+	  <offset>0</offset>
+      <min>0</min>
+      <max>1.0</max>
+   </dim-factor>
+   <attenuation>
+     <c>1</c>
+     <l>1</l>
+     <q>1</q>
+   </attenuation>
+   <near-m>0.01</near-m>
+   <far-m>5</far-m>
+ </animation>
+ 
+  <animation>
+    <type>light</type>
+    <light-type>point</light-type>
+    <object-name>red.right.beam</object-name>
+	<nopreview/>
+    <position>
+      <x> 0.04173 </x>
+      <y> 0.73201</y>
+      <z> 0.09222 </z>
+    </position>
+    <ambient>
+      <r>  0.2 </r>
+      <g>  0.1 </g>
+      <b>  0.1 </b>
+      <a>  0.8 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.5 </r>
+      <g>  0.2 </g>
+      <b>  0.2 </b>
+      <a>  0.9 </a>
+    </diffuse>
+    <specular>
+      <r>  0.8 </r>
+      <g>  0.3 </g>
+      <b>  0.3 </b>
+      <a>  1.0 </a>
+    </specular>
+     <dim-factor>
+      <property>sim/model/lights/refuelling-lights-centre/red/illumination</property>
+      <factor>1.1</factor>
+	  <offset>0</offset>
+      <min>0</min>
+      <max>1.0</max>
+   </dim-factor>
+   <attenuation>
+     <c>1</c>
+     <l>1</l>
+     <q>1</q>
+   </attenuation>
+   <near-m>0.1</near-m>
+   <far-m>10</far-m>
+ </animation>
+ 
+  <animation>
+  <type>dist-scale</type>
+  <object-name>red.left.aura</object-name>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>1</dep>
+   </entry>
+   <entry>
+    <ind>500</ind>
+    <dep>5</dep>
+   </entry>
+   <entry>
+    <ind>4000</ind>
+    <dep>12</dep>
+   </entry>
+  </interpolation>
+  <centre>
+   <x-m>0.02045</x-m>
+   <y-m>-0.63952</y-m>
+   <z-m>0.08691</z-m>
+  </centre>
+ </animation>
+ 
+   <animation>
+  <type>dist-scale</type>
+  <object-name>red.right.aura</object-name>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>1</dep>
+   </entry>
+   <entry>
+    <ind>500</ind>
+    <dep>5</dep>
+   </entry>
+   <entry>
+    <ind>4000</ind>
+    <dep>12</dep>
+   </entry>
+  </interpolation>
+  <centre>
+   <x-m>0.02045</x-m>
+   <y-m>0.63952</y-m>
+   <z-m>0.08691</z-m>
+  </centre>
+ </animation>
+ 
+ <animation>
+  <type>flash</type>
+  <object-name>red.left.aura</object-name>
+  <offset>0.1</offset>
+  <centre>
+   <x-m>0.02045</x-m>
+   <y-m>-0.63952</y-m>
+   <z-m>0.08691</z-m>
+  </centre>
+  <axis>
+   <x>1</x>
+   <y>-0.15</y>
+   <z>0.4</z>
+  </axis>
+  <power>1</power>
+ </animation>
+ 
+  <animation>
+  <type>flash</type>
+  <object-name>red.right.aura</object-name>
+  <offset>0.1</offset>
+  <centre>
+   <x-m>0.02045</x-m>
+   <y-m>0.63952</y-m>
+   <z-m>0.08691</z-m>
+  </centre>
+  <axis>
+   <x>1</x>
+   <y>0.15</y>
+   <z>0.4</z>
+  </axis>
+  <power>1</power>
+ </animation>
+ 
+ <animation>
+  <object-name>red.left.aura</object-name>
+  <object-name>red.right.aura</object-name>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>blend</type>
+   <object-name>red.left.aura</object-name>
+   <object-name>red.right.aura</object-name>
+  <property>sim/model/lights/refuelling-lights-centre/red/illumination</property>
+  <factor>-1.0</factor>
+  <offset>1.0</offset>
+  <min>0.75</min>
+  <max>1.0</max>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>red.left</object-name>
+  <object-name>red.right</object-name>
+   <object-name>red.left.aura</object-name>
+   <object-name>red.right.aura</object-name>
+  <emission>
+    <red>1.0</red>
+    <green>1</green>
+    <blue>0.8</blue>
+	<factor-prop>sim/model/lights/refuelling-lights-centre/red/illumination</factor-prop>
+  </emission>
+  
+ </animation>
+
+</PropertyList>

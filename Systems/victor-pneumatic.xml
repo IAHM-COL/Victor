@@ -1,0 +1,114 @@
+
+<PropertyList>
+
+ <filter>
+  <name>Engine 1 Bleed Air</name>
+  <type>gain</type>
+  <input>
+   <property>/engines/engine[0]/rpm</property>
+  </input>
+  <output>
+   <property>/engines/engine[0]/bleed-air</property>
+  </output>
+  <gain>1</gain>
+  <min>0</min>
+  <max>39.8</max>
+ </filter>
+ 
+ <filter>
+  <name>Engine 2 Bleed Air</name>
+  <type>gain</type>
+  <input>
+   <property>/engines/engine[1]/rpm</property>
+  </input>
+  <output>
+   <property>/engines/engine[1]/bleed-air</property>
+  </output>
+  <gain>1</gain>
+  <min>0</min>
+  <max>39.8</max>
+ </filter>
+ 
+ <filter>
+  <name>Engine 3 Bleed Air</name>
+  <type>gain</type>
+  <input>
+   <property>/engines/engine[2]/rpm</property>
+  </input>
+  <output>
+   <property>/engines/engine[2]/bleed-air</property>
+  </output>
+  <gain>1</gain>
+  <min>0</min>
+  <max>39.8</max>
+ </filter>
+ 
+ <filter>
+  <name>Engine 4 Bleed Air</name>
+  <type>gain</type>
+  <input>
+   <property>/engines/engine[3]/rpm</property>
+  </input>
+  <output>
+   <property>/engines/engine[3]/bleed-air</property>
+  </output>
+  <gain>1</gain>
+  <min>0</min>
+  <max>39.8</max>
+ </filter>
+  
+ <filter>
+  <name>AAPP Bleed Air</name>
+  <type>gain</type>
+  <input>
+   <property>/engines/engine[4]/rpm</property>
+  </input>
+  <output>
+   <property>/engines/engine[4]/bleed-air</property>
+  </output>
+  <gain>1.55</gain>
+  <min>0</min>
+  <max>39.8</max>
+ </filter>
+ 
+ <filter>
+  <name>Air Starter System PSI</name>
+  <type>gain</type>
+  <input>
+   <property>/engines/engine[4]/bleed-air</property>
+  </input>
+  <output>
+   <property>/systems/air/air-start-system-psi</property>
+  </output>
+  <gain>1</gain>
+  <min>0</min>
+  <max>39.8</max>
+ </filter>
+ 
+  <filter>
+  <name>Air Starter System Normal</name>
+  <type>gain</type>
+  <input>
+   <property>/engines/engine[0]/rpm</property>
+  </input>
+  <input>
+   <property>/engines/engine[1]/rpm</property>
+  </input>
+  <input>
+   <property>/engines/engine[2]/rpm</property>
+  </input>
+  <input>
+   <property>/engines/engine[3]/rpm</property>
+  </input>
+  <input>
+   <property>/engines/engine[4]/rpm</property>
+  </input>
+  <output>
+   <property>/systems/air/air-start-system-norm</property>
+  </output>
+  <gain>0.25</gain>
+  <min>0</min>
+  <max>1</max>
+ </filter>
+
+</PropertyList>

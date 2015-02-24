@@ -1,0 +1,84 @@
+
+<PropertyList>
+
+ <path>desk-lamp.ac</path>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>LampBody</object-name>
+  <object-name>beam</object-name>
+  <property>/instrumentation/illumination/table-lamp/AEO/position-y</property>
+  <factor>0.5</factor>
+   <axis>
+    <x>-1</x>
+   </axis>
+   <center>
+	<x-m>1</x-m>
+	<y-m>0</y-m>
+	<z-m>0</z-m>
+  </center>
+ </animation>
+ 
+  <animation> 
+  <type>rotate</type>
+  <object-name>LampBody</object-name>
+  <object-name>beam</object-name>
+  <object-name>AEONavLamp</object-name>
+  <property>/instrumentation/illumination/table-lamp/AEO/position-x</property>
+  <factor>0.5</factor>
+   <axis>
+    <y>-1</y>
+   </axis>
+   <center>
+	<x-m>1</x-m>
+	<y-m>0</y-m>
+	<z-m>0</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+   <type>light</type>
+   <light-type>spot</light-type>
+   <name>AEONavLamp</name>
+   <object-name>beam</object-name>
+   <nopreview/>
+   <position>
+     <x>-0.0063</x>
+     <y>0</y>
+     <z>-0.061</z>
+   </position>
+   <direction>
+     <x>0</x>
+     <y>0</y>
+     <z>-0.75</z>
+   </direction>
+   <ambient>
+     <r>0.03</r>
+     <g>0.03</g>
+     <b>0.03</b>
+     <a>1.0</a>
+   </ambient>
+   <diffuse>
+     <r>0.7</r>
+     <g>0.7</g>
+     <b>0.6</b>
+     <a>1.0</a>
+   </diffuse>
+   <specular>
+     <r>0.7</r>
+     <g>0.7</g>
+     <b>0.7</b>
+     <a>1.0</a>
+   </specular>
+   <attenuation>
+     <c>1.0</c>
+     <l>0.002</l>
+     <q>0.00005</q>
+   </attenuation>
+   <exponent>15.0</exponent>
+   <cutoff>39</cutoff>
+   <near-m>0.1</near-m>
+   <far-m>4</far-m>
+ </animation>
+ 
+</PropertyList>

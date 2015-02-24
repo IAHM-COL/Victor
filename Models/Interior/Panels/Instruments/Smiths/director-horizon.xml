@@ -1,0 +1,154 @@
+<PropertyList>
+
+ <!-- Smiths Military Flight System - Director Horizon -->
+ 
+ <path>director-horizon.ac</path>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-large.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <z-m>0.0</z-m>
+  </offsets>
+ </model>
+ 
+  <!-- Horizon Indicator -->
+ <animation>
+  <type>rotate</type>
+  <object-name>horizon</object-name>
+  <property>orientation/roll-deg</property>
+  <factor>1</factor>
+  <center>
+   <x-m>0.04832</x-m>
+   <y-m>0</y-m>
+   <z-m>0.001524</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>translate</type>
+  <object-name>ownac</object-name>
+  <property>orientation/pitch-deg</property>
+  <factor>0.00075</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>bank-pointer</object-name>
+  <property>instrumentation/director-horizon[0]/bank-pointer-deg</property>
+  <factor>1</factor>
+  <center>
+   <x-m>0.04832</x-m>
+   <y-m>0</y-m>
+   <z-m>0.001524</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>pitch-pointer</object-name>
+  <property>/instrumentation/director-horizon[0]/pitch-pointer</property>
+  <factor>0.011</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>pitch-pointer</object-name>
+  <object-name>pitch-scale</object-name>
+  <property>/instrumentation/director-horizon[0]/pitch-setting-deg</property>
+  <factor>-0.00075</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>knob.down</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/director-horizon/pitch-setting-deg</property>
+	<step>-1</step>
+	<min>-10</min>
+	<max>20</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>knob.up</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/director-horizon/pitch-setting-deg</property>
+	<step>1</step>
+	<min>-10</min>
+	<max>20</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <!-- Flags -->
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>flag.beam</object-name>
+  <property>/instrumentation/director-horizon/flags/beam-flag-pos-norm</property>
+  <factor>-90</factor>
+  <center>
+   <x-m>0.001316</x-m>
+   <y-m>-0.04705</y-m>
+   <z-m>0.00986</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>flag.gp</object-name>
+  <property>/instrumentation/director-horizon/flags/gp-flag-pos-norm</property>
+  <factor>90</factor>
+  <center>
+   <x-m>0.001316</x-m>
+   <y-m>0.04453</y-m>
+   <z-m>0.00986</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ 
+</PropertyList>

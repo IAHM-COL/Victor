@@ -1,0 +1,106 @@
+
+<PropertyList>
+ 
+ <filter>
+  <name>Nosewheel Steering</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <condition>
+    <property>/preferences/couple-nosewheel-to-rudder</property>
+   </condition>
+   <property>/controls/flight/rudder</property>
+   <scale>-1</scale>
+  </input>
+  <input>
+   <condition>
+    <not>
+	 <property>/preferences/couple-nosewheel-to-rudder</property>
+	</not>
+   </condition>
+   <property>/controls/gear/nosewheel-steering</property>
+  </input>
+  <output>
+   <property>/controls/gear/steering-norm</property>
+  </output>
+  <gain>
+   <value>1.0</value>
+  </gain>
+ </filter>
+ 
+ <!-- Not ready yet 
+ 
+ <filter>
+  <name>Differential Braking Left</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <property>/controls/flight/rudder</property>
+   <scale>-1</scale>
+  </input>
+  <output>
+   <property>/controls/gear/brake-left</property>
+  </output>
+  <gain>
+   <value>1.0</value>
+  </gain>
+  <min>0</min>
+  <max>1</max>
+ </filter>
+ 
+ <filter>
+  <name>Differential Braking Right</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <property>/controls/flight/rudder</property>
+   <scale>1</scale>
+  </input>
+  <output>
+   <property>/controls/gear/brake-right</property>
+  </output>
+  <gain>
+   <value>1.0</value>
+  </gain>
+  <min>0</min>
+  <max>1</max>
+ </filter>
+ 
+ <-->
+ 
+ <filter>
+  <name>Damping</name>
+  <debug>false</debug>
+  <type>reciprocal</type>
+  <input>
+   <property>/velocities/airspeed-kt</property>
+   <offset>120</offset>
+  </input>
+  <output>
+   <property>/systems/damping/damping-scale</property>
+  </output>
+  <gain>190</gain>
+  <u_min>0.1</u_min>
+  <u_max>1.0</u_max>
+ </filter>
+ 
+ <filter>
+  <name>Pitch Damping</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <property>/systems/PFCUs/port-elevator</property>
+   <property>/systems/PFCUs/starboard-elevator</property>
+   <scale>1</scale>
+  </input>
+  <output>
+   <property>/systems/damping/elevator</property>
+  </output>
+  <gain>
+   <property>/systems/damping/damping-scale</property>
+  </gain>
+  <min>0</min>
+  <max>1</max>
+ </filter>
+
+</PropertyList>

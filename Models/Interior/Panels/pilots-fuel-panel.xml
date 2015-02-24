@@ -1,0 +1,226 @@
+<PropertyList>
+ 
+ <path>pilots-fuel-panel.ac</path>
+ 
+ <effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+  <condition>
+   <property>/sim/rendering/rembrandt/enabled</property>
+  </condition>
+  <object-name>wingrefuel.port.lens</object-name>
+  <object-name>wingrefuel.stbd.lens</object-name>
+ </effect>
+ 
+ <model>
+  <name>Floods</name>
+  <path>Aircraft/victor/Models/Interior/Panels/pilots-fuel-panel-floods.xml</path>
+ </model>
+ 
+ <model>
+  <name>Mk10 Autopilot</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/mk10-ap.xml</path>
+  <offsets>
+   <x-m>0.65</x-m>
+   <y-m>0</y-m>
+   <z-m>-</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>MSF Selector</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/mfs-selector.xml</path>
+  <offsets>
+   <x-m>0.625</x-m>
+   <y-m>-0.125</y-m>
+   <z-m>-</z-m>
+  </offsets>
+ </model>
+ 
+ <animation>
+   <type>light</type>
+   <light-type>point</light-type>
+   <name>FuselageGlow</name>
+   <object-name>glow.fuselage</object-name>
+   <nopreview/>
+   <position>
+     <x>0.01775</x>
+     <y>0.01344</y>
+     <z>0.005</z>
+   </position>
+   <ambient>
+     <r>0.00</r>
+     <g>0.00</g>
+     <b>0.00</b>
+     <a>1.0</a>
+   </ambient>
+   <diffuse>
+     <r>0.75</r>
+     <g>0.75</g>
+     <b>0.4</b>
+     <a>1.0</a>
+   </diffuse>
+   <specular>
+     <r>0.8</r>
+     <g>0.8</g>
+     <b>0.5</b>
+     <a>1.0</a>
+   </specular>
+   <attenuation>
+     <c>1</c>
+     <l>0.999</l>
+     <q>0.999</q>
+   </attenuation>
+   <dim-factor>
+      <property>/controls/rotary/AEOs/generator-panel-dimmer</property>
+      <offset>-0.2</offset>
+	  <factor>1.0</factor>
+      <min>0</min>
+      <max>1.0</max>
+   </dim-factor>
+
+   <cutoff>2</cutoff>
+   <near-m>0.1</near-m>
+   <far-m>0.2</far-m>
+ </animation>
+ 
+ <!-- Fuel Gauges -->
+ 
+ <!-- animation> 
+  <type>rotate</type>
+  <object-name>gauge.fuselage.needle</object-name>
+  <property>/instrumentation/fuel-panel/fuel-gauges/fuselage-lbs</property>
+  <factor>300</factor>
+   <axis>
+    <z>-1</z>
+   </axis>
+   <center>
+	<x-m>0.0325</x-m>
+	<y-m>0</y-m>
+	<z-m>-0.02275</z-m>
+  </center>
+ </animation -->
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>gauge.fuselage.needle</object-name>
+  <property>/consumables/fuel/total-fuel-lbs</property>
+  <factor>0.0056</factor>
+   <axis>
+    <z>-1</z>
+   </axis>
+   <center>
+	<x-m>0.0325</x-m>
+	<y-m>0</y-m>
+	<z-m>-0.02275</z-m>
+  </center>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>switch.lpcock.1</object-name>
+  <property>/controls/engines/engine[0]/LP-cock</property>
+  <factor>50</factor>
+   <axis>
+    <y>-1</y>
+   </axis>
+   <center>
+	<x-m>0.3223</x-m>
+	<y-m>-0.17</y-m>
+	<z-m>-0.01</z-m>
+  </center>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>switch.lpcock.2</object-name>
+  <property>/controls/engines/engine[1]/LP-cock</property>
+  <factor>50</factor>
+   <axis>
+    <y>-1</y>
+   </axis>
+   <center>
+	<x-m>0.3223</x-m>
+	<y-m>-0.14</y-m>
+	<z-m>-0.01</z-m>
+  </center>
+ </animation>
+ 
+  <animation> 
+  <type>rotate</type>
+  <object-name>switch.lpcock.3</object-name>
+  <property>/controls/engines/engine[2]/LP-cock</property>
+  <factor>50</factor>
+   <axis>
+    <y>-1</y>
+   </axis>
+   <center>
+	<x-m>0.3223</x-m>
+	<y-m>0.14</y-m>
+	<z-m>-0.01</z-m>
+  </center>
+ </animation>
+ 
+  <animation> 
+  <type>rotate</type>
+  <object-name>switch.lpcock.4</object-name>
+  <property>/controls/engines/engine[3]/LP-cock</property>
+  <factor>50</factor>
+   <axis>
+    <y>-1</y>
+   </axis>
+   <center>
+	<x-m>0.3223</x-m>
+	<y-m>0.17</y-m>
+	<z-m>-0.01</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>switch.lpcock.1</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/engines/engine[0]/LP-cock</property>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <object-name>switch.lpcock.2</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/engines/engine[1]/LP-cock</property>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <object-name>switch.lpcock.3</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/engines/engine[2]/LP-cock</property>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <object-name>switch.lpcock.4</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/engines/engine[3]/LP-cock</property>
+   </binding>
+  </action>
+ </animation>
+ 
+</PropertyList>

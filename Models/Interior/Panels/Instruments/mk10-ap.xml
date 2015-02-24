@@ -1,0 +1,360 @@
+<PropertyList>
+
+ <!-- Smiths Mk 10 Autopilot -->
+ 
+ <path>mk10-ap.ac</path>
+ 
+  <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <condition>
+    <property>/sim/rendering/rembrandt/enabled</property>
+   </condition>
+  <object-name>ready.lens</object-name>
+  <object-name>in.lens</object-name>
+  </effect>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>switch.rudchan</object-name>
+  <property>/instrumentation/mk10-autopilot/rudder-channel-switch</property>
+  <factor>25</factor>
+   <axis>
+    <y>-1</y>
+   </axis>
+   <center>
+	<x-m>-0.07187</x-m>
+	<y-m>-0.01661</y-m>
+	<z-m>0.003575</z-m>
+  </center>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>switch.ailchan</object-name>
+  <property>/instrumentation/mk10-autopilot/aileron-channel-switch</property>
+  <factor>25</factor>
+   <axis>
+    <y>-1</y>
+   </axis>
+   <center>
+	<x-m>-0.07187</x-m>
+	<y-m>-0.00007</y-m>
+	<z-m>0.003575</z-m>
+  </center>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>switch.elchan</object-name>
+  <property>/instrumentation/mk10-autopilot/elevator-channel-switch</property>
+  <factor>25</factor>
+   <axis>
+    <y>-1</y>
+   </axis>
+   <center>
+	<x-m>-0.07187</x-m>
+	<y-m>0.01682</y-m>
+	<z-m>0.003575</z-m>
+  </center>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>bank.select</object-name>
+  <property>/instrumentation/mk10-autopilot/bank-selector</property>
+  <factor>3</factor>
+   <axis>
+    <z>-1</z>
+   </axis>
+   <center>
+	<x-m>0</x-m>
+	<y-m>0</y-m>
+	<z-m>0</z-m>
+  </center>
+ </animation>
+ 
+ <animation> 
+  <type>translate</type>
+  <object-name>engage</object-name>
+  <property>/instrumentation/mk10-autopilot/engaged-switch</property>
+  <factor>0.006</factor>
+   <axis>
+    <z>1</z>
+   </axis>
+ </animation>
+ 
+ <animation> 
+  <type>translate</type>
+  <object-name>power</object-name>
+  <property>/instrumentation/mk10-autopilot/power-switch</property>
+  <factor>0.006</factor>
+   <axis>
+    <z>1</z>
+   </axis>
+ </animation>
+ 
+ <animation> 
+  <type>translate</type>
+  <object-name>track</object-name>
+  <property>/instrumentation/mk10-autopilot/track-switch</property>
+  <factor>0.006</factor>
+   <axis>
+    <z>1</z>
+   </axis>
+ </animation>
+ 
+  <animation> 
+  <type>translate</type>
+  <object-name>glide</object-name>
+  <property>/instrumentation/mk10-autopilot/glide-switch</property>
+  <factor>0.006</factor>
+   <axis>
+    <z>1</z>
+   </axis>
+ </animation>
+  
+ <animation>
+  <type>pick</type>
+  <object-name>switch.rudchan</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/instrumentation/mk10-autopilot/rudder-channel-switch</property>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <object-name>switch.ailchan</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/instrumentation/mk10-autopilot/aileron-channel-switch</property>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <object-name>switch.elchan</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/instrumentation/mk10-autopilot/elevator-channel-switch</property>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <object-name>power</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/instrumentation/mk10-autopilot/power-switch</property>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>engage</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/instrumentation/mk10-autopilot/engaged-switch</property>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>track</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/instrumentation/mk10-autopilot/track-switch</property>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>glide</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/instrumentation/mk10-autopilot/glide-switch</property>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>bank.0</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(0);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>bank.10</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(10);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>bank.-10</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(-10);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>bank.20</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(20);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>bank.-20</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(-20);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>bank.30</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(30);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>bank.-30</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(-30);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <object-name>bank.40</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(40);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>bank.-40</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>mk10ap.bankselect(-40);</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <!-- Pillar Lights -->
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light-mk10ap.xml</path>
+  <offsets>
+   <x-m>-0.0476</x-m>
+   <y-m>-0.0389</y-m>
+   <z-m>0.012</z-m>
+   <heading-deg>120</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light-mk10ap.xml</path>
+  <offsets>
+   <x-m>-0.05276</x-m>
+   <y-m>0</y-m>
+   <z-m>0.012</z-m>
+   <heading-deg>0</heading-deg>
+  </offsets>
+ </model>
+ 
+  <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light-mk10ap.xml</path>
+  <offsets>
+   <x-m>-0.0476</x-m>
+   <y-m>0.0384</y-m>
+   <z-m>0.012</z-m>
+   <heading-deg>-120</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light-mk10ap.xml</path>
+  <offsets>
+   <x-m>0.0543</x-m>
+   <y-m>-0.03496</y-m>
+   <z-m>0.012</z-m>
+   <heading-deg>160</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light-mk10ap.xml</path>
+  <offsets>
+   <x-m>0.0543</x-m>
+   <y-m>0.03371</y-m>
+   <z-m>0.012</z-m>
+   <heading-deg>-160</heading-deg>
+  </offsets>
+ </model>
+ 
+</PropertyList>

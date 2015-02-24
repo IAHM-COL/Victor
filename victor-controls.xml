@@ -1,0 +1,163 @@
+
+<PropertyList>
+
+ <!-- Flight Panel -->
+ 
+  <buttons>
+   <warning-lamps>
+    <PFCUs>
+	 <aileron-port type="bool" num="0">false</aileron-port>
+	 <aileron-stbd type="bool" num="0">false</aileron-stbd>
+	 <aileron-port type="bool" num="1">false</aileron-port>
+	 <aileron-stbd type="bool" num="1">false</aileron-stbd>
+	 <elevator-port type="bool" num="0">false</elevator-port>
+	 <elevator-stbd type="bool" num="0">false</elevator-stbd>
+	 <elevator-port type="bool" num="1">false</elevator-port>
+	 <elevator-stbd type="bool" num="1">false</elevator-stbd>
+	 <rudder-port type="bool" num="0">false</rudder-port>
+	 <rudder-stbd type="bool" num="0">false</rudder-stbd>
+	</PFCUs>
+   </warning-lamps>
+   <overhead>
+    <engine-starter type="bool">false</engine-starter>
+   </overhead>
+  </buttons>
+  
+  <comm n="0">
+   <switches>
+    <freq-1 type="int">0</freq-1>
+	<freq-2 type="int">0</freq-2>
+	<freq-3 type="int">0</freq-3>
+	<freq-4 type="int">0</freq-4>
+	<freq-5 type="int">0</freq-5>
+   </switches>
+  </comm>
+  
+  <comm n="1">
+   <switches>
+    <freq-1 type="int">0</freq-1>
+	<freq-2 type="int">0</freq-2>
+	<freq-3 type="int">0</freq-3>
+	<freq-4 type="int">0</freq-4>
+	<freq-5 type="int">0</freq-5>
+   </switches>
+  </comm>
+  
+  <electrical>
+   <circuit-breakers>
+    <a-breaker num="0" type="bool">true</a-breaker>
+	<a-breaker num="1" type="bool">true</a-breaker>
+	<a-breaker num="2" type="bool">true</a-breaker>
+	<a-breaker num="3" type="bool">true</a-breaker>
+	<s-breaker num="0" type="bool">true</s-breaker>
+	<s-breaker num="1" type="bool">true</s-breaker>
+	<s-breaker num="2" type="bool">true</s-breaker>
+	<s-breaker num="3" type="bool">true</s-breaker>
+	<adf type="bool">true</adf>
+	<port-synchronising-busbar type="bool">true</port-synchronising-busbar>
+	<starboard-synchronising-busbar type="bool">true</starboard-synchronising-busbar>
+	<port-lv-busbar type="bool">true</port-lv-busbar>
+	<starboard-lv-busbar type="bool">true</starboard-lv-busbar>
+	<parallel-mv-busbars type="bool">false</parallel-mv-busbars>
+	<parallel-lv-busbars type="bool">true</parallel-lv-busbars>
+	<ground-power-lv type="bool">false</ground-power-lv>
+	<ground-power-mv type="bool">false</ground-power-mv>
+	<port-lv-battery type="bool">true</port-lv-battery>
+	<starboard-lv-battery type="bool">true</starboard-lv-battery>
+	<uvhf-radio n="0" type="bool">true</uvhf-radio>
+	<uvhf-radio n="1" type="bool">true</uvhf-radio>
+   </circuit-breakers>
+   <relays>
+    <AAPP type="bool">false</AAPP>
+	<AAPP-starter-motor type="bool">true</AAPP-starter-motor>
+   </relays>
+  </electrical>
+  
+  <engines>
+   <AAPP>
+    <throttle type="double">0.105</throttle>
+   </AAPP>
+   <throttle-gate type="bool">true</throttle-gate>
+  </engines>
+  
+  <flight>
+   <flaps>0.65</flaps>
+  </flight>
+     
+  <rotary>
+   <pilots>
+    <coaming-panel-dimmer-left type="double">0.4</coaming-panel-dimmer-left>
+	<coaming-panel-dimmer-right type="double">0.4</coaming-panel-dimmer-right>
+	<fuel-panel-floods-dimmer type="double">0.5</fuel-panel-floods-dimmer>
+	<overhead-panel-floods-dimmer type="double">0.5</overhead-panel-floods-dimmer>
+   </pilots>
+   <AEOs>
+    <generator-panel-dimmer type="double">0.5</generator-panel-dimmer>
+   </AEOs>
+  </rotary>
+  
+  <station-box>
+    <adf type="bool">false</adf>
+	<ils type="bool">false</ils>
+	<rt1 type="bool">false</rt1>
+	<rt2 type="bool">false</rt2>
+	<volume type="double">0.5</volume>
+	<xmit type="int">1</xmit>
+  </station-box>
+  
+  <switches>
+   <pilots>
+    <powered-surfaces>
+	 <aileron-port type="bool" num="0">true</aileron-port>
+	 <aileron-stbd type="bool" num="0">true</aileron-stbd>
+	 <aileron-port type="bool" num="1">true</aileron-port>
+	 <aileron-stbd type="bool" num="1">true</aileron-stbd>
+	 <elevator-port type="bool" num="0">true</elevator-port>
+	 <elevator-stbd type="bool" num="0">true</elevator-stbd>
+	 <elevator-port type="bool" num="1">true</elevator-port>
+	 <elevator-stbd type="bool" num="1">true</elevator-stbd>
+	 <rudder-port type="bool" num="0">true</rudder-port>
+	 <rudder-stbd type="bool" num="0">true</rudder-stbd>
+	</powered-surfaces>
+   <lights>
+    <external-lights-master type="bool">true</external-lights-master>
+	<nav-lights type="bool">false</nav-lights>
+	<strobes type="bool">false</strobes>
+	<beacon type="bool">false</beacon>
+	<landing-light-port type="bool">true</landing-light-port>
+	<landing-light-starboard type="bool">true</landing-light-starboard>
+	<landing-lights-extend type="int">0</landing-lights-extend>
+	<storm-lights type="bool">false</storm-lights>
+   </lights> 
+   </pilots>
+   
+   <overhead>
+    <engine-ignition type="bool">false</engine-ignition>
+	<engine-start-master type="int">2</engine-start-master> <!-- Defaults to Ground -->
+	<engine-starter-button type="bool">true</engine-starter-button>
+	<engine-select num="0" type="bool">false</engine-select>
+	<engine-select num="1" type="bool">false</engine-select>
+	<engine-select num="2" type="bool">false</engine-select>
+	<engine-select num="3" type="bool">false</engine-select>   
+   </overhead>
+
+  
+   <AEOs>
+    <engine-alternator num="0" type="double">0</engine-alternator>
+	<engine-alternator num="1" type="double">0</engine-alternator>
+    <engine-alternator num="2" type="double">0</engine-alternator>
+    <engine-alternator num="3" type="double">0</engine-alternator>
+	<AAPP-load type="bool">false</AAPP-load>
+	<AAPP-intake type="bool">false</AAPP-intake>
+	<AAPP-start type="bool">false</AAPP-start>
+	<AAPP-start-cover type="double">0</AAPP-start-cover>
+	<lights>
+	 <refuelling-centre type="int">1</refuelling-centre>
+	 <refuelling-port type="int">0</refuelling-port>
+	 <refuelling-starboard type="int">0</refuelling-starboard>
+	</lights>
+   </AEOs>
+   
+  </switches>
+  
+</PropertyList>

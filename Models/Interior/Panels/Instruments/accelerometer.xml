@@ -1,0 +1,30 @@
+
+<PropertyList>
+
+ <path>accelerometer.ac</path>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-std.xml</path>
+  <offsets>
+   <z-m>-0.01</z-m>
+  </offsets>
+ </model>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>accelerometer.needle</object-name>
+  <property>/accelerations/pilot-gdamped</property>
+  <factor>45</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+</PropertyList>

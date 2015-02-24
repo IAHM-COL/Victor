@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+
+ <electrical>
+
+  <path></path> <!-- Important: clearing the path disables the default Flightgear system -->
+
+  <!-- Suppliers -->
+
+  <component>
+    <kind type="string">alternator</kind>
+    <name type="string">Engine 1 Generator</name>
+    <volts type="float">200</volts>
+    <prop type="string">/systems/electrical/suppliers/engine-alternator[0]</prop>
+	<frequency type="float">400</frequency>
+	<freq-prop type="string">/systems/electrical/suppliers/alternator-frequency[0]</freq-prop>
+    <source-prop type="string">/engines/engine[0]/rpm</source-prop>
+    <source-min type="float">30</source-min>
+  </component>
+  
+  <component>
+    <kind type="string">alternator</kind>
+    <name type="string">Engine 2 Generator</name>
+    <volts type="float">200</volts>
+    <prop type="string">/systems/electrical/suppliers/engine-alternator[1]</prop>
+	<frequency type="float">400</frequency>
+	<freq-prop type="string">/systems/electrical/suppliers/alternator-frequency[1]</freq-prop>
+    <source-prop type="string">/engines/engine[1]/rpm</source-prop>
+    <source-min type="float">30</source-min>
+  </component>
+  
+  <component>
+    <kind type="string">alternator</kind>
+    <name type="string">Engine 3 Generator</name>
+    <volts type="float">200</volts>
+    <prop type="string">/systems/electrical/suppliers/engine-alternator[2]</prop>
+    <frequency type="float">400</frequency>
+	<freq-prop type="string">/systems/electrical/suppliers/alternator-frequency[2]</freq-prop>
+    <source-prop type="string">/engines/engine[2]/rpm</source-prop>
+    <source-min type="float">30</source-min>
+  </component>
+  
+  <component>
+    <kind type="string">alternator</kind>
+    <name type="string">Engine 4 Generator</name>
+    <volts type="float">200</volts>
+    <prop type="string">/systems/electrical/suppliers/engine-alternator[3]</prop>
+	<frequency type="float">400</frequency>
+	<freq-prop type="string">/systems/electrical/suppliers/alternator-frequency[3]</freq-prop>
+    <source-prop type="string">/engines/engine[3]/rpm</source-prop>
+    <source-min type="float">30</source-min>
+  </component>
+  
+  <component>
+    <kind type="string">alternator</kind>
+    <name type="string">AAPP Generator</name>
+    <volts type="float">200</volts>
+    <prop type="string">/systems/electrical/suppliers/AAPP-alternator</prop>
+	<frequency type="float">400</frequency>
+	<freq-prop type="string">/systems/electrical/suppliers/AAP-alternator-frequency</freq-prop>
+    <source-prop type="string">/engines/engine[4]/rpm</source-prop>
+    <source-min type="float">33</source-min>
+  </component>
+  
+  <component>
+    <kind type="string">battery</kind>
+    <name type="string">Port LV Battery</name>
+    <volts type="float">28</volts>
+    <prop type="string">/systems/electrical/suppliers/port-lv-battery</prop>
+  </component>
+
+  <component>
+    <kind type="string">battery</kind>
+    <name type="string">Starboard LV Battery</name>
+    <volts type="float">28</volts>
+    <prop type="string">/systems/electrical/suppliers/starboard-lv-battery</prop>
+  </component>
+  
+  <component>
+    <kind type="string">external</kind>
+    <name type="string">Ground Power 200V</name>
+    <volts type="float">200</volts>
+    <prop type="string">/systems/electrical/suppliers/ground-power-200V</prop>
+	<frequency type="float">400</frequency>
+	<freq-prop type="string">/systems/electrical/suppliers/ground-power-frequency</freq-prop>
+  </component>
+  
+  <component>
+    <kind type="string">external</kind>
+    <name type="string">Ground Power 28V</name>
+    <volts type="float">28</volts>
+    <prop type="string">/systems/electrical/suppliers/ground-power-28V</prop>
+  </component>
+  
+  <!-- AAPP Starter -->
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">AAPP Starter Motor</name>
+	<prop type="string">/systems/electrical/outputs/AAPP/AAPP-starter-motor</prop>
+  </component>
+  
+  <!-- MV (200V AC) Busbars -->
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Number 1 Busbar</name>
+	<prop type="string">/systems/electrical/outputs/busbars/engine-busbar[0]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Number 2 Busbar</name>
+	<prop type="string">/systems/electrical/outputs/busbars/engine-busbar[1]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Number 3 Busbar</name>
+	<prop type="string">/systems/electrical/outputs/busbars/engine-busbar[2]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Number 4 Busbar</name>
+	<prop type="string">/systems/electrical/outputs/busbars/engine-busbar[3]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port Busbar</name>
+	<prop type="string">/systems/electrical/outputs/busbars/port-busbar</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard Busbar</name>
+	<prop type="string">/systems/electrical/outputs/busbars/starboard-busbar</prop>
+  </component>
+  
+  <!-- AAPP Meter -->
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">AAPP Generator Meter</name>
+	<prop type="string">/systems/electrical/outputs/AAPP/AAPP-generator-meter</prop>
+  </component>
+  
+  <!-- Tranformer/Rectifier Units for LV (28V DC) Supply -->
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port TRU</name>
+	<prop type="string">/systems/electrical/outputs/TRUs/port-TRU</prop>
+  </component>
+
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard TRU</name>
+	<prop type="string">/systems/electrical/outputs/TRUs/starboard-TRU</prop>
+  </component>
+  
+  <!-- LV (28V DC) Busbars -->
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port LV Busbar</name>
+	<prop type="string">/systems/electrical/outputs/busbars/port-lv-busbar</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard LV Busbar</name>
+	<prop type="string">/systems/electrical/outputs/busbars/starboard-lv-busbar</prop>
+  </component>
+  
+  <!-- Powered Flying Control Units -->
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port Aileron 1 PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/port-aileron[0]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port Aileron 2 PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/port-aileron[1]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port Elevator 1 PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/port-elevator[0]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port Elevator 2 PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/port-elevator[1]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port Rudder PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/port-rudder</prop>
+  </component>
+  
+    <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard Aileron 1 PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/starboard-aileron[0]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard Aileron 2 PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/starboard-aileron[1]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard Elevator 1 PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/starboard-elevator[0]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard Elevator 2 PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/starboard-elevator[1]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard Rudder PFCU</name>
+	<prop type="string">/systems/electrical/outputs/PFCUs/starboard-rudder</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">External Lights Bus</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/ext-lights-bus</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Navigation Lights</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/nav-lights</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Strobe</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/strobe</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Beacon</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/beacon</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Landing Light Port</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/landing-light-port</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Landing Light Starboard</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/landing-light-starboard</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Centre Refuelling Lights</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/refuelling-lights-centre</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Port Refuelling Lights</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/refuelling-lights-port</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Starboard Refuelling Lights</name>
+	<prop type="string">/systems/electrical/outputs/ext-lights/refuelling-lights-starboard</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Internal Lights Bus</name>
+	<prop type="string">/systems/electrical/outputs/busbars/int-lights-bus</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Panel Lights</name>
+	<prop type="string">/systems/electrical/outputs/int-lights/panel-lights</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Storm Lights</name>
+	<prop type="string">/systems/electrical/outputs/int-lights/storm-lights</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">ADF</name>
+	<prop type="string">/systems/electrical/outputs/adf</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Comm1</name>
+	<prop type="string">/systems/electrical/outputs/comm</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">Comm2</name>
+	<prop type="string">/systems/electrical/outputs/comm[1]</prop>
+  </component>
+  
+  <component>
+    <kind type="string">output</kind>
+    <name type="string">ILS</name>
+	<prop type="string">/systems/electrical/outputs/nav[0]</prop>
+  </component>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Starboard LV Busbar</input>
+    <output type="string">Comm1</output>
+    <switch type="string">/controls/electrical/circuit-breakers/uvhf-radio[0]</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Port LV Busbar</input>
+    <output type="string">Comm2</output>
+    <switch type="string">/controls/electrical/circuit-breakers/uvhf-radio[1]</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Starboard LV Busbar</input>
+    <output type="string">ADF</output>
+    <switch type="string">/controls/electrical/circuit-breakers/adf</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Port LV Busbar</input>
+    <output type="string">ILS</output>
+    <switch type="string">/controls/electrical/circuit-breakers/uvhf-radio[0]</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Port LV Busbar</input>
+    <output type="string">External Lights Bus</output>
+    <switch type="string">/controls/switches/pilots/lights/external-lights-master</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">External Lights Bus</input>
+    <output type="string">Navigation Lights</output>
+    <switch type="string">/controls/switches/pilots/lights/nav-lights</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">External Lights Bus</input>
+    <output type="string">Beacon</output>
+    <switch type="string">/controls/switches/pilots/lights/beacon</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">External Lights Bus</input>
+    <output type="string">Strobe</output>
+    <switch type="string">/controls/switches/pilots/lights/strobes</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">External Lights Bus</input>
+    <output type="string">Landing Light Port</output>
+    <switch type="string">/controls/switches/pilots/lights/landing-light-port</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">External Lights Bus</input>
+    <output type="string">Landing Light Starboard</output>
+    <switch type="string">/controls/switches/pilots/lights/landing-light-starboard</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">External Lights Bus</input>
+    <output type="string">Centre Refuelling Lights</output>
+    <switch type="string">/controls/switches/AEOs/lights/refuelling-centre</switch>
+  </connector>
+
+  <connector> <!-- Tidy! -->
+    <input type="string">External Lights Bus</input>
+    <output type="string">Port Refuelling Lights</output>
+    <switch type="string">/controls/switches/AEOs/lights/refuelling-port</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">External Lights Bus</input>
+    <output type="string">Starboard Refuelling Lights</output>
+    <switch type="string">/controls/switches/AEOs/lights/refuelling-starboard</switch>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Port LV Busbar</input>
+    <output type="string">Internal Lights Bus</output>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Internal Lights Bus</input>
+    <output type="string">Panel Lights</output>
+  </connector>
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Internal Lights Bus</input>
+    <output type="string">Storm Lights</output>
+    <switch type="string">/controls/switches/pilots/lights/storm-lights</switch>
+  </connector>
+  
+  <!-- == Connectors == -->
+  
+  <connector>
+    <input type="string">Engine 1 Generator</input>
+    <output type="string">Number 1 Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/a-breaker[0]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Engine 2 Generator</input>
+    <output type="string">Number 2 Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/a-breaker[1]</switch>
+  </connector>
+
+  <connector>
+    <input type="string">Engine 3 Generator</input>
+    <output type="string">Number 3 Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/a-breaker[2]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Engine 4 Generator</input>
+    <output type="string">Number 4 Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/a-breaker[3]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">AAPP Generator</input>
+    <output type="string">Starboard Busbar</output>
+    <switch type="string">/controls/electrical/relays/AAPP</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">AAPP Generator</input>
+    <output type="string">AAPP Generator Meter</output>
+  </connector>
+  
+  <connector>
+    <input type="string">Number 1 Busbar</input>
+    <output type="string">Port Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/s-breaker[0]</switch>
+  </connector>  
+  
+  <connector>
+    <input type="string">Number 2 Busbar</input>
+    <output type="string">Port Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/s-breaker[1]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Number 3 Busbar</input>
+    <output type="string">Starboard Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/s-breaker[2]</switch>
+  </connector>  
+  
+  <connector>
+    <input type="string">Number 4 Busbar</input>
+    <output type="string">Starboard Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/s-breaker[3]</switch>
+  </connector>
+  
+  <!-- Ground Power Circuit Breakers -->
+    
+  <connector>
+    <input type="string">Ground Power 200V</input>
+    <output type="string">Port Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/ground-power-mv</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Ground Power 28V</input>
+    <output type="string">Port LV Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/ground-power-lv</switch>
+  </connector>
+  
+  <!-- AAPP Start Motor Relay -->
+  
+  <connector> <!-- Tidy! -->
+    <input type="string">Starboard LV Busbar</input>
+    <output type="string">AAPP Starter Motor</output>
+    <switch type="string">/controls/electrical/relays/AAPP-starter-motor</switch>
+  </connector>
+  
+  
+  <!-- MV Busbar Parallels -->
+  
+  <connector>
+    <input type="string">Port Busbar</input>
+    <output type="string">Starboard Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/parallel-mv-busbars</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Starboard Busbar</input>
+    <output type="string">Port Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/parallel-mv-busbars</switch>
+  </connector>
+  
+  <!-- 28V (LV) Busbars -->
+  
+  <connector> <!-- Port Transformer/Rectifier Unit -->
+    <input type="string">Port Busbar</input>
+    <output type="string">Port TRU</output>
+    <switch type="string">/controls/electrical/circuit-breakers/port-lv-busbar</switch>
+	<variable type="string">switch-volts</variable>
+	<scale type="double">0.14</scale>
+  </connector>
+  
+  <connector> 
+    <input type="string">Port TRU</input>
+    <output type="string">Port LV Busbar</output>
+	<switch type="string">/controls/electrical/circuit-breakers/port-lv-busbar</switch>
+  </connector>
+  
+  <connector> <!-- Starboard Transformer/Rectifier Unit -->
+    <input type="string">Starboard Busbar</input>
+    <output type="string">Starboard TRU</output>
+    <switch type="string">/controls/electrical/circuit-breakers/starboard-lv-busbar</switch>
+	<variable type="string">switch-volts</variable>
+	<scale type="double">0.14</scale>
+  </connector>
+  
+  <connector>
+    <input type="string">Starboard TRU</input>
+    <output type="string">Starboard LV Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/starboard-lv-busbar</switch>
+  </connector>
+  
+  <!-- LV Busbar Parallels -->
+  
+  <connector>
+    <input type="string">Port LV Busbar</input>
+    <output type="string">Starboard LV Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/parallel-lv-busbars</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Starboard LV Busbar</input>
+    <output type="string">Port LV Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/parallel-lv-busbars</switch>
+  </connector>
+  
+  <!-- LV Battery Breakers -->
+  
+  <connector>
+    <input type="string">Port LV Battery</input>
+    <output type="string">Port LV Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/port-lv-battery</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Starboard LV Battery</input>
+    <output type="string">Starboard LV Busbar</output>
+    <switch type="string">/controls/electrical/circuit-breakers/starboard-lv-battery</switch>
+  </connector>
+  
+  <!-- PFCU Switches -->
+  
+  <connector>
+    <input type="string">Port Busbar</input>
+    <output type="string">Port Elevator 1 PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/elevator-port[0]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Port Busbar</input>
+    <output type="string">Port Elevator 2 PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/elevator-port[1]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Port Busbar</input>
+    <output type="string">Port Aileron 1 PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/aileron-port[0]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Port Busbar</input>
+    <output type="string">Port Aileron 2 PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/aileron-port[1]</switch>
+  </connector>
+
+  <connector>
+    <input type="string">Port Busbar</input>
+    <output type="string">Port Rudder PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/rudder-port</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Starboard Busbar</input>
+    <output type="string">Starboard Elevator 1 PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/elevator-stbd[0]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Starboard Busbar</input>
+    <output type="string">Starboard Elevator 2 PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/elevator-stbd[1]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Starboard Busbar</input>
+    <output type="string">Starboard Aileron 1 PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/aileron-stbd[0]</switch>
+  </connector>
+  
+  <connector>
+    <input type="string">Starboard Busbar</input>
+    <output type="string">Starboard Aileron 2 PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/aileron-stbd[1]</switch>
+  </connector>
+
+  <connector>
+    <input type="string">Starboard Busbar</input>
+    <output type="string">Starboard Rudder PFCU</output>
+    <switch type="string">/controls/switches/pilots/powered-surfaces/rudder-stbd</switch>
+  </connector>
+  
+  <!-- Instrumentation and Systems -->
+  
+  <connector>
+    <input type="string">Starboard Busbar</input>
+    <output type="string">ADF</output>
+  </connector>
+  
+ </electrical>
+  
+</PropertyList>

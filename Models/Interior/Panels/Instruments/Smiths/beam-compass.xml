@@ -1,0 +1,63 @@
+<PropertyList>
+
+ <!-- Smiths Military Flight System - Beam Compass -->
+ 
+ <path>beam-compass.ac</path>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-std.xml</path>
+ </model>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>heading-pointer</object-name>
+  <property>/instrumentation/beam-compass[0]/heading-demand-deg</property>
+  <factor>-1</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <object-name>bar</object-name>
+  <object-name>heading-pointer</object-name>
+  <property>/orientation/heading-deg</property>
+  <factor>-1</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+  </axis>
+ </animation> 
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>heading-pointer</object-name>
+  <object-name>bar</object-name>
+  <object-name>needle</object-name>
+  <object-name>bar</object-name>
+  <object-name>ownac</object-name>
+  <object-name>card</object-name>
+  <property>/instrumentation/beam-compass[0]/heading-setting-deg/</property>
+  <factor>1</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+  </axis>
+ </animation>
+ 
+</PropertyList>

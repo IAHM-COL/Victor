@@ -1,0 +1,181 @@
+<PropertyList>
+
+ <!-- Smiths Military Flight System - Source Selector -->
+ 
+ <path>mfs-selector.ac</path>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-std.xml</path>
+  <offsets>
+   <pitch-deg>-90</pitch-deg>
+   <x-m>-0.015</x-m>
+   <y-m>-0.01</y-m>
+   <z-m>-0.005</z-m>
+  </offsets>
+ </model>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>nav-select</object-name>
+  <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+  <factor>33</factor>
+  <center>
+   <x-m>-0.01604</x-m>
+   <y-m>0.004971</y-m>
+   <z-m>-0.00366</z-m>
+  </center> 
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>pitch-select</object-name>
+  <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+  <factor>33</factor>
+  <center>
+   <x-m>0.02553</x-m>
+   <y-m>-0.002573</y-m>
+   <z-m>-0.00366</z-m>
+  </center> 
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>-1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>nav-sel.0</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	<value>0</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>nav-sel.-1</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	<value>-1</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>nav-sel.-2</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	<value>-2</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>nav-sel.1</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	<value>1</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>nav-sel.2</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	<value>2</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>pitch-sel.0</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	<value>0</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>pitch-sel.-1</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	<value>-1</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>pitch-sel.-2</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	<value>-2</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>pitch-sel.1</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	<value>1</value>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>pitch-sel.2</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-assign</command>
+    <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	<value>2</value>
+   </binding>
+  </action>
+ </animation>
+ 
+</PropertyList>

@@ -1,0 +1,544 @@
+
+<PropertyList>
+
+ <path>boom.ac</path>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>arm.lower</object-name>
+  <object-name>boom</object-name>
+  <object-name>lights.off</object-name>
+  <object-name>bracket.left</object-name>
+  <object-name>bracket.right</object-name>
+  <object-name>surface.left</object-name>
+  <object-name>surface.right</object-name>
+  <property>sim/multiplay/generic/float[5]</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.81</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.95</ind>
+	<dep>90</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+	<dep>90</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m> 0.0 </y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>surface.left</object-name>
+  <object-name>bracket.left</object-name>
+  <object-name>surface.right</object-name>
+  <object-name>bracket.right</object-name>
+  <property>sim/multiplay/generic/float[5]</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.95</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.975</ind>
+	<dep>40</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+	<dep>40</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>3.2987</x-m>
+   <y-m>-0.002</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>surface.left</object-name>
+  <property>sim/multiplay/generic/float[5]</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.97</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+	<dep>-40</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+	<dep>-40</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>3.27927</x-m>
+   <y-m> 0.005217 </y-m>
+   <z-m> 0.25480</z-m>
+  </center> 
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>surface.right</object-name>
+  <property>sim/multiplay/generic/float[5]</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.97</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+	<dep>40</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+	<dep>40</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>3.27927</x-m>
+   <y-m> 0.005217 </y-m>
+   <z-m> -0.25480</z-m>
+  </center> 
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+    <type>translate</type>
+    <object-name>boom</object-name>
+    <property>sim/multiplay/generic/float[5]</property>
+    <interpolation>
+   <entry>
+    <ind>0</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.90</ind>
+	<dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.98</ind>
+	<dep>0.3</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+	<dep>0.3</dep>
+   </entry>
+  </interpolation>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>boom</object-name>
+    <property>sim/multiplay/generic/float[9]</property>
+    <factor>3.5</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <condition>
+    <property>/sim/rendering/rembrandt/enabled</property>
+   </condition>
+   <object-name>green.boom.aura</object-name>
+   <object-name>yellow.boom.aura</object-name>
+   <object-name>red.boom.aura</object-name>
+  </effect>
+ 
+  <animation>
+    <type>light</type>
+    <light-type>point</light-type>
+    <object-name>green.boom.beam</object-name>
+	<nopreview/>
+    <position>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>0.07977</z-m>
+    </position>
+    <ambient>
+      <r>  0.2 </r>
+      <g>  0.4 </g>
+      <b>  0.2 </b>
+      <a>  0.8 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.3 </r>
+      <g>  0.9 </g>
+      <b>  0.3 </b>
+      <a>  0.9 </a>
+    </diffuse>
+    <specular>
+      <r>  0.75 </r>
+      <g>  1.0 </g>
+      <b>  0.75 </b>
+      <a>  1.0 </a>
+    </specular>
+     <dim-factor>
+      <property>sim/model/lights/refuelling-lights-centre/green/illumination</property>
+      <factor>1.1</factor>
+	  <offset>0</offset>
+      <min>0</min>
+      <max>1.0</max>
+   </dim-factor>
+   <attenuation>
+     <c>1</c>
+     <l>1</l>
+     <q>1</q>
+   </attenuation>
+   <near-m>0.1</near-m>
+   <far-m>10</far-m>
+ </animation>
+ 
+  <animation>
+  <type>dist-scale</type>
+  <object-name>green.boom.aura</object-name>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>1</dep>
+   </entry>
+   <entry>
+    <ind>500</ind>
+    <dep>5</dep>
+   </entry>
+   <entry>
+    <ind>4000</ind>
+    <dep>12</dep>
+   </entry>
+  </interpolation>
+  <centre>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>0.07977</z-m>
+  </centre>
+ </animation>
+ 
+  <animation>
+  <type>flash</type>
+  <object-name>green.boom.aura</object-name>
+  <offset>0.1</offset>
+  <centre>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>0.07977</z-m>
+  </centre>
+  <axis>
+   <x>1</x>
+   <y>0.15</y>
+   <z>0.4</z>
+  </axis>
+  <power>1</power>
+ </animation>
+ 
+ <animation>
+  <object-name>green.boom.aura</object-name>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>blend</type>
+  <object-name>green.boom.aura</object-name>
+  <property>sim/model/lights/refuelling-lights-centre/green/illumination</property>
+  <factor>-1.0</factor>
+  <offset>1.0</offset>
+  <min>0.75</min>
+  <max>1.0</max>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>green.boom</object-name>
+   <object-name>green.boom.aura</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>1</green>
+    <blue>0.8</blue>
+	<factor-prop>sim/model/lights/refuelling-lights-centre/green/illumination</factor-prop>
+  </emission>
+ </animation>
+ 
+ <animation>
+    <type>light</type>
+    <light-type>point</light-type>
+    <object-name>yellow.boom.beam</object-name>
+	<nopreview/>
+    <position>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>-0.034</z-m>
+    </position>
+    <ambient>
+      <r>  0.2 </r>
+      <g>  0.4 </g>
+      <b>  0.2 </b>
+      <a>  0.8 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.3 </r>
+      <g>  0.9 </g>
+      <b>  0.3 </b>
+      <a>  0.9 </a>
+    </diffuse>
+    <specular>
+      <r>  1.0 </r>
+      <g>  1.0 </g>
+      <b>  0.75 </b>
+      <a>  1.0 </a>
+    </specular>
+     <dim-factor>
+      <property>sim/model/lights/refuelling-lights-centre/yellow/illumination</property>
+      <factor>1.1</factor>
+	  <offset>0</offset>
+      <min>0</min>
+      <max>1.0</max>
+   </dim-factor>
+   <attenuation>
+     <c>1</c>
+     <l>1</l>
+     <q>1</q>
+   </attenuation>
+   <near-m>0.1</near-m>
+   <far-m>10</far-m>
+ </animation>
+ 
+  <animation>
+  <type>dist-scale</type>
+  <object-name>yellow.boom.aura</object-name>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>1</dep>
+   </entry>
+   <entry>
+    <ind>500</ind>
+    <dep>5</dep>
+   </entry>
+   <entry>
+    <ind>4000</ind>
+    <dep>12</dep>
+   </entry>
+  </interpolation>
+  <centre>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>-0.034</z-m>
+  </centre>
+ </animation>
+ 
+  <animation>
+  <type>flash</type>
+  <object-name>yellow.boom.aura</object-name>
+  <offset>0.1</offset>
+  <centre>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>-0.034</z-m>
+  </centre>
+  <axis>
+   <x>1</x>
+   <y>0.15</y>
+   <z>0.4</z>
+  </axis>
+  <power>1</power>
+ </animation>
+ 
+ <animation>
+  <object-name>yellow.boom.aura</object-name>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>blend</type>
+  <object-name>yellow.boom.aura</object-name>
+  <property>sim/model/lights/refuelling-lights-centre/yellow/illumination</property>
+  <factor>-1.0</factor>
+  <offset>1.0</offset>
+  <min>0.75</min>
+  <max>1.0</max>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>yellow.boom</object-name>
+  <object-name>yellow.boom.aura</object-name>
+  <emission>
+    <red>1</red>
+    <green>1</green>
+    <blue>0.8</blue>
+	<factor-prop>sim/model/lights/refuelling-lights-centre/yellow/illumination</factor-prop>
+  </emission>
+ </animation>
+ 
+ <animation>
+    <type>light</type>
+    <light-type>point</light-type>
+    <object-name>red.boom.beam</object-name>
+	<nopreview/>
+    <position>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>-0.07122</z-m>
+    </position>
+    <ambient>
+      <r>  0.2 </r>
+      <g>  0.4 </g>
+      <b>  0.2 </b>
+      <a>  0.8 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.3 </r>
+      <g>  0.9 </g>
+      <b>  0.3 </b>
+      <a>  0.9 </a>
+    </diffuse>
+    <specular>
+      <r>  1.0 </r>
+      <g>  0.75 </g>
+      <b>  0.75 </b>
+      <a>  1.0 </a>
+    </specular>
+     <dim-factor>
+      <property>sim/model/lights/refuelling-lights-centre/red/illumination</property>
+      <factor>1.1</factor>
+	  <offset>0</offset>
+      <min>0</min>
+      <max>1.0</max>
+   </dim-factor>
+   <attenuation>
+     <c>1</c>
+     <l>1</l>
+     <q>1</q>
+   </attenuation>
+   <near-m>0.1</near-m>
+   <far-m>10</far-m>
+ </animation>
+ 
+  <animation>
+  <type>dist-scale</type>
+  <object-name>red.boom.aura</object-name>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>1</dep>
+   </entry>
+   <entry>
+    <ind>500</ind>
+    <dep>5</dep>
+   </entry>
+   <entry>
+    <ind>4000</ind>
+    <dep>12</dep>
+   </entry>
+  </interpolation>
+  <centre>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>-0.07122</z-m>
+  </centre>
+ </animation>
+ 
+  <animation>
+  <type>flash</type>
+  <object-name>red.boom.aura</object-name>
+  <offset>0.1</offset>
+  <centre>
+   <x-m>3.61802</x-m>
+   <y-m>-0.114</y-m>
+   <z-m>-0.07122</z-m>
+  </centre>
+  <axis>
+   <x>1</x>
+   <y>0.15</y>
+   <z>0.4</z>
+  </axis>
+  <power>1</power>
+ </animation>
+ 
+ <animation>
+  <object-name>red.boom.aura</object-name>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5000</max-m>
+ </animation>
+ 
+ <animation>
+  <type>blend</type>
+  <object-name>red.boom.aura</object-name>
+  <property>sim/model/lights/refuelling-lights-centre/red/illumination</property>
+  <factor>-1.0</factor>
+  <offset>1.0</offset>
+  <min>0.75</min>
+  <max>1.0</max>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>red.boom</object-name>
+   <object-name>red.boom.aura</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>1</green>
+    <blue>0.8</blue>
+	<factor-prop>sim/model/lights/refuelling-lights-centre/red/illumination</factor-prop>
+  </emission>
+ </animation>
+ 
+ </PropertyList>

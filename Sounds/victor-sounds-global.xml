@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+ <fx>
+ 
+  <engine>
+   <name>Engine 1 Internal</name>
+   <path>Aircraft/victor/Sounds/jet.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	<property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>9.4</x>
+	<y>-3.63</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>1</x>
+    <y>0</y>
+    <z>0</z>
+    <inner-angle>120.0</inner-angle>
+    <outer-angle>270.0</outer-angle>
+    <outer-gain>0.65</outer-gain>
+   </orientation>
+   
+   <pitch>
+    <property>engines/engine[0]/n1</property>
+	<factor>0.01</factor>
+	<offset>0.2</offset>
+	<min>0</min>
+	<max>2.5</max>
+   </pitch>
+   
+   <volume>
+    <property>engines/engine[0]/n1</property>
+    <factor>0.005</factor>
+    <offset>-0.2</offset>
+   </volume>
+   
+   <reference-dist>15</reference-dist>
+   <max-dist>2500</max-dist>
+   
+  </engine>
+ 
+ 
+  <engine>
+   <name>Engine 1 External Intake</name>
+   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	<property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>9.4</x>
+	<y>-3.63</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>-1.0</x>
+    <y>-0.25</y>
+    <z>0</z>
+    <inner-angle>120.0</inner-angle>
+    <outer-angle>270.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   
+   <pitch>
+    <property>engines/engine[0]/n1</property>
+	<factor>0.01</factor>
+	<offset>0.2</offset>
+	<min>-0.25</min>
+	<max>2.5</max>
+   </pitch>
+   
+   <volume>
+    <property>engines/engine[0]/n1</property>
+    <factor>0.001</factor>
+    <offset>-0.035</offset>
+   </volume>
+   
+   <reference-dist>15</reference-dist>
+   <max-dist>2500</max-dist>
+   
+  </engine>
+  
+  <engine>
+   <name>Engine 1 External Exhaust</name>
+   <path>Aircraft/victor/Sounds/jet-out.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	 <property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>18.6</x>
+	<y>-3.4</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[0]/n1</property>
+    <factor>0.007</factor>
+    <offset>-0.45</offset>
+   </volume>
+   
+   <reference-dist>20</reference-dist>
+   <max-dist>3000</max-dist>
+   
+  </engine>
+  
+  <engine>
+   <name>Engine 1 Wake</name>
+   <path>Aircraft/victor/Sounds/wake.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	 <property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>60.5</x>
+	<y>-3.5</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0</y>
+    <z>0</z>
+    <inner-angle>80.0</inner-angle>
+    <outer-angle>160.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[0]/n1</property>
+    <factor>0.03</factor>
+    <offset>-2.25</offset>
+   </volume>
+   
+   <reference-dist>80</reference-dist>
+   <max-dist>5000</max-dist>
+   
+  </engine>
+  
+  <!-- Engine 2 -->
+  
+  <engine>
+   <name>Engine 2 External Intake</name>
+   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <mode>looped</mode>
+   <condition>
+	<not>
+	<property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>9.4</x>
+	<y>-2.5</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>-1.0</x>
+    <y>-0.25</y>
+    <z>0</z>
+    <inner-angle>120.0</inner-angle>
+    <outer-angle>270.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   
+   <pitch>
+    <property>engines/engine[1]/n1</property>
+	<factor>0.0105</factor>
+	<offset>0.2</offset>
+	<min>-0.25</min>
+	<max>2.5</max>
+   </pitch>
+   
+   <volume>
+    <property>engines/engine[1]/n1</property>
+    <factor>0.001</factor>
+    <offset>-0.035</offset>
+   </volume>
+   
+   <reference-dist>15</reference-dist>
+   <max-dist>2500</max-dist>
+   
+  </engine>
+  
+  <engine>
+   <name>Engine 2 External Exhaust</name>
+   <path>Aircraft/victor/Sounds/jet-out.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	 <property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>18.6</x>
+	<y>-2.5</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[1]/n1</property>
+    <factor>0.007</factor>
+    <offset>-0.45</offset>
+   </volume>
+   
+   <reference-dist>20</reference-dist>
+   <max-dist>3000</max-dist>
+   
+  </engine>
+  
+  <engine>
+   <name>Engine 2 Wake</name>
+   <path>Aircraft/victor/Sounds/wake.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	 <property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>60.5</x>
+	<y>-3.5</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0</y>
+    <z>0</z>
+    <inner-angle>80.0</inner-angle>
+    <outer-angle>160.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[1]/n1</property>
+    <factor>0.003</factor>
+    <offset>-2.25</offset>
+   </volume>
+   
+   <reference-dist>80</reference-dist>
+   <max-dist>5000</max-dist>
+   
+  </engine>
+  
+  <!-- Engine 3 -->
+  
+  <engine>
+   <name>Engine 3 External Intake</name>
+   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <mode>looped</mode>
+   <condition>
+	<not>
+	<property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>9.4</x>
+	<y>2.5</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>-1.0</x>
+    <y>-0.25</y>
+    <z>0</z>
+    <inner-angle>120.0</inner-angle>
+    <outer-angle>270.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   
+   <pitch>
+    <property>engines/engine[2]/n1</property>
+	<factor>0.0105</factor>
+	<offset>0.2</offset>
+	<min>-0.25</min>
+	<max>2.5</max>
+   </pitch>
+   
+   <volume>
+    <property>engines/engine[2]/n1</property>
+    <factor>0.001</factor>
+    <offset>-0.035</offset>
+   </volume>
+   
+   <reference-dist>15</reference-dist>
+   <max-dist>2500</max-dist>
+   
+  </engine>
+  
+  <engine>
+   <name>Engine 3 External Exhaust</name>
+   <path>Aircraft/victor/Sounds/jet-out.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	 <property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>18.6</x>
+	<y>2.5</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[2]/n1</property>
+    <factor>0.007</factor>
+    <offset>-0.45</offset>
+   </volume>
+   
+   <reference-dist>20</reference-dist>
+   <max-dist>3000</max-dist>
+   
+  </engine>
+  
+  <engine>
+   <name>Engine 3 Wake</name>
+   <path>Aircraft/victor/Sounds/wake.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	 <property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>60.5</x>
+	<y>3.5</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0</y>
+    <z>0</z>
+    <inner-angle>80.0</inner-angle>
+    <outer-angle>160.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[2]/n1</property>
+    <factor>0.003</factor>
+    <offset>-2.25</offset>
+   </volume>
+   
+   <reference-dist>80</reference-dist>
+   <max-dist>5000</max-dist>
+   
+  </engine>
+  
+<!-- Engine 4 -->
+  
+  <engine>
+   <name>Engine 4 External Intake</name>
+   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <mode>looped</mode>
+   <condition>
+	<not>
+	<property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>9.4</x>
+	<y>3.4</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>-1.0</x>
+    <y>-0.25</y>
+    <z>0</z>
+    <inner-angle>120.0</inner-angle>
+    <outer-angle>270.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   
+   <pitch>
+    <property>engines/engine[3]/n1</property>
+	<factor>0.0105</factor>
+	<offset>0.2</offset>
+	<min>-0.25</min>
+	<max>2.5</max>
+   </pitch>
+   
+   <volume>
+    <property>engines/engine[3]/n1</property>
+    <factor>0.001</factor>
+    <offset>-0.035</offset>
+   </volume>
+   
+   <reference-dist>15</reference-dist>
+   <max-dist>2500</max-dist>
+   
+  </engine>
+  
+  <engine>
+   <name>Engine 4 External Exhaust</name>
+   <path>Aircraft/victor/Sounds/jet-out.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	 <property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>18.6</x>
+	<y>3.5</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[3]/n1</property>
+    <factor>0.007</factor>
+    <offset>-0.45</offset>
+   </volume>
+   
+   <reference-dist>20</reference-dist>
+   <max-dist>3000</max-dist>
+   
+  </engine>
+  
+  <engine>
+   <name>Engine 4 Wake</name>
+   <path>Aircraft/victor/Sounds/wake.wav</path>
+   <mode>looped</mode>
+   
+   <condition>
+	<not>
+	 <property>/sim/current-view/internal</property>
+	</not>
+   </condition>
+   
+   <position>
+    <x>60.5</x>
+	<y>3.5</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0</y>
+    <z>0</z>
+    <inner-angle>80.0</inner-angle>
+    <outer-angle>160.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[3]/n1</property>
+    <factor>0.003</factor>
+    <offset>-2.25</offset>
+   </volume>
+   
+   <reference-dist>80</reference-dist>
+   <max-dist>5000</max-dist>
+   
+  </engine>
+  
+  <!-- Radios -->
+
+  
+ <ils>
+  <name>ILS Static</name>
+  <mode>looped</mode>
+  <path>Aircraft/victor/Sounds/jet-out.wav</path>
+  <type>avionics</type>
+   <volume>
+    <property>/instrumentation/nav[0]/volume</property>
+    <factor>1.0</factor>
+    <offset>0</offset>
+    <min>0.0</min>
+	<max>1.0</max>
+   </volume>
+  </ils>
+ 
+  </fx>
+  
+</PropertyList>

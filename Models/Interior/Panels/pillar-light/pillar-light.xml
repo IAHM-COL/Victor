@@ -1,0 +1,135 @@
+
+<PropertyList>
+
+ <path>pillar-light.ac</path>
+ 
+ <animation>
+  <type>select</type>
+  <object-name>pillarlight.lens.on</object-name>
+  <object-name>beam</object-name>
+  <condition>
+   <greater-than>
+    <property>/systems/electrical/outputs/int-lights/panel-lights</property>
+	<value>24</value>
+   </greater-than>  
+  </condition>
+ </animation>
+ 
+ <animation>
+  <type>select</type>
+  <object-name>pillarlight.lens</object-name>
+  <condition>
+    <less-than>
+     <property>/systems/electrical/outputs/int-lights/panel-lights</property>
+	 <value>24</value>
+    </less-than>  
+  </condition>
+ </animation>
+
+ <!-- animation>
+   <type>light</type>
+   <light-type>point</light-type>
+   <name>Beam1</name>
+   <object-name>beam</object-name>
+   <nopreview/>
+   <position>
+     <x>0.002</x>
+     <y>0</y>
+     <z>0.005</z>
+   </position>
+   <ambient>
+     <r>0.00</r>
+     <g>0.00</g>
+     <b>0.00</b>
+     <a>1.0</a>
+   </ambient>
+   <diffuse>
+     <r>0.7</r>
+     <g>0.7</g>
+     <b>0.5</b>
+     <a>1.0</a>
+   </diffuse>
+   <specular>
+     <r>0.9</r>
+     <g>0.9</g>
+     <b>0.6</b>
+     <a>1.0</a>
+   </specular>
+   <attenuation>
+     <c>1</c>
+     <l>0.999</l>
+     <q>0.999</q>
+   </attenuation>
+   <dim-factor>
+    <property>/controls/rotary/pilots/coaming-panel-dimmer-left</property>
+    <factor>1.4</factor>
+    <min>0</min>
+    <max>1.0</max>
+   </dim-factor>
+   
+   <cutoff>0</cutoff>
+   <near-m>0.1</near-m>
+   <far-m>0.2</far-m>
+ </animation -->
+ 
+   <animation>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <object-name>beam</object-name>
+	<nopreview/>
+    <position>
+      <x> 0.018 </x>
+      <y> 0 </y>
+      <z> 0.1 </z>
+    </position>
+    <direction>
+      <x> 0.045 </x>
+      <y>  0 </y>
+      <z>  -0.15 </z>
+    </direction>
+    <ambient>
+      <r>  0.3 </r>
+      <g>  0.3 </g>
+      <b>  0.1 </b>
+      <a>  0.2 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.9 </r>
+      <g>  0.9 </g>
+      <b>  0.55 </b>
+      <a>  1.0 </a>
+    </diffuse>
+    <specular>
+      <r>  1.0 </r>
+      <g>  1.0 </g>
+      <b>  0.95 </b>
+      <a>  1.0 </a>
+    </specular>
+   <dim-factor>
+    <property>/controls/rotary/pilots/coaming-panel-dimmer-left</property>
+    <factor>0.75</factor>
+    <min>0</min>
+    <max>1.0</max>
+   </dim-factor>
+   <attenuation>
+     <c>1.0</c>
+     <l>0.8</l>
+     <q>0.8</q>
+   </attenuation>
+   <exponent>22</exponent>
+   <cutoff>100</cutoff>
+   <near-m>0.01</near-m>
+   <far-m>1</far-m>
+ </animation>
+  
+ <animation>
+  <type>material</type>
+  <object-name>pillarlight.lens.on</object-name>
+  <emission>
+    <red>0.7</red>
+    <green>0.7</green>
+    <blue>0.3</blue>
+  </emission>
+ </animation>
+
+</PropertyList>

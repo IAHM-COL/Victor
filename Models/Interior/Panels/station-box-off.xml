@@ -1,0 +1,115 @@
+
+<PropertyList>
+
+ <path>station-box.ac</path>
+ 
+ <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <condition>
+    <property>/sim/rendering/rembrandt/enabled</property>
+   </condition>
+  <object-name>lightring</object-name>
+  <object-name>lightring.001</object-name>
+  <object-name>lightring.002</object-name>
+  <object-name>lightring.003</object-name>
+  <object-name>lightring.004</object-name>
+  <object-name>legend</object-name>
+  </effect>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>switch.ILS</object-name>
+  <property>/controls/station-box/ils</property>
+  <factor>20</factor>
+   <axis>
+    <y>1</y>
+   </axis>
+   <center>
+    <x-m>-0.01353</x-m>
+    <y-m>-0.01046</y-m>
+    <z-m>0.0093</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>switch.ILS</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/station-box/ils</property>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>switch.RT1</object-name>
+  <property>/controls/station-box/rt1</property>
+  <factor>20</factor>
+   <axis>
+    <y>1</y>
+   </axis>
+   <center>
+    <x-m>-0.03155</x-m>
+    <y-m>0.0222</y-m>
+    <z-m>0.0093</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>switch.RT1</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/station-box/rt1</property>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>switch.RT2</object-name>
+  <property>/controls/station-box/rt2</property>
+  <factor>20</factor>
+   <axis>
+    <y>1</y>
+   </axis>
+   <center>
+    <x-m>-0.03155</x-m>
+    <y-m>0.03783</y-m>
+    <z-m>0.0093</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>switch.RT2</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>/controls/station-box/rt2</property>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>knob.xmit</object-name>
+  <property>/controls/station-box/xmit</property>
+  <factor>22.5</factor>
+   <axis>
+    <z>-1</z>
+   </axis>
+   <center>
+    <x-m>0.01585</x-m>
+    <y-m>0.006185</y-m>
+    <z-m>0.01254</z-m>
+  </center>
+ </animation>
+ 
+</PropertyList>

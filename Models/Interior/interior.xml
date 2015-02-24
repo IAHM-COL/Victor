@@ -1,0 +1,63 @@
+
+<PropertyList>
+
+ <path>interior.ac</path>
+ 
+ <model>
+    <path>Aircraft/victor/Models/Interior/Panels/front-panels.xml</path>
+    <offsets>
+      <x-m> 2.85 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 3.34 </z-m>
+    </offsets>
+  </model>
+  
+ <model>
+  <name>Rear Bulkhead Panel</name>
+  <path>Aircraft/victor/Models/Interior/Panels/rear-panels.xml</path>
+  <offsets>
+   <x-m> 6.01 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 3.05 </z-m>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>0</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Captains Seat</name>
+  <path>Aircraft/victor/Models/Interior/ejector-seat.xml</path>
+  <offsets>
+   <x-m> 3.6 </x-m>
+   <y-m> -0.55 </y-m>
+   <z-m> 3.25 </z-m>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>-4.677</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>CoPilots Seat</name>
+  <path>Aircraft/victor/Models/Interior/ejector-seat.xml</path>
+  <offsets>
+   <x-m> 3.6 </x-m>
+   <y-m> 0.55 </y-m>
+   <z-m> 3.25 </z-m>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>-4.677</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+  
+ <model>
+    <path>Aircraft/victor/Models/storm-lights.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

@@ -1,0 +1,25 @@
+
+
+<PropertyList>
+
+ <filter>
+  <name>Differential Braking</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <!-- 
+  <enable>
+  ## Hydraulic Systems Powered & Brakes Serviceable ##
+  </enable>
+  -->
+  <input>
+   <property>/controls/flight/rudder</property>
+  </input>
+  <output>
+   <property>/controls/flight/rudder</property>
+  </output>
+  <gain>
+   <property>/controls/flight/rudder</property>
+  </gain>
+ </filter>
+
+</PropertyList>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>aeo-gen-panel.ac</path>
+ 
+  <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <condition>
+    <property>/sim/rendering/rembrandt/enabled</property>
+   </condition>
+  <object-name>alt1.abreaker.lens</object-name>
+  <object-name>alt1.sbreaker.lens</object-name>
+  <object-name>alt2.abreaker.lens</object-name>
+  <object-name>alt2.sbreaker.lens</object-name>
+  <object-name>alt3.abreaker.lens</object-name>
+  <object-name>alt3.sbreaker.lens</object-name>
+  <object-name>alt4.abreaker.lens</object-name>
+  <object-name>alt4.sbreaker.lens</object-name>
+  <object-name>alt1.abreaker.ind</object-name>
+  <object-name>alt2.abreaker.ind</object-name>
+  <object-name>alt3.abreaker.ind</object-name>
+  <object-name>alt4.abreaker.ind</object-name>
+  <object-name>parallelmv.lens</object-name>
+  <object-name>parallellv.lens</object-name>
+  <object-name>lvbusbar.port.lens</object-name>
+  <object-name>lvbusbar.stbd.lens</object-name>
+  <object-name>mvground.lens</object-name>
+  <object-name>lvground.lens</object-name>
+  <object-name>aapp.lens</object-name>
+  <object-name>aapp.intake.lens</object-name>
+  </effect>
+  
+  <animation>
+   <type>select</type>
+   <condition>
+    <not><property>/sim/signals/fdm-initialized</property></not>
+   </condition>
+  <object-name>aapp.rpm.glow</object-name>
+  <object-name>alt1.watts.glow</object-name>
+  <object-name>alt2.watts.glow</object-name>
+  <object-name>alt3.watts.glow</object-name>
+  <object-name>alt4.watts.glow</object-name>
+  <object-name>mv.port.volts.glow</object-name>
+  <object-name>mv.stbd.volts.glow</object-name>
+ </animation>
+ 
+</PropertyList>

@@ -1,0 +1,28 @@
+
+<PropertyList>
+
+ <path>rear-flight-instruments.ac</path>
+ 
+ <model>
+  <name>ASI</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/asi.xml</path>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>-0.15</y-m>
+   <z-m>0.0325</z-m>
+   <pitch-deg>5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>ASI</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/altimeter.xml</path>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>-0.045</y-m>
+   <z-m>0.0325</z-m>
+   <pitch-deg>5</pitch-deg>
+  </offsets>
+ </model>
+ 
+</PropertyList>

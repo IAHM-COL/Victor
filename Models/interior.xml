@@ -1,0 +1,37 @@
+
+<PropertyList>
+
+ <path>interior2.ac</path>
+ 
+ <model>
+    <path>Aircraft/victor/Models/Panel.xml</path>
+    <offsets>
+      <x-m> 2.85 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 3.34 </z-m>
+    </offsets>
+  </model>
+  
+ <model>
+  <name>Rear Bulkhead Panel</name>
+  <path>Aircraft/victor/Models/rear-panel.xml</path>
+  <offsets>
+   <x-m> 6.01 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 3.05 </z-m>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>0</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+  
+ <model>
+    <path>Aircraft/victor/Models/storm-lights.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

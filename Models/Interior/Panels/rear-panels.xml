@@ -1,0 +1,168 @@
+
+<PropertyList>
+
+ <path>rear-panel.ac</path>
+ 
+ <animation>
+  <type>select</type>
+  <object-name>AEOs Generator Panel</object-name>
+  <object-name>AEOs Station Box</object-name>
+  <condition>
+   <greater-than>
+    <property>/systems/electrical/outputs/busbars/port-lv-busbar</property>
+	<value>21</value>
+   </greater-than>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>AEOs Generator Panel Off</object-name>
+  <object-name>AEOs Station Box Off</object-name>
+  <condition>
+   <less-than>
+    <property>/systems/electrical/outputs/busbars/port-lv-busbar</property>
+	<value>21</value>
+   </less-than>
+  </condition>
+ </animation>
+ 
+ <model>
+  <name>AEOs Generator Panel</name>
+  <path>Aircraft/victor/Models/Interior/Panels/aeo-gen-panel.xml</path>
+  <offsets>
+   <x-m>-0.06</x-m>
+   <y-m>-0.88</y-m>
+   <z-m>0.37</z-m>
+   <pitch-deg>0</pitch-deg>
+   <heading-deg>180</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>AEOs Generator Panel Off</name>
+  <path>Aircraft/victor/Models/Interior/Panels/aeo-gen-panel-off.xml</path>
+  <offsets>
+   <x-m>-0.06</x-m>
+   <y-m>-0.88</y-m>
+   <z-m>0.37</z-m>
+   <pitch-deg>0</pitch-deg>
+   <heading-deg>180</heading-deg>
+  </offsets>
+ </model>
+ 
+ <animation>
+  <object-name>AEOs Generator Panel</object-name>
+  <object-name>AEOs Generator Panel Off</object-name>
+  <type>scale</type>
+  <x-offset>0.9</x-offset>
+  <y-offset>0.9</y-offset>
+  <z-offset>0.9</z-offset>
+ </animation>
+  
+ <model>
+  <name>AEOs Station Box</name>
+  <path>Aircraft/victor/Models/Interior/Panels/station-box.xml</path>
+  <offsets>
+   <x-m>-0.2</x-m>
+   <y-m>-1.0</y-m>
+   <z-m>0.64</z-m>
+   <pitch-deg>125</pitch-deg>
+   <heading-deg>180</heading-deg>
+  </offsets>
+ </model>
+  
+ <model>
+  <name>AEOs Station Box Off</name>
+  <path>Aircraft/victor/Models/Interior/Panels/station-box-off.xml</path>
+   <x-m>-0.2</x-m>
+   <y-m>-1.0</y-m>
+   <z-m>0.64</z-m>
+   <pitch-deg>125</pitch-deg>
+   <heading-deg>180</heading-deg>
+ </model>
+ 
+ <model>
+  <name>AEOs UVHF Radio Box</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/aeo-radio.xml</path>
+  <offsets>
+   <x-m>-0.12</x-m>
+   <y-m>-0.45</y-m>
+   <z-m>0.675</z-m>
+   <pitch-deg>5</pitch-deg>
+   <heading-deg>180</heading-deg>
+  </offsets>
+ </model>
+ 
+ <!--
+ 
+ <model>
+  <name>Ground Radar</name>
+  <path>Aircraft/victor/Models/Instruments/ground-radar/ground-radar.xml</path>
+  <offsets>
+   <x-m>2.88</x-m>
+   <y-m>0.81</y-m>
+   <z-m>0.18</z-m>
+   <pitch-deg>0</pitch-deg>
+   <heading-deg>180</heading-deg>
+  </offsets>
+ </model>
+  
+  -->
+  
+ <model>
+  <name>Rear Flight Instruments</name>
+  <path>Aircraft/victor/Models/Interior/Panels/rear-flight-instruments.xml</path>
+  <offsets>
+   <x-m>-0.3</x-m>
+   <y-m>0.03</y-m>
+   <z-m>0.65</z-m>
+   <pitch-deg>5</pitch-deg>
+   <heading-deg>180</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Green Satin</name>
+  <path>Aircraft/victor/Models/Interior/Panels/green-satin.xml</path>
+  <offsets>
+   <x-m>-0.1</x-m>
+   <y-m>-0.16</y-m>
+   <z-m>0.44</z-m>
+   <pitch-deg>0</pitch-deg>
+   <heading-deg>180</heading-deg>
+  </offsets>
+ </model>
+ 
+ <animation>
+  <object-name>ADF Tuner</object-name>
+  <type>scale</type>
+  <x-offset>0.9</x-offset>
+  <y-offset>0.9</y-offset>
+  <z-offset>0.9</z-offset>
+ </animation>
+ 
+ <model>
+  <name>ADF Tuner</name>
+  <path>Aircraft/victor/Models/Interior/Panels/adf-tuner-panel.xml</path>
+  <offsets>
+   <x-m>-0.12</x-m>
+   <y-m>0.045</y-m>
+   <z-m>0.51</z-m>
+   <pitch-deg>0</pitch-deg>
+   <heading-deg>180</heading-deg>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>AOEs Console Panel</name>
+  <path>Aircraft/victor/Models/Interior/Panels/aeo-console.xml</path>
+  <offsets>
+   <x-m>-0.28</x-m>
+   <y-m>-0.195</y-m>
+   <z-m>0.09</z-m>
+   <pitch-deg>0</pitch-deg>
+   <heading-deg>-90</heading-deg>
+  </offsets>
+ </model>
+
+</PropertyList>

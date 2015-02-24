@@ -1,0 +1,36 @@
+
+<PropertyList>
+
+ <path>bomb-bay.ac</path>
+ 
+ <model>
+  <name>GreenRefuelLights</name>
+  <path>Aircraft/victor/Models/lights/refuelling-lights/refuel-lights-green.xml</path>
+  <offsets>
+   <x-m> 1.02 </x-m>
+   <y-m> -0.005 </y-m>
+   <z-m> -0.08 </z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>YellowRefuelLights</name>
+  <path>Aircraft/victor/Models/lights/refuelling-lights/refuel-lights-yellow.xml</path>
+  <offsets>
+   <x-m> 1.02 </x-m>
+   <y-m> -0.005 </y-m>
+   <z-m> -0.14 </z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>RedRefuelLights</name>
+  <path>Aircraft/victor/Models/lights/refuelling-lights/refuel-lights-red.xml</path>
+  <offsets>
+   <x-m> 1.02 </x-m>
+   <y-m> -0.005 </y-m>
+   <z-m> -0.28 </z-m>
+  </offsets>
+ </model>
+ 
+</PropertyList>
