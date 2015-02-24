@@ -22,11 +22,11 @@ Extended work by Alg
     <aero archive="y">victor-yasim</aero>
 
     <startup>
-      <splash-texture>Aircraft/victor/victork2-splash.png</splash-texture>
+      <splash-texture>Aircraft/Victor/victork2-splash.png</splash-texture>
     </startup>
 
     <model>
-      <path archive="y">Aircraft/victor/Models/Victor-K2.xml</path>
+      <path archive="y">Aircraft/Victor/Models/Victor-K2.xml</path>
       <livery> 
         <file type="string"/> 
       </livery> 
@@ -38,11 +38,11 @@ Extended work by Alg
 
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/victor/Models/submodels.xml</path>
+      <path>Aircraft/Victor/Models/submodels.xml</path>
     </submodels>
 
     <sound>
-	  <path>Aircraft/victor/Sounds/victor-sounds-local.xml</path>
+	  <path>Aircraft/Victor/Sounds/victor-sounds-local.xml</path>
     </sound>
 
     <menubar>
@@ -118,7 +118,7 @@ Extended work by Alg
     </help>
 
     <panel>
-      <path>Aircraft/victor/Panels/victor-vfr-panel.xml</path>
+      <path>Aircraft/Victor/Panels/victor-vfr-panel.xml</path>
       <visibility>false</visibility>
     </panel>
 
@@ -293,34 +293,34 @@ Extended work by Alg
     <systems include="Systems/victor-electrical-new.xml">
 	
 	  <autopilot> <!-- FlightGear Menu-Driven AP -->
-        <path>Aircraft/victor/Systems/autopilot2.xml</path>
+        <path>Aircraft/Victor/Systems/autopilot2.xml</path>
       </autopilot>
 	 <autopilot> <!-- FlightGear Menu-Driven AP -->
         <path>Aircraft/generic/generic-autopilot-helper.xml</path>
       </autopilot>
 	  
 	  <autopilot> <!-- Mk10 Autopilot -->
-        <path>Aircraft/victor/Systems/JWOCKY_SYS7_autopilot.xml</path>
+        <path>Aircraft/Victor/Systems/JWOCKY_SYS7_autopilot.xml</path>
       </autopilot>
 	  
   	  <autopilot>
-        <path>Aircraft/victor/Systems/victor-gauges.xml</path>
+        <path>Aircraft/Victor/Systems/victor-gauges.xml</path>
       </autopilot>
 	  
 	  <autopilot>
-        <path>Aircraft/victor/Systems/victor-pfcus.xml</path>
+        <path>Aircraft/Victor/Systems/victor-pfcus.xml</path>
       </autopilot>
 	  
 	  <autopilot>
-        <path>Aircraft/victor/Systems/victor-pneumatic.xml</path>
+        <path>Aircraft/Victor/Systems/victor-pneumatic.xml</path>
       </autopilot>
 	  
 	  <autopilot>
-        <path>Aircraft/victor/Systems/smiths-MFS.xml</path>
+        <path>Aircraft/Victor/Systems/smiths-MFS.xml</path>
       </autopilot>
 	  
 	  <autopilot>
-        <path>Aircraft/victor/Systems/victor-misc-systems.xml</path>
+        <path>Aircraft/Victor/Systems/victor-misc-systems.xml</path>
       </autopilot>
 
     </systems>
@@ -361,7 +361,7 @@ Extended work by Alg
 	 
     <systems>
       <electrical>
-       <path>Aircraft/victor/Systems/victor-electrical.xml</path>
+       <path>Aircraft/Victor/Systems/victor-electrical.xml</path>
       </electrical>
       <refuel>
         <type>probe</type>
@@ -512,7 +512,7 @@ Extended work by Alg
       <minimized type="bool" archive="y">false</minimized>
     </radar>
 
-    <path>Aircraft/victor/Systems/victor-instrumentation.xml</path>
+    <path>Aircraft/Victor/Systems/victor-instrumentation.xml</path>
   </instrumentation>
   
 
@@ -589,13 +589,13 @@ Extended work by Alg
   <!-- Nasal files/scripts -->
   <nasal>
     <engines>
-	 <file>Aircraft/victor/Nasal/engines.nas</file>
+	 <file>Aircraft/Victor/Nasal/engines.nas</file>
 	</engines>
     <victor>
-      <file>Aircraft/victor/Nasal/victor.nas</file>
+      <file>Aircraft/Victor/Nasal/victor.nas</file>
     </victor>
 	<controls>
-	 <file>Aircraft/victor/Nasal/controls.nas</file>
+	 <file>Aircraft/Victor/Nasal/controls.nas</file>
 	</controls>
     <failures>
       <file>Aircraft/Generic/limits.nas</file>
@@ -604,40 +604,40 @@ Extended work by Alg
       <file>Aircraft/Generic/aar.nas</file>
     </aar>
 	<low>
-      <file>Aircraft/victor/Nasal/low.nas</file>
+      <file>Aircraft/Victor/Nasal/low.nas</file>
     </low>
 	<mk10ap>
-	 <file>Aircraft/victor/Nasal/mk10-autopilot.nas</file>
+	 <file>Aircraft/Victor/Nasal/mk10-autopilot.nas</file>
 	</mk10ap>
 	<electrical>
-	 <file>Aircraft/victor/Nasal/Electrical.nas</file>
+	 <file>Aircraft/Victor/Nasal/Electrical.nas</file>
 	</electrical>
 	<extlights>
-	 <file>Aircraft/victor/Nasal/ext-lights-panel.nas</file>
+	 <file>Aircraft/Victor/Nasal/ext-lights-panel.nas</file>
 	</extlights>
 	<genpanel>
-	 <file>Aircraft/victor/Nasal/aeo-gen-panel.nas</file>
+	 <file>Aircraft/Victor/Nasal/aeo-gen-panel.nas</file>
 	</genpanel>
 	<lights>
-	 <file>Aircraft/victor/Nasal/fguk-lightsv2.nas</file>
+	 <file>Aircraft/Victor/Nasal/fguk-lightsv2.nas</file>
 	</lights>
 	<mfs>
-	 <file>Aircraft/victor/Nasal/mfs.nas</file>
+	 <file>Aircraft/Victor/Nasal/mfs.nas</file>
 	</mfs>
     <radios>
-	 <file>Aircraft/victor/Nasal/radios.nas</file>
+	 <file>Aircraft/Victor/Nasal/radios.nas</file>
 	</radios>
 	<refuel>
-	 <file>Aircraft/victor/Nasal/refuel.nas</file>
+	 <file>Aircraft/Victor/Nasal/refuel.nas</file>
 	</refuel>
 	<garmin196>
-	 <file>Aircraft/victor/Models/Interior/Panels/Instruments/garmin196/garmin196.nas</file>
+	 <file>Aircraft/Victor/Models/Interior/Panels/Instruments/garmin196/garmin196.nas</file>
 	</garmin196>
     <groundradar>
-	 <file>Aircraft/victor/Nasal/ground-radar.nas</file>
+	 <file>Aircraft/Victor/Nasal/ground-radar.nas</file>
 	</groundradar>
     <checklists>
-	 <file>Aircraft/victor/Nasal/checklists.nas</file>
+	 <file>Aircraft/Victor/Nasal/checklists.nas</file>
 	</checklists>
   </nasal>
 
