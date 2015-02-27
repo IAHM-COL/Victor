@@ -1,0 +1,460 @@
+
+<PropertyList>
+
+ <path>uvhf-radio.ac</path>
+ 
+  <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <condition>
+    <property>/sim/rendering/rembrandt/enabled</property>
+   </condition>
+  <object-name>window</object-name>
+  </effect>
+  
+ <animation>
+  <type>select</type>
+  <object-name>frequency</object-name>
+  <condition>
+    <property>/instrumentation/comm[0]/operable</property>
+  </condition>
+ </animation>
+ 
+  <animation>
+  <type>select</type>
+  <object-name>channel</object-name>
+  <condition>
+    <not>
+	 <property>/instrumentation/comm[0]/manual-mode</property>
+	</not>
+	<property>/instrumentation/comm[0]/operable</property>
+  </condition>
+ </animation>
+ 
+ <text>
+  <name>frequency</name>
+  <font>led.txf</font>
+  <character-size type="double">0.0125</character-size>
+  <offsets>
+   <x-m>0.005</x-m>
+   <y-m>0.0275</y-m>
+   <z-m>0.0225</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+  <format>%3.3f</format>
+  <draw-text type="bool">true</draw-text>
+  <truncate type="bool">false</truncate>
+  <alignment>right-center</alignment>
+ </text>
+ 
+ <text>
+  <name>channel</name>
+  <font>led.txf</font>
+  <character-size type="double">0.0125</character-size>
+  <offsets>
+   <x-m>0.005</x-m>
+   <y-m>0.047</y-m>
+   <z-m>0.0225</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property>/instrumentation/comm[0]/channel-id</property>
+  <draw-text type="bool">true</draw-text>
+  <truncate type="bool">true</truncate>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <animation>
+  <object-name>freq1.switch</object-name>
+  <type>rotate</type>
+  <property>/controls/comm[0]/switches/freq-1</property>
+  <factor>-20</factor>
+  <center>
+   <x-m>0.002174</x-m>
+   <y-m>-0.02988</y-m>
+   <z-m>0.00005</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq1.up</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-1");
+	 switch.setValue(1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>100</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq1.down</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-1");
+	 switch.setValue(-1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>-100</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+<animation>
+  <object-name>freq2.switch</object-name>
+  <type>rotate</type>
+  <property>/controls/comm[0]/switches/freq-2</property>
+  <factor>-20</factor>
+  <center>
+   <x-m>0.002174</x-m>
+   <y-m>-0.0159</y-m>
+   <z-m>0.00005</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq2.up</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-2");
+	 switch.setValue(1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>10</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq2.down</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-2");
+	 switch.setValue(-1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>-10</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <object-name>freq3.switch</object-name>
+  <type>rotate</type>
+  <property>/controls/comm[0]/switches/freq-3</property>
+  <factor>-20</factor>
+  <center>
+   <x-m>0.002174</x-m>
+   <y-m>-0.0159</y-m>
+   <z-m>0.00005</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq3.up</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-3");
+	 switch.setValue(1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>1</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq3.down</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-3");
+	 switch.setValue(-1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>-1</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <object-name>freq4.switch</object-name>
+  <type>rotate</type>
+  <property>/controls/comm[0]/switches/freq-4</property>
+  <factor>-20</factor>
+  <center>
+   <x-m>0.002174</x-m>
+   <y-m>-0.0159</y-m>
+   <z-m>0.00005</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq4.up</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-4");
+	 switch.setValue(1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>0.1</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq4.down</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-4");
+	 switch.setValue(-1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>-0.1</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+<animation>
+  <object-name>freq5.switch</object-name>
+  <type>rotate</type>
+  <property>/controls/comm[0]/switches/freq-5</property>
+  <factor>-20</factor>
+  <center>
+   <x-m>0.002174</x-m>
+   <y-m>-0.0159</y-m>
+   <z-m>0.00005</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq5.up</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-5");
+	 switch.setValue(1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>0.01</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>freq5.down</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>
+	 var switch = props.globals.getNode("/controls/comm[0]/switches/freq-5");
+	 switch.setValue(-1);
+	 settimer ( func { switch.setValue(0); }, 0.25 );
+	 setprop("/instrumentation/comm[0]/manual-mode", 1);
+	</script>
+   </binding>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <step>-0.01</step>
+    <min>80</min>
+    <max>160</max>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>pick</type>
+  <object-name>chan.down</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/channel-selected</property>
+    <step>-1</step>
+    <min>0</min>
+    <max>20</max>
+	<wrap>true</wrap>
+   </binding>
+   <binding>
+    <command>nasal</command>
+    <script>
+     setprop("/instrumentation/comm[0]/manual-mode", 0);
+	 radios.rt.chan(0);
+	</script>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>chan.up</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/comm[0]/channel-selected</property>
+    <step>1</step>
+    <min>0</min>
+    <max>20</max>
+	<wrap>true</wrap>
+   </binding>
+   <binding>
+    <command>nasal</command>
+    <script>
+     setprop("/instrumentation/comm[0]/manual-mode", 0);
+	 radios.rt.chan(0);
+	</script>
+   </binding>
+  </action>
+ </animation>
+ 
+  <animation>
+  <type>material</type>
+  <object-name>frequency</object-name>
+  <object-name>channel</object-name>
+  <ambient>
+    <red>0.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.6</red>
+    <green>0.6</green>
+    <blue>0.9</blue>
+  </diffuse>
+  <emission>
+    <red>0.4</red>
+    <green>0.4</green>
+    <blue>0.7</blue>
+  </emission>
+ </animation>
+ 
+</PropertyList>

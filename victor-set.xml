@@ -12,18 +12,19 @@ Started Feb 2009 by Alex Park,
   <sim>
 
     <description>Handley Page Victor</description>
-    <author>Alex Park</author>
-    <status>alpha</status>
+    <author>Alex Park, StuartC, Algernon</author>
+	<aircraft-version>FGUK SE v1.1</aircraft-version>
+    <status>FGUK Se, V1.2</status>
 
     <flight-model archive="y">jsb</flight-model>
     <aero archive="y">victor</aero>
 
     <startup>
-      <splash-texture>Aircraft/victor/victork2-splash.png</splash-texture>
+      <splash-texture>Aircraft/Victor/victork2-splash.png</splash-texture>
     </startup>
 
     <model>
-      <path archive="y">Aircraft/victor/Models/victor.xml</path>
+      <path archive="y">Aircraft/Victor/Models/victor.xml</path>
       <livery> 
         <file type="string"/> 
       </livery> 
@@ -35,11 +36,11 @@ Started Feb 2009 by Alex Park,
 
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/victor/Models/submodels.xml</path>
+      <path>Aircraft/Victor/Models/submodels.xml</path>
     </submodels>
 
     <sound>
-      <path>Aircraft/victor/Sounds/victor-sounds.xml</path>
+      <path>Aircraft/Victor/Sounds/victor-sounds.xml</path>
     </sound>
 
     <menubar>
@@ -95,13 +96,13 @@ Started Feb 2009 by Alex Park,
         <desc>2 position speedbrakes</desc>
       </key>
       <key>
-        <name>=</name>
+        <name>Tab</name>
         <desc>Configuration menu</desc>
       </key>
     </help>
 
     <panel>
-      <path>Aircraft/victor/Panels/victor-vfr-panel.xml</path>
+      <path>Aircraft/Victor/Panels/victor-vfr-panel.xml</path>
       <visibility>false</visibility>
     </panel>
 
@@ -164,6 +165,21 @@ Started Feb 2009 by Alex Park,
         <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
       </config>
     </view>
+	
+	<view n="100">
+	  <name>AEO Panels</name>
+      <internal archive="y">true</internal>
+	  <config>
+	   <from-model type="bool">true</from-model>
+       <from-model-idx type="int">0</from-model-idx>
+       <x-offset-m archive="y">-0.0</x-offset-m>
+       <y-offset-m archive="y">1.16</y-offset-m>
+       <z-offset-m archive="y">-4.1</z-offset-m> 
+       <pitch-offset-deg>0</pitch-offset-deg>
+	   <heading-offset-deg>180</heading-offset-deg>
+       <default-field-of-view-deg>95</default-field-of-view-deg>
+      </config>
+    </view>
 
     
     <flaps>
@@ -188,8 +204,14 @@ Started Feb 2009 by Alex Park,
 
     <systems>
       <electrical>
-        <path>Aircraft/victor/Systems/victor-electrical.xml</path>
+        <path>Aircraft/Victor/Systems/victor-electrical.xml</path>
       </electrical>
+	
+	  <autopilot>
+        <path>Aircraft/Victor/Systems/JWOCKY_SYS7_autopilot.xml</path>
+        <!-- path>Aircraft/Victor/Systems/Autopilot.xml</path -->
+      </autopilot>
+	
     </systems>
 
     <multiplay>      
@@ -203,7 +225,29 @@ Started Feb 2009 by Alex Park,
     </multiplay>
   </sim>
 
-  <tanker type="bool">false</tanker>
+     
+    <systems>
+      <electrical>
+      <path>Aircraft/Victor/Systems/victor-electrical.xml</path>
+      </electrical>
+	   <autopilot>
+        <path>Aircraft/Victor/Systems/Autopilot.xml</path>
+      </autopilot>
+      <refuel>
+        <type>probe</type>
+        <serviceable type="bool">true</serviceable> 
+      </refuel>
+
+    </systems>
+  
+<environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+  
+  
+  <tanker type="bool">true</tanker>
 
   <consumables>
     <fuel>
@@ -274,20 +318,20 @@ Started Feb 2009 by Alex Park,
 
     <radar>
       <!-- Used for Air-to-Air Refueling -->
-      <range type="int" archive="y">20</range>
+      <range type="int" archive="y">200</range>
       <range-factor type="double" archive="n">20</range-factor>
       <minimized type="bool" archive="y">false</minimized>
     </radar>
 
-    <path>Aircraft/victor/Systems/victor-instrumentation.xml</path>
+    <path>Aircraft/Victor/Systems/victor-instrumentation.xml</path>
   </instrumentation>
 
   <!-- Key mappings -->
   <input>
     <keyboard>
 
-      <key n="61">
-        <name>=</name>
+      <key n="9">
+        <name>Tab</name>
         <desc>Show configuration dialog</desc>
         <binding n="0">
           <command>nasal</command>
@@ -345,23 +389,29 @@ Started Feb 2009 by Alex Park,
  
   </input>
   
-  <systems>
-    <refuel>
-      <serviceable type="bool">true</serviceable>
-      <type>probe</type>
-    </refuel>
-  </systems>
-  <!-- Nasal files/scripts -->
-  <nasal>
-    <victor>
-      <file>Aircraft/victor/Nasal/victor.nas</file>
-    </victor>
-    <failures>
-      <file>Aircraft/Generic/limits.nas</file>
-    </failures>
-    <aar>
-      <file>Aircraft/Generic/aar.nas</file>
-    </aar>
-  </nasal>
+	<!-- Initial values for autopilot SYS7 -->
+	<autopilot>
+		<settings>
+			<kts-mach-select>kts</kts-mach-select>
+		</settings>
+	</autopilot>
+
+	<!-- Nasal files/scripts -->
+	<nasal>
+		<victor>
+			<file>Aircraft/Victor/Nasal/victor.nas</file>
+			<file>Aircraft/Victor/Nasal/lights.nas</file>
+		</victor>
+		<failures>
+			<file>Aircraft/Generic/limits.nas</file>
+		</failures>
+
+		<aar> 
+			<file>Common/aar/aar.nas</file>
+		</aar>
+		<low>
+			<file>Aircraft/Victor/Nasal/low.nas</file>
+		</low>
+	</nasal>
 
 </PropertyList>

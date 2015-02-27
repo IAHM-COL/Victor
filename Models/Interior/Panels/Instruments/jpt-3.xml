@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<!-- Jet Pipe Temperature -->
+
+<PropertyList>
+
+ <path>jpt.ac</path>
+ 
+  <model>
+  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-noplate.xml</path>
+ </model>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>jpt-Needle1</object-name>
+  <property>engines/engine[2]/jpt-degc</property>
+  <factor>0.3</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+</PropertyList>

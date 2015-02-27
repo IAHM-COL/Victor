@@ -1,0 +1,301 @@
+
+<PropertyList>
+
+ <!-- Beam Compass Port -->
+ 
+
+ <pi-simple-controller>
+  <name>Set Heading</name>
+  <debug>false</debug>
+  <input>
+   <property>/orientation/heading-deg</property>
+  </input>
+  <reference>
+   <property>/instrumentation/beam-compass[0]/heading-setting-deg</property>
+  </reference>
+  <output>
+   <property>/systems/MFS/set-heading-error-deg</property>
+  </output>
+  <config> <!-- just build the delta, no integration -->
+   <Kp>1.0</Kp>
+   <Ki>0.0</Ki>
+  </config>
+  <period>
+   <min>-180</min>
+   <max>180</max>
+  </period>
+ </pi-simple-controller>
+ 
+  <filter>
+    <name>nav1 heading error computer/normalizer</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>
+	<condition>
+	 <equals>
+	  <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	  <value>1</value>
+	 </equals>
+	</condition>
+      <property>instrumentation/nav[0]/heading-deg</property>
+      <offset>
+        <property>orientation/heading-deg</property>
+        <scale>-1.0</scale>
+      </offset>
+    </input>
+	<input>
+	<condition>
+	 <equals>
+	  <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	  <value>2</value>
+	 </equals>
+	</condition>
+      <property>instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
+      <offset>
+        <property>orientation/heading-deg</property>
+        <scale>-1.0</scale>
+      </offset>
+    </input>
+    <output>systems/MFS/nav1-heading-error-deg</output>
+    <period>
+      <min>-180</min>
+      <max>180</max>
+    </period>
+    <gain>1.0</gain>
+  </filter>
+ 
+  <pi-simple-controller>
+  <name>GPS Heading</name>
+  <debug>false</debug>
+  <input>
+   <property>/orientation/track-deg</property>
+  </input>
+  <reference>
+   <property>/autopilot/route-manager/wp[0]/bearing-deg</property>
+  </reference>
+  <output>
+   <property>/systems/MFS/remote-heading-error-deg</property>
+  </output>
+  <config> <!-- just build the delta, no integration -->
+   <Kp>1.0</Kp>
+   <Ki>0.0</Ki>
+  </config>
+  <period>
+   <min>-180</min>
+   <max>180</max>
+  </period>
+ </pi-simple-controller>
+ 
+ <filter>
+  <name>Port Beam Compass: Heading</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <condition>
+    <equals>
+	 <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	 <value>1</value>
+	</equals>
+   </condition>
+   <!-- property>/systems/MFS/nav1-heading-error-deg</property-->
+   <property>/systems/MFS/nav1-heading-error-deg</property>
+  </input>
+  <input>
+   <condition>
+    <equals>
+	 <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	 <value>2</value>
+	</equals>
+   </condition>
+   <property>/systems/MFS/nav1-heading-error-deg</property>
+   <offset>
+    <property>/instrumentation/nav[0]/gs-direct-deg</property>
+	<scale>-1.0</scale>
+   </offset>
+  </input>
+  <input>
+   <condition>
+    <equals>
+	 <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	 <value>-1</value>
+	</equals>
+   </condition>
+   <property>/systems/MFS/remote-heading-error-deg</property>
+  </input>
+  <input>
+   <condition>
+    <equals>
+	 <property>/instrumentation/beam-compass[0]/nav-selector-pos</property>
+	 <value>0</value>
+	</equals>
+   </condition>
+   <property>/systems/MFS/set-heading-error-deg</property>
+  </input>
+  <output>
+   <property>/instrumentation/beam-compass[0]/heading-demand-deg</property>
+  </output>
+  <gain>1.0</gain>
+ </filter>
+ 
+ <filter>
+  <name>Port Beam Compass: Bank Demand</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <condition>
+    <or>
+	<equals>
+	 <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	 <value>1</value>
+	</equals>
+    <equals>
+	 <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	 <value>2</value>
+	</equals>
+	</or>
+   </condition>
+   <property>/systems/MFS/nav1-heading-error-deg</property>
+  </input>
+  <input>
+   <condition>
+    <equals>
+	 <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	 <value>-1</value>
+	</equals>
+   </condition>
+   <property>/systems/MFS/remote-heading-error-deg</property>
+  </input>
+  <input>
+   <condition>
+    <equals>
+	 <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	 <value>0</value>
+	</equals>
+   </condition>
+   <property>/systems/MFS/set-heading-error-deg</property>
+  </input>
+  <output>
+   <property>/instrumentation/director-horizon[0]/bank-pointer-deg</property>
+  </output>
+  <gain>
+   <condition>
+    <or>
+	 <equals>
+	  <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	  <value>0</value>
+	 </equals>
+     <equals>
+	  <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	  <value>-1</value>
+	 </equals>
+	</or>
+   </condition>
+  <value>2.0</value>
+  </gain>
+  <gain>
+   <condition>
+    <or>
+	 <equals>
+	  <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	  <value>1</value>
+	 </equals>
+     <equals>
+	  <property>/instrumentation/mfs-selector/nav-selector-pos</property>
+	  <value>2</value>
+	 </equals>
+	</or>
+   </condition>
+  <value>1.0</value>
+  </gain>
+  <min>-20</min>
+   <max>20</max>
+ </filter>
+ 
+  <pi-simple-controller>
+  <name>NAV1 Glideslope</name>
+  <debug>false</debug>
+  <input>
+   <property>/velocities/vertical-speed-fps</property>
+  </input>
+  <reference>
+   <property>/instrumentation/nav[0]/gs-rate-of-climb</property>
+  </reference>
+  <output>
+   <property>/systems/MFS/nav1-climb-error-fps</property>
+  </output>
+  <output>
+   <property>/instrumentation/director-horizon[0]/pitch-pointer</property>
+  </output>
+  <config> <!-- just build the delta, no integration -->
+   <Kp>1.0</Kp>
+   <Ki>0.0</Ki>
+  </config>
+ </pi-simple-controller>
+ 
+ <pid-controller>
+  <name>System Command: Height Lock</name>
+  <debug>false</debug>
+  <input>
+   <property>/position/altitude-ft</property>
+  </input>
+  <reference>
+   <property>/systems/mk10-autopilot/height-lock</property>
+  </reference>
+  <output>
+   <property>/systems/MFS/height-hold-command</property>
+  </output>
+  <config>
+   <Kp>0.05</Kp>           
+   <beta>0.001</beta>    <!-- input value weighing factor -->
+   <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+   <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+   <Ti>50.0</Ti>       <!-- integrator time  10.0 -->
+   <Td>0.00001</Td>    <!-- derivator time -->
+   <u_min>-5</u_min> <!-- minimum output clamp -->
+   <u_max>5</u_max>
+  </config>
+ </pid-controller>
+ 
+  <filter>
+  <name>Port Director Horizon: Pitch Demand</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <condition>	
+	<equals>
+	 <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	 <value>1</value>
+	</equals>
+   </condition>
+   <property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+  </input>
+  <output>
+   <property>/instrumentation/director-horizon[0]/pitch-pointer</property>
+  </output>
+  <gain>1.0</gain>
+  <min>-10</min>
+   <max>20</max>
+ </filter>
+ 
+   <filter>
+  <name>Port Director Horizon: Height Hold</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <condition>	
+	<equals>
+	 <property>/instrumentation/mfs-selector/pitch-selector-pos</property>
+	 <value>-1</value>
+	</equals>
+   </condition>
+   <property>/systems/MFS/height-hold-command</property>
+  </input>
+  <output>
+   <property>/instrumentation/director-horizon[0]/pitch-scale-deg</property>
+  </output>
+  <gain>1.0</gain>
+  <min>-10</min>
+   <max>20</max>
+ </filter>
+ 
+</PropertyList>

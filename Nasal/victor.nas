@@ -9,6 +9,12 @@ toggle_cockpit_door = func {
     interpolate("controls/doors/cockpit-door-pos-norm", 1, 4);
   }
 }
+
+#AAPP Intake
+
+var aapp_intake = aircraft.door.new ("/engines/AAPP/intake/", 4.5);
+
+
 #--------------------------------------------------------------------
 toggle_chute = func {
   
@@ -285,3 +291,54 @@ settimer(func {
   });
 
 }, 0);
+
+props.globals.initNode("/instrumentation/cooling/fan-speed", 0, "DOUBLE");
+
+var avionicsFan = func {
+	 var fans = props.globals.getNode("/instrumentation/cooling/fan-speed");
+	 var volts = props.globals.getNode("/systems/electrical/outputs/busbars/port-lv-busbar").getValue();
+	 if (( volts > 18 ) and ( fans.getValue() < 1 )) {
+	     interpolate(fans, 1, 2.2);
+		}
+	 if (( volts < 18 ) and ( fans.getValue() > 0 )) {
+	     interpolate(fans, 0, 8);
+		}
+	 settimer(avionicsFan, 0.25);
+	}
+	
+settimer(avionicsFan, 9);
+
+
+# Sound
+
+# Developer Preferences
+var MPmin = 0.15; # Low minimum for MP sound
+var intmin = 0.04;
+var intmax = 0.25;
+
+
+
+var sound = {
+     init: func {
+	     var mpset = props.globals.getNode("/sim/sound/aimodels/volume").getValue();
+		 props.globals.initNode("/sim/sound/aimodels/user-setting", mpset, "DOUBLE");
+		 props.globals.initNode("/sim/sound/canopy-view-modifier", 0, "DOUBLE");
+		 sound.doorlp();
+		},
+	 doorlp: func {
+		 var int = props.globals.getNode("/sim/current-view/internal").getBoolValue();
+         var door_pos = props.globals.getNode("/controls/doors/cockpit-door-pos-norm").getValue(); 
+		 if (int) { var notext = 0 }
+		 if (!int) { var notext = 1 }
+	     var vol_out = ( door_pos + notext );
+		 if ((int) and ( vol_out > intmax )) { vol_out = intmax };
+		 if ((int) and ( vol_out < intmin )) { vol_out = intmin };
+		 #if ( vol_out > MPmin ) { var mp_out = vol_out }
+		 #if ( vol_out < MPmin ) { var mp_out = MPmin }		 
+	     setprop("/sim/sound/canopy-view-modifier", vol_out);
+		 #setprop("/sim/sound/aimodels/volume", mp_out);
+		 settimer(sound.doorlp, 0.08);
+        },
+    };
+
+settimer(sound.init,5);

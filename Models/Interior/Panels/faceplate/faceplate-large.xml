@@ -1,0 +1,29 @@
+
+<PropertyList>
+
+ 
+ <path>faceplate-large.ac</path>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+  <offsets>
+   <x-m>0.0098</x-m>
+   <y-m>0.05052</y-m>
+   <z-m>0.05659</z-m>
+   <pitch-deg>90</pitch-deg>
+   <roll-deg>-30</roll-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+  <offsets>
+   <x-m>0.0098</x-m>
+   <y-m>-0.05052</y-m>
+   <z-m>0.05659</z-m>
+   <pitch-deg>90</pitch-deg>
+   <roll-deg>30</roll-deg>
+  </offsets>
+ </model>
+ 
+</PropertyList>

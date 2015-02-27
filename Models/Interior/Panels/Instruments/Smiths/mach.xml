@@ -1,0 +1,35 @@
+
+<PropertyList>
+
+ <!-- Smiths Military Flight System - Powered Altimeter -->
+ 
+ <path>mach.ac</path>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-std.xml</path>
+ </model>
+ 
+ <!-- Altimeter Needle -->
+ <animation>
+  <type>rotate</type>
+  <object-name>mach.needle</object-name>
+  <property>velocities/mach</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>0</dep></entry>
+	<entry><ind>0.7</ind><dep>22</dep></entry>
+	<entry><ind>1.0</ind><dep>180</dep></entry>
+	<entry><ind>1.3</ind><dep>340</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+</PropertyList>

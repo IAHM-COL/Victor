@@ -1,0 +1,73 @@
+
+<PropertyList>
+
+ <path>victor-trim.ac</path>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0.011</y-m>
+   <z-m>0.052</z-m>
+   <pitch-deg>90</pitch-deg>
+   <roll-deg>-10</roll-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>-0.011</y-m>
+   <z-m>0.052</z-m>
+   <pitch-deg>90</pitch-deg>
+   <roll-deg>10</roll-deg>
+  </offsets>
+ </model>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>trim.aileron</object-name>
+  <property>/controls/flight/aileron-trim</property>
+  <factor>45</factor>
+   <axis>
+    <x>-1</x>
+   </axis>
+   <center>
+	<x-m>0.032</x-m>
+	<y-m>-0.0006</y-m>
+	<z-m>-0.033</z-m>
+  </center>
+ </animation>
+ 
+  <animation> 
+  <type>rotate</type>
+  <object-name>trim.elevator</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <factor>45</factor>
+   <axis>
+    <x>1</x>
+   </axis>
+   <center>
+	<x-m>0.032</x-m>
+	<y-m>-0.0006</y-m>
+	<z-m>-0.0003</z-m>
+  </center>
+ </animation>
+ 
+  <animation> 
+  <type>rotate</type>
+  <object-name>trim.rudder</object-name>
+  <property>/controls/flight/rudder-trim</property>
+  <factor>45</factor>
+   <axis>
+    <x>-1</x>
+   </axis>
+   <center>
+	<x-m>0.032</x-m>
+	<y-m>-0.0006</y-m>
+	<z-m>0.033</z-m>
+  </center>
+ </animation>
+ 
+</PropertyList>

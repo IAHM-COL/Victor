@@ -1,0 +1,101 @@
+
+<PropertyList>
+
+ <filter>
+  <name>JPT1</name>
+  <type>gain</type>
+  <input>
+   <expression>
+     <table>
+      <property>/engines/engine[0]/rpm</property>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>12</ind><dep>0</dep></entry>
+	  <entry><ind>48</ind><dep>550</dep></entry>
+	  <entry><ind>75</ind><dep>570</dep></entry>
+	  <entry><ind>105</ind><dep>580</dep></entry>
+     </table>
+    </expression>
+	<offset>
+	 <property>/environment/temperature-degc</property>
+	</offset>
+  </input>
+  <output>
+   <property>/engines/engine[0]/jpt-degc</property>
+  </output>
+  <gain>1.0</gain>
+ </filter>
+ 
+ <filter>
+  <name>JPT2</name>
+  <type>gain</type>
+  <input>
+   <expression>
+     <table>
+      <property>/engines/engine[1]/rpm</property>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>12</ind><dep>0</dep></entry>
+	  <entry><ind>48</ind><dep>550</dep></entry>
+	  <entry><ind>75</ind><dep>570</dep></entry>
+	  <entry><ind>105</ind><dep>580</dep></entry>
+     </table>
+    </expression>
+	<offset>
+	 <property>/environment/temperature-degc</property>
+	</offset>
+  </input>
+  <output>
+   <property>/engines/engine[1]/jpt-degc</property>
+  </output>
+  <gain>1.0</gain>
+ </filter>
+ 
+ <filter>
+  <name>JPT3</name>
+  <type>gain</type>
+  <input>
+   <expression>
+     <table>
+      <property>/engines/engine[2]/rpm</property>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>12</ind><dep>0</dep></entry>
+	  <entry><ind>48</ind><dep>550</dep></entry>
+	  <entry><ind>75</ind><dep>570</dep></entry>
+	  <entry><ind>105</ind><dep>580</dep></entry>
+     </table>
+    </expression>
+	<offset>
+	 <property>/environment/temperature-degc</property>
+	</offset>
+  </input>
+  <output>
+   <property>/engines/engine[2]/jpt-degc</property>
+  </output>
+  <gain>1.0</gain>
+ </filter>
+ 
+ <filter>
+  <name>JPT4</name>
+  <type>gain</type>
+  <input>
+   <expression>
+     <table>
+      <property>/engines/engine[3]/rpm</property>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>12</ind><dep>0</dep></entry>
+	  <entry><ind>48</ind><dep>550</dep></entry>
+	  <entry><ind>75</ind><dep>570</dep></entry>
+	  <entry><ind>105</ind><dep>580</dep></entry>
+     </table>
+    </expression>
+	<offset>
+	 <property>/environment/temperature-degc</property>
+	</offset>
+  </input>
+  <output>
+   <property>/engines/engine[3]/jpt-degc</property>
+  </output>
+  <gain>1.0</gain>
+ </filter>
+
+
+</PropertyList>

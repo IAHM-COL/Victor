@@ -1,0 +1,190 @@
+
+<PropertyList>
+
+ <!-- Powered Flight Control Units -->
+ 
+ <filter>
+  <name>Port Aileron 1</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <property>/controls/flight/aileron</property>
+  </input>
+  <output>
+   <property>/systems/PFCUs/port-aileron[0]</property>
+  </output>
+  <gain>
+   <condition>
+    <greater-than>
+     <property>/systems/electrical/outputs/PFCUs/port-aileron[0]</property>
+	 <value>190</value>
+	</greater-than>
+   </condition>
+   <value>0.8</value>
+  </gain>
+  <gain>
+   <condition>
+    <less-than>
+     <property>/systems/electrical/outputs/PFCUs/port-aileron[0]</property>
+	 <value>190</value>
+	</less-than>
+   </condition>
+   <value>0.05</value>
+  </gain>
+ </filter>
+ 
+ <filter>
+  <name>Starboard Aileron 1</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <property>/controls/flight/aileron</property>
+  </input>
+  <output>
+   <property>/systems/PFCUs/starboard-aileron[0]</property>
+  </output>
+  <gain>
+   <condition>
+    <greater-than>
+     <property>/systems/electrical/outputs/PFCUs/starboard-aileron[0]</property>
+	 <value>190</value>
+	</greater-than>
+   </condition>
+   <value>0.8</value>
+  </gain>
+  <gain>
+   <condition>
+    <less-than>
+     <property>/systems/electrical/outputs/PFCUs/starboard-aileron[0]</property>
+	 <value>190</value>
+	</less-than>
+   </condition>
+   <value>0.2</value>
+  </gain>
+ </filter>
+ 
+ <filter>
+  <name>Port Aileron 2</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <property>/controls/flight/aileron</property>
+  </input>
+  <output>
+   <property>/systems/PFCUs/port-aileron[1]</property>
+  </output>
+  <gain>
+   <condition>
+    <greater-than>
+     <property>/systems/electrical/outputs/PFCUs/port-aileron[1]</property>
+	 <value>190</value>
+	</greater-than>
+   </condition>
+   <value>0.8</value>
+  </gain>
+  <gain>
+   <condition>
+    <less-than>
+     <property>/systems/electrical/outputs/PFCUs/port-aileron[1]</property>
+	 <value>190</value>
+	</less-than>
+   </condition>
+   <value>0.2</value>
+  </gain>
+ </filter>
+ 
+ <filter>
+  <name>Starboard Aileron 2</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <property>/controls/flight/aileron</property>
+  </input>
+  <output>
+   <property>/systems/PFCUs/starboard-aileron[1]</property>
+  </output>
+  <gain>
+   <condition>
+    <greater-than>
+     <property>/systems/electrical/outputs/PFCUs/starboard-aileron[1]</property>
+	 <value>190</value>
+	</greater-than>
+   </condition>
+   <value>0.8</value>
+  </gain>
+  <gain>
+   <condition>
+    <less-than>
+     <property>/systems/electrical/outputs/PFCUs/starboard-aileron[1]</property>
+	 <value>190</value>
+	</less-than>
+   </condition>
+   <value>0.2</value>
+  </gain>
+ </filter>
+  
+ <filter>
+  <name>Port Elevator</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <condition>
+    <greater-than>
+     <property>/systems/electrical/outputs/PFCUs/port-elevator[0]</property>
+	 <value>190</value>
+	</greater-than>
+   </condition>
+   <property>/controls/flight/elevator</property>
+  <scale>0.6</scale>
+  </input>
+  <input>
+   <condition>
+    <less-than>
+     <property>/systems/electrical/outputs/PFCUs/port-elevator[0]</property>
+	 <value>190</value>
+	</less-than>
+   </condition>
+   <property>/controls/flight/elevator</property>
+   <scale>0.05</scale>
+  </input>
+  <output>
+   <property>/systems/PFCUs/port-elevator</property>
+  </output>
+  <gain>
+   <property>/systems/damping/damping-scale</property>
+  </gain>
+ </filter>
+
+ <filter>
+  <name>Starboard Elevator</name>
+  <type>gain</type>
+  <debug>false</debug>
+  <input>
+   <condition>
+    <greater-than>
+     <property>/systems/electrical/outputs/PFCUs/starboard-elevator[0]</property>
+	 <value>190</value>
+	</greater-than>
+   </condition>
+   <property>/controls/flight/elevator</property>
+   <scale>0.6</scale>   
+  </input>
+  <input>
+   <condition>
+    <less-than>
+     <property>/systems/electrical/outputs/PFCUs/starboard-elevator[0]</property>
+	 <value>190</value>
+	</less-than>
+   </condition>
+   <property>/controls/flight/elevator</property>
+   <scale>0.05</scale>
+  </input>
+  <output>
+   <property>/systems/PFCUs/starboard-elevator[0]</property>
+  </output>
+  <gain>
+   <property>/systems/damping/damping-scale</property>
+  </gain>
+ </filter>
+
+</PropertyList>

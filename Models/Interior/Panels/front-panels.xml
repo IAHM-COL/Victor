@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>front-panel.ac</path>
+ 
+ <model>
+  <name>Pilots Coaming Panel</name>
+  <path>Aircraft/victor/Models/Interior/Panels/pilots-coaming-panel.xml</path>
+  <offsets>
+   <x-m>0.02</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>0</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Pilots Coaming Panel Off</name>
+  <path>Aircraft/victor/Models/Interior/Panels/pilots-coaming-panel-off.xml</path>
+  <offsets>
+   <x-m>0.02</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>0</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+ 
+ <animation>
+  <type>select</type>
+  <object-name>Pilots Station Box</object-name>
+  <object-name>AEOs Station Box</object-name>
+  <condition>
+   <greater-than>
+    <property>/systems/electrical/outputs/busbars/port-lv-busbar</property>
+	<value>21</value>
+   </greater-than>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>AEOs Station Box Off</object-name>
+  <object-name>Pilots Station Box Off</object-name>
+  <condition>
+   <less-than>
+    <property>/systems/electrical/outputs/busbars/port-lv-busbar</property>
+	<value>21</value>
+   </less-than>
+  </condition>
+ </animation>
+ 
+ <animation>
+  <type>select</type>
+  <object-name>AEOs Generator Panel</object-name>
+  <object-name>Pilots Coaming Panel</object-name>
+  <condition>
+   <greater-than>
+    <property>/systems/electrical/outputs/busbars/port-lv-busbar</property>
+	<value>21</value>
+   </greater-than>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>AEOs Generator Panel Off</object-name>
+  <object-name>Pilots Coaming Panel Off</object-name>
+  <condition>
+   <less-than>
+    <property>/systems/electrical/outputs/busbars/port-lv-busbar</property>
+	<value>21</value>
+   </less-than>
+  </condition>
+ </animation>
+ 
+ <model>
+  <name>Overhead Panel</name>
+  <path>Aircraft/victor/Models/Interior/Panels/overhead-panel.xml</path>
+  <offsets>
+   <x-m>0.42</x-m>
+   <y-m>0</y-m>
+   <z-m>0.78</z-m>
+   <heading-deg>180</heading-deg>
+   <pitch-deg>-15</pitch-deg>
+   <roll-deg>180</roll-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>External Lights Panel</name>
+  <path>Aircraft/victor/Models/Interior/Panels/external-lights-panel.xml</path>
+  <offsets>
+   <x-m>0.205</x-m>
+   <y-m>-0.865</y-m>
+   <z-m>0.1</z-m>
+   <heading-deg>72</heading-deg>
+   <pitch-deg>5</pitch-deg>
+   <roll-deg>1</roll-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Left MFS Director Horizon</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/director-horizon.xml</path>
+  <offsets>
+   <x-m>-0.000344</x-m>
+   <y-m>-0.45</y-m>
+   <z-m>0.14</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Left MFS Beam Compass</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/beam-compass.xml</path>
+  <offsets>
+   <x-m>-0.000344</x-m>
+   <y-m>-0.45015</y-m>
+   <z-m>0.035</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>Left Vertical Speed Indicator</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/vsi.xml</path>
+  <offsets>
+   <x-m>-0.000344</x-m>
+   <y-m>-0.5500</y-m>
+   <z-m>0.035</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Right MFS Director Horizon</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/director-horizon.xml</path>
+  <offsets>
+   <x-m>-0.000344</x-m>
+   <y-m>0.54</y-m>
+   <z-m>0.14</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Right MFS Beam Compass</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/beam-compass.xml</path>
+  <offsets>
+   <x-m>-0.000344</x-m>
+   <y-m>0.55</y-m>
+   <z-m>0.035</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>Right Vertical Speed Indicator</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/vsi.xml</path>
+  <offsets>
+   <x-m>-0.000344</x-m>
+   <y-m>0.46</y-m>
+   <z-m>0.035</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Pilots Station Box</name>
+  <path>Aircraft/victor/Models/Interior/Panels/station-box.xml</path>
+  <offsets>
+   <x-m>0.03979</x-m>
+   <y-m>-0.85361</y-m>
+   <z-m>-0.17603</z-m>
+   <pitch-deg>17.74</pitch-deg>
+   <roll-deg>2.63</roll-deg>
+   <heading-deg>-1.0</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Pilots Station Box Off</name>
+  <path>Aircraft/victor/Models/Interior/Panels/station-box-off.xml</path>
+  <offsets>
+   <x-m>0.03979</x-m>
+   <y-m>-0.85361</y-m>
+   <z-m>-0.17603</z-m>
+   <pitch-deg>17.74</pitch-deg>
+   <roll-deg>2.63</roll-deg>
+   <heading-deg>-1.0</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Pilots Fuel Panel</name>
+  <path>Aircraft/victor/Models/Interior/Panels/pilots-fuel-panel.xml</path>
+  <offsets>
+   <x-m>0.02</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+   <pitch-deg>15</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Pilots UVHF Radio</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/uvhf-radio-1.xml</path>
+  <offsets>
+   <x-m>0.372</x-m>
+   <y-m>-0.86</y-m>
+   <z-m>-0.24</z-m>
+   <pitch-deg>-80</pitch-deg>
+   <heading-deg>1</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RPM-1</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/rpm-1.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.144</y-m>
+   <z-m>0.226</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RPM-2</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/rpm-2.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.071</y-m>
+   <z-m>0.226</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RPM-3</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/rpm-3.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.071</y-m>
+   <z-m>0.226</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RPM-4</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/rpm-4.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.144</y-m>
+   <z-m>0.226</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp-1</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/jpt-1.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.144</y-m>
+   <z-m>0.138</z-m>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp-2</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/jpt-2.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.071</y-m>
+   <z-m>0.138</z-m>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp-3</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/jpt-3.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.071</y-m>
+   <z-m>0.138</z-m>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Temp-4</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/jpt-4.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.144</y-m>
+   <z-m>0.138</z-m>
+   <roll-deg>0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OilPressure-1</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/oil-1.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.144</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OilPressure-2</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/oil-2.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.071</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OilPressure-3</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/oil-3.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.071</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>OilPressure-4</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/oil-4.xml</path>
+  <overlay>
+   <animation n="1000">
+    <type>scale</type>
+    <x-factor>0.0</x-factor>
+    <x-offset>0.84</x-offset>
+    <y-factor>0.0</y-factor>
+    <y-offset>0.84</y-offset>
+    <z-factor>0.0</z-factor>
+    <z-offset>0.84</z-offset>
+   </animation>
+  </overlay>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.144</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Left ASI</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/asi.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.56</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>Left Mach</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/mach.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.65037</y-m>
+   <z-m>0.12976</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Right Mach</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/mach.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.34</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Left Alt</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/altimeter.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>-0.34</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Right Alt</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/Smiths/altimeter.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.65</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Right ASI</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/asi.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.43</y-m>
+   <z-m>0.13</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Garmin 196 GPS</name>
+  <path>Aircraft/victor/Models/Interior/Panels/Instruments/garmin196/garmin196.xml</path>
+  <offsets>
+   <x-m>0.08</x-m>
+   <y-m>-0.725</y-m>
+   <z-m>0.22</z-m>
+   <heading-deg>10</heading-deg>
+  </offsets>
+ </model>
+
+</PropertyList>

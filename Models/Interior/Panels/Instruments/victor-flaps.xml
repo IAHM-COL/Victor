@@ -1,0 +1,35 @@
+<PropertyList>
+
+ <path>victor-flaps.ac</path>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>flaps.portneedle</object-name>
+  <property>/surface-positions/left-flap-pos-norm</property>
+  <factor>180</factor>
+   <axis>
+    <x>-1</x>
+   </axis>
+   <center>
+	<x-m>0.00077</x-m>
+	<y-m>-0.01724</y-m>
+	<z-m>0</z-m>
+  </center>
+ </animation>
+ 
+ <animation> 
+  <type>rotate</type>
+  <object-name>flaps.stbdneedle</object-name>
+  <property>/surface-positions/left-flap-pos-norm</property>
+  <factor>180</factor>
+   <axis>
+    <x>1</x>
+   </axis>
+   <center>
+	<x-m>0.00077</x-m>
+	<y-m>0.01752</y-m>
+	<z-m>0</z-m>
+  </center>
+ </animation>
+ 
+</PropertyList>

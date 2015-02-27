@@ -1,0 +1,644 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+YASim Handley Page Victor Bomber/Tanker
+
+Started Feb 2009 by Alex Park, 
+YASIM FDM by StuartC 2013
+Extended work by Alg
+************************************************************************
+-->
+
+<PropertyList>
+
+  <sim>
+
+    <description>Handley Page Victor (YASIM)</description>
+    <author>Alex Park, StuartC, Algernon</author>
+	<aircraft-version>FGUK V1.5</aircraft-version>
+    <status>Development</status>
+
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">victor-yasim</aero>
+
+    <startup>
+      <splash-texture>Aircraft/Victor/victork2-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path archive="y">Aircraft/Victor/Models/Victor-K2.xml</path>
+      <livery> 
+        <file type="string"/> 
+      </livery> 
+
+    </model>
+
+    <!-- Initial armament. Controlled by aircraft dialog -->
+    <armament>BlackBuck6</armament>
+
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Victor/Models/submodels.xml</path>
+    </submodels>
+
+    <sound>
+	  <path>Aircraft/Victor/Sounds/victor-sounds-local.xml</path>
+    </sound>
+
+    <menubar>
+        <default>
+            <menu n="10">
+                <label>Victor</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Full Autostart</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>checklists.autostart("normal");</script>
+                    </binding>
+                </item>
+				<item>
+                    <label>Combustor Autostart</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>checklists.autostart("fast");</script>
+                    </binding>
+                </item>
+				<item>
+                    <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle()</script>
+                    </binding>
+                </item>
+            </menu>
+        </default>
+    </menubar>
+
+    <help>
+      <title>Handley Page Victor</title>
+      <line>Speeds (AUW 180,000lbs)</line>
+      <line></line>
+      <line>Rotation: 148 kts</line>
+      <line>Initial Climb: 156 kts</line>
+      <line>Climb (below 20k ft): 250 kts</line>
+      <line>Climb (above 20k ft): 300 kts</line>
+      <line>Pattern: 181 kts</line>
+      <line>Approach: 166 kts</line>
+      <line>Threshhold: 151 kts</line>
+      <line>Tail Chute: 145 kts</line>
+      <key>
+        <name>C</name>
+        <desc>Tail brake chute (TBC) control</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Toggle bomb bay door</desc>
+      </key>
+      <key>
+        <name>E</name>
+        <desc>Toggle crew door</desc>
+      </key>
+      <key>
+        <name>J</name>
+        <desc>Fire weaponry</desc>
+      </key>
+	<key>
+        <name>O</name>
+        <desc>Extend Refuelling Drogues</desc>
+      </key>
+      <key>
+        <name>j/k</name>
+        <desc>2 position speedbrakes</desc>
+      </key>
+      <key>
+        <name>Tab</name>
+        <desc>Configuration menu</desc>
+      </key>
+    </help>
+
+    <panel>
+      <path>Aircraft/Victor/Panels/victor-vfr-panel.xml</path>
+      <visibility>false</visibility>
+    </panel>
+
+
+    <!-- position the pilot viewpoint and angle -->
+    <view n="0">
+      <internal archive="y">true</internal>
+      <config>
+        <x-offset-m archive="y">-0.455</x-offset-m>
+        <y-offset-m archive="y">3.74</y-offset-m>
+        <z-offset-m archive="y">3.45</z-offset-m>
+        <pitch-offset-deg>-3.0</pitch-offset-deg>
+		<default-field-of-view-deg>84.5</default-field-of-view-deg>
+      </config>
+    </view>
+
+    <view n="1">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-60</z-offset-m>
+       <y-offset-m type="double" archive="y">-6</y-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+		<target-y-offset-m type="double" archive="y">3.5</target-y-offset-m>
+        <pitch-offset-deg>8.0</pitch-offset-deg>
+		
+      </config>
+    </view>
+
+    <view n="2">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-50</z-offset-m>
+       <y-offset-m type="double" archive="y">-6</y-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+		<target-y-offset-m type="double" archive="y">3.5</target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="3">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <y-offset-m type="double" archive="y">-6</y-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+		<target-y-offset-m type="double" archive="y">3.5</target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="4">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-50</z-offset-m>
+       <y-offset-m type="double" archive="y">-6</y-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+		<target-y-offset-m type="double" archive="y">3.5</target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="5">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-50</z-offset-m>
+       <y-offset-m type="double" archive="y">-6</y-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+		<target-y-offset-m type="double" archive="y">3.5</target-y-offset-m>
+      </config>
+    </view>
+	
+    <view n="6">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-50</z-offset-m>
+       <y-offset-m type="double" archive="y">-6</y-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+		<target-y-offset-m type="double" archive="y">3.5</target-y-offset-m>
+      </config>
+    </view>
+
+    <view n="104">
+	  <name>AEO Position</name>
+      <internal archive="y">true</internal>
+	  <config>
+	   <from-model type="bool">true</from-model>
+       <from-model-idx type="int">0</from-model-idx>
+       <x-offset-m archive="y">-0.8</x-offset-m>
+       <y-offset-m archive="y">3.75</y-offset-m>
+       <z-offset-m archive="y">5.05</z-offset-m> 
+       <pitch-offset-deg>-14.73</pitch-offset-deg>
+	   <heading-offset-deg>180</heading-offset-deg>
+       <default-field-of-view-deg>95</default-field-of-view-deg>
+      </config>
+    </view>
+	
+    <view n="103">
+	  <name>Nav/Plotter Position</name>
+      <internal archive="y">true</internal>
+	  <config>
+	   <from-model type="bool">true</from-model>
+       <from-model-idx type="int">0</from-model-idx>
+       <x-offset-m archive="y">0</x-offset-m>
+       <y-offset-m archive="y">3.75</y-offset-m>
+       <z-offset-m archive="y">5.05</z-offset-m> 
+       <pitch-offset-deg>-14.73</pitch-offset-deg>
+	   <heading-offset-deg>180</heading-offset-deg>
+       <default-field-of-view-deg>95</default-field-of-view-deg>
+      </config>
+    </view>
+	
+	<view n="102">
+	  <name>Nav/Radar Position</name>
+      <internal archive="y">true</internal>
+	  <config>
+	   <from-model type="bool">true</from-model>
+       <from-model-idx type="int">0</from-model-idx>
+       <x-offset-m archive="y">0.8</x-offset-m>
+       <y-offset-m archive="y">3.75</y-offset-m>
+       <z-offset-m archive="y">5.05</z-offset-m> 
+       <pitch-offset-deg>-14.73</pitch-offset-deg>
+	   <heading-offset-deg>180</heading-offset-deg>
+       <default-field-of-view-deg>95</default-field-of-view-deg>
+      </config>
+    </view>
+	
+    <view n="101">
+	  <name>Bomb Aimer's Nose Position</name>
+      <internal archive="y">true</internal>
+	  <config>
+	   <from-model type="bool">true</from-model>
+       <from-model-idx type="int">0</from-model-idx>
+       <x-offset-m archive="y">0</x-offset-m>
+       <y-offset-m archive="y">2.35</y-offset-m>
+       <z-offset-m archive="y">2.35</z-offset-m> 
+       <pitch-offset-deg>-3</pitch-offset-deg>
+	   <heading-offset-deg>0</heading-offset-deg>
+       <default-field-of-view-deg>72.8</default-field-of-view-deg>
+      </config>
+    </view>
+	
+	
+    <!-- position the co-pilot viewpoint and angle -->
+    <!-- This is definitely a dual-control a/c -->
+    <!-- view n="100">
+	  <name>Co-Pilot Position</name>
+      <internal archive="y">true</internal>
+      <config>
+        <z-offset-m type="double" archive="y">-30</z-offset-m>
+		<y-offset-m type="double" archive="y">-6</y-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+		<target-y-offset-m type="double" archive="y">3.5</target-y-offset-m>
+      </config>
+    </view -->
+
+    <flaps>
+      <setting>0.000</setting>
+	<setting>0.65</setting>
+      <setting>1.0</setting>
+    </flaps>
+
+    <!-- Two-position spoilers. 
+   0 - Fully in
+   0.5 - Parially out - 35 degrees
+   1.0 - Fully extended - 55/80 degrees undercarriage up/down.
+   
+   We simplify the fully out position 
+   
+ -->
+    <spoilers>
+      <setting>0.00</setting>
+      <setting>0.5</setting>
+      <setting>1.0</setting>
+    </spoilers>
+
+    <systems include="Systems/victor-electrical-new.xml">
+	
+	  <autopilot> <!-- FlightGear Menu-Driven AP -->
+        <path>Aircraft/Victor/Systems/autopilot2.xml</path>
+      </autopilot>
+	 <autopilot> <!-- FlightGear Menu-Driven AP -->
+        <path>Aircraft/generic/generic-autopilot-helper.xml</path>
+      </autopilot>
+	  
+	  <autopilot> <!-- Mk10 Autopilot -->
+        <path>Aircraft/Victor/Systems/JWOCKY_SYS7_autopilot.xml</path>
+      </autopilot>
+	  
+  	  <autopilot>
+        <path>Aircraft/Victor/Systems/victor-gauges.xml</path>
+      </autopilot>
+	  
+	  <autopilot>
+        <path>Aircraft/Victor/Systems/victor-pfcus.xml</path>
+      </autopilot>
+	  
+	  <autopilot>
+        <path>Aircraft/Victor/Systems/victor-pneumatic.xml</path>
+      </autopilot>
+	  
+	  <autopilot>
+        <path>Aircraft/Victor/Systems/smiths-MFS.xml</path>
+      </autopilot>
+	  
+	  <autopilot>
+        <path>Aircraft/Victor/Systems/victor-misc-systems.xml</path>
+      </autopilot>
+
+    </systems>
+
+    <multiplay>      
+      <generic>
+        <float n="0" alias="/controls/refuelling/refuelling-drogues-pos-norm"/>
+        <float n="1" alias="/controls/doors/cockpit-door-pos-norm"/>
+        <float n="2" alias="/controls/doors/bb-door-pos-norm"/>
+        <float n="3" alias="/controls/doors/chute-door-pos-norm"/>
+        <float n="4" alias="/controls/chute-pos-norm"/>
+		<float n="5" alias="/systems/refuel/arm-position-norm"/>
+		<float n="6" alias="/sim/model/lights/landing-light-port/position-norm" />
+		<!-- float n="7" alias="/sim/model/lights/landing-lights-starboard/position-norm" / -->
+		<float n="8" alias="/systems/refuel/center-drum-pos-norm" />
+		<float n="9" alias="/systems/refuel/boom-position-norm" />
+		<float n="10" alias="/engines/AAPP/intake/position-norm" />
+		<int n="4" alias="/sim/model/lights/nav-lights/powered" />
+		<int n="5" alias="/sim/model/lights/beacon/powered" />
+		<int n="6" alias="/sim/model/lights/strobe/powered" />
+		<int n="7" alias="/sim/model/lights/landing-light-port/powered" />
+		<int n="8" alias="/sim/model/lights/landing-light-starboard/powered" />
+		<!-- <int n="8" alias="/controls/switches/AEOs/lights/refuelling-centre" /> Temporary MP Fix -->
+		
+      </generic>
+    </multiplay>
+  </sim>
+  
+  <ground>
+   <ground-air type="bool">false</ground-air>
+   <ground-power type="bool">false</ground-power>
+  </ground>
+  
+  <preferences> <!-- Eventually do an include -->
+   <couple-nosewheel-to-rudder type="bool">true</couple-nosewheel-to-rudder>
+   <view-follows-autostart type="bool">false</view-follows-autostart>
+  </preferences>
+	 
+    <systems>
+      <electrical>
+       <path>Aircraft/Victor/Systems/victor-electrical.xml</path>
+      </electrical>
+      <refuel>
+        <type>probe</type>
+		<type>boom</type>
+        <serviceable type="bool">true</serviceable> 
+		<arm-position-norm type="double">0</arm-position-norm>
+		<boom-position-norm type="double">0</boom-position-norm>
+      </refuel>
+	  <mk10-autopilot>
+	   <height-lock type="double">0</height-lock>
+	  </mk10-autopilot>
+	  <MFS>
+	   <pitch-setting-deg type="double">0</pitch-setting-deg>
+	  </MFS>
+
+    </systems>
+  
+<environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+  
+  
+  <tanker type="bool">true</tanker>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <level-gal_us archive="y">1938</level-gal_us>
+      </tank>
+      <tank n="1">
+        <level-gal_us archive="y">1938</level-gal_us>
+      </tank>
+      <tank n="2">
+        <level-gal_us archive="y">1938</level-gal_us>
+      </tank>
+      <tank n="3">
+        <level-gal_us archive="y">1938</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+
+  <controls include="victor-controls.xml">
+    <!-- Start with the Parking Brake on, and everything closed up-->
+    <gear>
+      <brake-parking type="float">1.0</brake-parking>
+    </gear>
+
+    <doors>
+      <cockpit-door-pos-norm type="float">1.0</cockpit-door-pos-norm>
+      <bb-door-pos-norm type="float">0.0</bb-door-pos-norm>
+      <chute-door-pos-norm type="float">0.0</chute-door-pos-norm>
+    </doors>
+
+    <refuelling>
+      <refuelling-drogues-pos-norm type="float">0.0</refuelling-drogues-pos-norm>
+    </refuelling>
+
+    <chute-pos-norm type="float">0.0</chute-pos-norm>
+    <!-- trim for level cruise -->
+
+    <flight>
+      <aileron-trim>0.0</aileron-trim>
+      <rudder-trim>0.0</rudder-trim>
+    </flight>
+
+  </controls>
+
+
+  <instrumentation>
+  
+  <adf>
+   <needle-position-norm type="double">0.5</needle-position-norm>
+   <tuned-frequency-khz type="int">0</tuned-frequency-khz>
+  </adf>
+  
+  <comm n="0">
+   <channel-selected type="int">1</channel-selected>
+   <manual-mode type="bool">false</manual-mode>
+  </comm>
+  
+  <comm n="1">
+   <channel-selected type="int">0</channel-selected>
+   <manual-mode type="bool">false</manual-mode>
+  </comm>
+  
+  <comm-channels include="Systems/comm-channels.xml" />
+  
+  <director-horizon n="0">
+   <pitch-setting-deg type="double">0</pitch-setting-deg>
+   <beam-flag type="bool">false</beam-flag>
+   <gp-flag type="bool">false</gp-flag>
+   <flags>
+    <beam-flag-pos-norm type="double">0</beam-flag-pos-norm>
+	<gp-flag-pos-norm type="double">0</gp-flag-pos-norm>
+   </flags>
+  </director-horizon>
+  
+  <ground-radar>
+   <range type="int">50</range>
+   <powered type="bool">true</powered>
+   <display-brightness type="double">1</display-brightness>
+  </ground-radar>
+    
+	<illumination>
+	 <instrument-dim type="double">0.5</instrument-dim>
+	 
+	 <table-lamp>
+	  <AEO>
+	   <position-x type="double">0</position-x>
+	   <position-y type="double">0</position-y>
+	  </AEO>
+	 </table-lamp>
+	 
+	</illumination>
+	  
+  <mk10-autopilot>
+   <rudder-channel-switch type="bool">false</rudder-channel-switch>
+   <elevator-channel-switch type="bool">false</elevator-channel-switch>
+   <aileron-channel-switch type="bool">false</aileron-channel-switch>
+   <engaged-switch alias="/systems/mk10-autopilot/engaged" />
+   <engaged-switch type="bool">false</engaged-switch>
+   <power-switch type="bool">false</power-switch>
+   <track-switch type="bool">false</track-switch>
+   <bank-selector type="double">0</bank-selector>
+   <pitch-selector type="double">0</pitch-selector>
+   <glide-switch type="bool">false</glide-switch>
+  </mk10-autopilot>
+  
+  <mfs-selector>
+   <compass-selector-pos type="int">1</compass-selector-pos>
+   <nav-selector-pos type="int">0</nav-selector-pos>
+   <pitch-selector-pos type="int">0</pitch-selector-pos>
+  </mfs-selector>
+	
+	<tacan n="0">
+      <name>tacan</name>
+      <number>0</number>
+      <serviceable type="bool" archive="y">true</serviceable>
+      <switch-position type="int" archive="y">1</switch-position>
+    </tacan>
+
+    <radar>
+      <!-- Used for Air-to-Air Refueling -->
+      <range type="int" archive="y">20</range>
+      <range-factor type="double" archive="n">20</range-factor>
+      <minimized type="bool" archive="y">false</minimized>
+    </radar>
+
+    <path>Aircraft/Victor/Systems/victor-instrumentation.xml</path>
+  </instrumentation>
+  
+
+
+
+  <!-- Key mappings -->
+  <input>
+  
+
+
+  		 
+    <keyboard>
+
+      <key n="9">
+        <name>Tab</name>
+        <desc>Show configuration dialog</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>victor.config_dialog.toggle()</script>
+        </binding>
+      </key>
+
+      <key n="67">
+        <name>C</name>
+        <desc>Toggle Chute</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>victor.toggle_chute()</script>
+        </binding>
+      </key>
+
+      <key n="68">
+        <name>D</name>
+        <desc>Toggle Bomb Bay Doors</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>victor.toggle_bb_doors()</script>
+        </binding>
+      </key>
+
+      <key n="69">
+        <name>E</name>
+        <desc>Toggle Entrance Hatch</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>victor.toggle_cockpit_door()</script>
+        </binding>
+      </key>
+
+      <key n="74">
+        <name>J</name>
+        <desc>Fire weaponry</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>victor.fire()</script>
+        </binding>
+      </key>
+
+	<key n="79">
+        <name>O</name>
+        <desc>Extend Refuelling Drogues</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>victor.toggle_refuelling_drogues()</script>
+        </binding>
+      </key>
+    </keyboard>
+
+
+ 
+  </input>
+  
+ 
+  <!-- Nasal files/scripts -->
+  <nasal>
+    <engines>
+	 <file>Aircraft/Victor/Nasal/engines.nas</file>
+	</engines>
+    <victor>
+      <file>Aircraft/Victor/Nasal/victor.nas</file>
+    </victor>
+	<controls>
+	 <file>Aircraft/Victor/Nasal/controls.nas</file>
+	</controls>
+    <failures>
+      <file>Aircraft/Generic/limits.nas</file>
+    </failures>
+    <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+    </aar>
+	<low>
+      <file>Aircraft/Victor/Nasal/low.nas</file>
+    </low>
+	<mk10ap>
+	 <file>Aircraft/Victor/Nasal/mk10-autopilot.nas</file>
+	</mk10ap>
+	<electrical>
+	 <file>Aircraft/Victor/Nasal/Electrical.nas</file>
+	</electrical>
+	<extlights>
+	 <file>Aircraft/Victor/Nasal/ext-lights-panel.nas</file>
+	</extlights>
+	<genpanel>
+	 <file>Aircraft/Victor/Nasal/aeo-gen-panel.nas</file>
+	</genpanel>
+	<lights>
+	 <file>Aircraft/Victor/Nasal/fguk-lightsv2.nas</file>
+	</lights>
+	<mfs>
+	 <file>Aircraft/Victor/Nasal/mfs.nas</file>
+	</mfs>
+    <radios>
+	 <file>Aircraft/Victor/Nasal/radios.nas</file>
+	</radios>
+	<refuel>
+	 <file>Aircraft/Victor/Nasal/refuel.nas</file>
+	</refuel>
+	<garmin196>
+	 <file>Aircraft/Victor/Models/Interior/Panels/Instruments/garmin196/garmin196.nas</file>
+	</garmin196>
+    <groundradar>
+	 <file>Aircraft/Victor/Nasal/ground-radar.nas</file>
+	</groundradar>
+    <checklists>
+	 <file>Aircraft/Victor/Nasal/checklists.nas</file>
+	</checklists>
+  </nasal>
+
+</PropertyList>

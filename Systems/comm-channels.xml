@@ -1,0 +1,124 @@
+
+<PropertyList>
+
+ <channel n="0">
+  <id> G</id>
+  <description>Guard Frequency</description>
+  <frequency>122.75</frequency>
+ </channel>
+ 
+ <channel n="1">
+  <id>01</id>
+  <description>Marham Tower</description>
+  <frequency>122.10</frequency>
+ </channel> 
+ 
+ <channel n="2">
+  <id>02</id>
+  <description>Cottesmore Tower</description>
+  <frequency>122.10</frequency>
+ </channel>
+ 
+ <channel n="3">
+  <id>03</id>
+  <description>Manchester Woodford Tower</description>
+  <frequency>120.70</frequency>
+ </channel>
+ 
+ <channel n="4">
+  <id>04</id>
+  <description>Guard Frequency</description>
+  <frequency>0</frequency>
+ </channel>
+ 
+ <channel n="5">
+  <id>05</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+
+ <channel n="6">
+  <id>06</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+
+ <channel n="7">
+  <id>07</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+ 
+ <channel n="8">
+  <id>08</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+ 
+ <channel n="9">
+  <id>09</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+ 
+  <channel n="10">
+  <id>10</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+
+ <channel n="11">
+  <id>11</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+
+ <channel n="12">
+  <id>12</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+ 
+ <channel n="13">
+  <id>13</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+ 
+ <channel n="14">
+  <id>14</id>
+  <description></description>
+  <frequency>0</frequency>
+ </channel>
+ 
+ <channel n="15">
+  <id>15</id>
+  <description>Manston ATIS</description>
+  <frequency>133.67</frequency>
+ </channel>
+
+ <channel n="16">
+  <id>16</id>
+  <description>Manston Tower</description>
+  <frequency>119.92</frequency>
+ </channel>
+ 
+ <channel n="17">
+  <id>17</id>
+  <description>Valley ATIS</description>
+  <frequency>120.72</frequency>
+ </channel>
+ 
+ <channel n="18">
+  <id>18</id>
+  <description>Valley Tower</description>
+  <frequency>122.75</frequency>
+ </channel>
+ 
+ <channel n="19">
+  <id>19</id>
+  <description>Llanbedr Tower</description>
+  <frequency>122.5</frequency>
+ </channel>
+ 
+</PropertyList>

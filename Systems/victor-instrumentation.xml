@@ -93,6 +93,13 @@ file, these values will be used (they are hardcoded).
     <name>magnetic-compass</name>
     <number>0</number>
   </magnetic-compass>
+  
+  <mk10-autopilot>
+   <rudder-channel-switch type="bool">false</rudder-channel-switch>
+   <elevator-channel-switch type="bool">false</elevator-channel-switch>
+   <aileron-channel-switch type="bool">false</aileron-channel-switch>
+   <bank-selector type="int">0</bank-selector>
+  </mk10-autopilot>
 
   <nav-radio>
     <name>nav</name>
@@ -144,5 +151,14 @@ file, these values will be used (they are hardcoded).
    <range-factor type="double" archive="n">20</range-factor>
    <minimized type="bool" archive="y">false</minimized>
   </radar>
+  
+  <generator-panel>
+   <indicators>
+    <alternator-a-breaker type="bool" num="0">false</alternator-a-breaker>
+	<alternator-a-breaker type="bool" num="1">false</alternator-a-breaker>
+	<alternator-a-breaker type="bool" num="2">false</alternator-a-breaker>
+	<alternator-a-breaker type="bool" num="3">false</alternator-a-breaker>
+   </indicators>
+  </generator-panel>
 
 </PropertyList>
