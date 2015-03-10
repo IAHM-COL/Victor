@@ -300,7 +300,7 @@ Extended work by Alg
       </autopilot>
 	  
 	  <autopilot> <!-- Mk10 Autopilot -->
-        <path>Aircraft/Victor/Systems/JWOCKY_SYS7_autopilot.xml</path>
+        <path>Aircraft/Victor/Systems/victor-autopilot.xml</path>
       </autopilot>
 	  
   	  <autopilot>

@@ -44,13 +44,13 @@ var enginePanel = {
 		 foreach ( e ; engines ) {
 		     if ( e.getIndex() < 5 ) {
 		     var sip = e.getNode("start-in-progress").getBoolValue();
-		         print("Checking engine "~ e.getIndex() ~".");
+		         #print("Checking engine "~ e.getIndex() ~".");
 				 if ( sip ) {
 			         sips = ( sips + 1 );
 					    }
 				    }
 			    }
-		 print("Sips: "~ sips );	
+		 #print("Sips: "~ sips );	
   		 
 		 if ( sips > 0 ) {
 		     button.setBoolValue(1);

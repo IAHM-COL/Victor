@@ -7,7 +7,7 @@
 <!-- External Sounds -->
  <engine>
    <name>engine</name>
-   <path>Aircraft/victor/Sounds/jet.wav</path>
+   <path>Aircraft/Victor/Sounds/jet.wav</path>
    <mode>looped</mode>
 <condition>
 	<not>
@@ -39,7 +39,7 @@
 
   <engine>
    <name>whine</name>
-   <path>Aircraft/victor/Sounds/jet1.wav</path>
+   <path>Aircraft/Victor/Sounds/jet1.wav</path>
    <mode>looped</mode>
 <condition>
 	<not>
@@ -87,7 +87,7 @@
 		<flyby>
 			<name>fly-by</name>
 			<mode>once</mode>
-			<path>Aircraft/victor/Sounds/flyby.wav</path>
+			<path>Aircraft/Victor/Sounds/flyby.wav</path>
 			<condition>
 				<and>
 	    <greater-than>

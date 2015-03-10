@@ -208,8 +208,7 @@ Started Feb 2009 by Alex Park,
       </electrical>
 	
 	  <autopilot>
-        <path>Aircraft/Victor/Systems/JWOCKY_SYS7_autopilot.xml</path>
-        <!-- path>Aircraft/Victor/Systems/Autopilot.xml</path -->
+        <path>Aircraft/Victor/Systems/Autopilot.xml</path>
       </autopilot>
 	
     </systems>
@@ -318,7 +317,7 @@ Started Feb 2009 by Alex Park,
 
     <radar>
       <!-- Used for Air-to-Air Refueling -->
-      <range type="int" archive="y">200</range>
+      <range type="int" archive="y">20</range>
       <range-factor type="double" archive="n">20</range-factor>
       <minimized type="bool" archive="y">false</minimized>
     </radar>
@@ -389,29 +388,22 @@ Started Feb 2009 by Alex Park,
  
   </input>
   
-	<!-- Initial values for autopilot SYS7 -->
-	<autopilot>
-		<settings>
-			<kts-mach-select>kts</kts-mach-select>
-		</settings>
-	</autopilot>
-
-	<!-- Nasal files/scripts -->
-	<nasal>
-		<victor>
-			<file>Aircraft/Victor/Nasal/victor.nas</file>
-			<file>Aircraft/Victor/Nasal/lights.nas</file>
-		</victor>
-		<failures>
-			<file>Aircraft/Generic/limits.nas</file>
-		</failures>
-
-		<aar> 
-			<file>Common/aar/aar.nas</file>
-		</aar>
-		<low>
-			<file>Aircraft/Victor/Nasal/low.nas</file>
-		</low>
-	</nasal>
+ 
+  <!-- Nasal files/scripts -->
+  <nasal>
+    <victor>
+      <file>Aircraft/Victor/Nasal/victor.nas</file>
+	  <file>Aircraft/Victor/Nasal/light.nas</file>
+    </victor>
+    <failures>
+      <file>Aircraft/Generic/limits.nas</file>
+    </failures>
+    <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+    </aar>
+	<low>
+      <file>Aircraft/Victor/Nasal/low.nas</file>
+    </low>
+  </nasal>
 
 </PropertyList>
