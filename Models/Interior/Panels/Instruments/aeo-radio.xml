@@ -5,7 +5,7 @@
  
  <model>
   <name>AEO UVHF Radio</name>
-  <path>Aircraft/victor/Models/Interior/Panels/Instruments/uvhf-radio-2.xml</path>
+  <path>Aircraft/Victor/Models/Interior/Panels/Instruments/uvhf-radio-2.xml</path>
   <offsets>
    <x-m>0.175</x-m>
    <y-m>-0.055</y-m>
