@@ -6,7 +6,7 @@
  
    <ambience>
    <name>Cockpit Ambience</name>
-   <path>Aircraft/victor/Sounds/cockpit.wav</path>
+   <path>Aircraft/Victor/Sounds/cockpit.wav</path>
    <mode>looped</mode>
    <condition>
     <property>/sim/current-view/internal</property>
@@ -72,7 +72,7 @@
   <gear>
    <name>Gear</name>
    <mode>in-transit</mode>
-   <path>Aircraft/victor/Sounds/victor-gear.wav</path>
+   <path>Aircraft/Victor/Sounds/victor-gear.wav</path>
    <property>/gear/gear[0]/position-norm</property>
    
    <pitch>
@@ -96,7 +96,7 @@
   
   <engine>
    <name>Engine 1 Internal</name>
-   <path>Aircraft/victor/Sounds/jet.wav</path>
+   <path>Aircraft/Victor/Sounds/jet.wav</path>
    <mode>looped</mode>
    
    <condition>
@@ -137,7 +137,7 @@
  
   <engine>
    <name>Engine 1 External Intake</name>
-   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-in.wav</path>
    <mode>looped</mode>
    <delay-sec>0.25</delay-sec>
    <position>
@@ -182,7 +182,7 @@
   
   <engine>
    <name>Engine 1 External Exhaust</name>
-   <path>Aircraft/victor/Sounds/jet-out.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-out.wav</path>
    <mode>looped</mode>
    <delay-sec>0.35</delay-sec>
    <position>
@@ -219,7 +219,7 @@
   
   <engine>
    <name>Engine 1 Wake</name>
-   <path>Aircraft/victor/Sounds/wake.wav</path>
+   <path>Aircraft/Victor/Sounds/wake.wav</path>
    <mode>looped</mode>
    <delay-sec>0.45</delay-sec>   
    <position>
@@ -258,7 +258,7 @@
   
   <engine>
    <name>Engine 2 Internal</name>
-   <path>Aircraft/victor/Sounds/jet.wav</path>
+   <path>Aircraft/Victor/Sounds/jet.wav</path>
    <mode>looped</mode>
    <delay-sec>0.55</delay-sec>
    <condition>
@@ -299,7 +299,7 @@
   
   <engine>
    <name>Engine 2 External Intake</name>
-   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-in.wav</path>
    <mode>looped</mode>
    <delay-sec>0.65</delay-sec>
    
@@ -345,7 +345,7 @@
   
   <engine>
    <name>Engine 2 External Exhaust</name>
-   <path>Aircraft/victor/Sounds/jet-out.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-out.wav</path>
    <mode>looped</mode>
    <delay-sec>0.75</delay-sec>
    <position>
@@ -382,7 +382,7 @@
   
   <engine>
    <name>Engine 2 Wake</name>
-   <path>Aircraft/victor/Sounds/wake.wav</path>
+   <path>Aircraft/Victor/Sounds/wake.wav</path>
    <mode>looped</mode>
    
    <condition>
@@ -420,7 +420,7 @@
   
   <engine>
    <name>Engine 3 Internal</name>
-   <path>Aircraft/victor/Sounds/jet.wav</path>
+   <path>Aircraft/Victor/Sounds/jet.wav</path>
    <mode>looped</mode>
    
    <condition>
@@ -462,7 +462,7 @@
   
   <engine>
    <name>Engine 3 External Intake</name>
-   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-in.wav</path>
    <mode>looped</mode>
    
    <position>
@@ -507,7 +507,7 @@
   
   <engine>
    <name>Engine 3 External Exhaust</name>
-   <path>Aircraft/victor/Sounds/jet-out.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-out.wav</path>
    <mode>looped</mode>
 
    <position>
@@ -544,7 +544,7 @@
   
   <engine>
    <name>Engine 3 Wake</name>
-   <path>Aircraft/victor/Sounds/wake.wav</path>
+   <path>Aircraft/Victor/Sounds/wake.wav</path>
    <mode>looped</mode>
    
    <condition>
@@ -582,7 +582,7 @@
 
   <engine>
    <name>Engine 4 Internal</name>
-   <path>Aircraft/victor/Sounds/jet.wav</path>
+   <path>Aircraft/Victor/Sounds/jet.wav</path>
    <mode>looped</mode>
    
    <condition>
@@ -624,7 +624,7 @@
   
   <engine>
    <name>Engine 4 External Intake</name>
-   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-in.wav</path>
    <mode>looped</mode>
 
    <position>
@@ -669,7 +669,7 @@
   
   <engine>
    <name>Engine 4 External Exhaust</name>
-   <path>Aircraft/victor/Sounds/jet-out.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-out.wav</path>
    <mode>looped</mode>
 
    <position>
@@ -706,7 +706,7 @@
   
   <engine>
    <name>Engine 4 Wake</name>
-   <path>Aircraft/victor/Sounds/wake.wav</path>
+   <path>Aircraft/Victor/Sounds/wake.wav</path>
    <mode>looped</mode>
    
    <condition>
@@ -742,7 +742,7 @@
   
   <engine>
    <name>AAPP External Intake</name>
-   <path>Aircraft/victor/Sounds/jet-in.wav</path>
+   <path>Aircraft/Victor/Sounds/jet-in.wav</path>
    <mode>looped</mode>
    
    <position>

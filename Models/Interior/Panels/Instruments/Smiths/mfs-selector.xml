@@ -5,7 +5,7 @@
  <path>mfs-selector.ac</path>
  
  <model>
-  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-std.xml</path>
+  <path>Aircraft/Victor/Models/Interior/Panels/faceplate/faceplate-std.xml</path>
   <offsets>
    <pitch-deg>-90</pitch-deg>
    <x-m>-0.015</x-m>

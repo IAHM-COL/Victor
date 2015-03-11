@@ -5,7 +5,7 @@
  <fx>
   <engine>
    <name>engine</name>
-   <path>Aircraft/victor/Sounds/jet.wav</path>
+   <path>Aircraft/Victor/Sounds/jet.wav</path>
    <mode>looped</mode>
 <condition>
 	<not>
@@ -37,7 +37,7 @@
 
   <engine>
    <name>whine</name>
-   <path>Aircraft/victor/Sounds/jet1.wav</path>
+   <path>Aircraft/Victor/Sounds/jet1.wav</path>
    <mode>looped</mode>
 <condition>
 	<not>
@@ -81,7 +81,7 @@
   </engine>
 <engine-whine-internal>
 			<name>internal-whine</name>
-			<path>Aircraft/victor/Sounds/jet.wav</path>
+			<path>Aircraft/Victor/Sounds/jet.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<property>sim/current-view/internal</property>
@@ -124,7 +124,7 @@
   <gear>
    <name>gear</name>
    <mode>in-transit</mode>
-   <path>Aircraft/victor/Sounds/victor-gear.wav</path>
+   <path>Aircraft/Victor/Sounds/victor-gear.wav</path>
    <property>/gear/gear[0]/position-norm</property>
    <pitch>
     <internal>dt_play</internal>

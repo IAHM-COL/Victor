@@ -4,7 +4,7 @@
  <path>ext-lights-panel.ac</path>
  
   <model>
-   <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+   <path>Aircraft/Victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
    <offsets>
     <x-m>0.009</x-m>
     <y-m>0.06064</y-m>
@@ -16,7 +16,7 @@
   </model>
   
   <model>
-   <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+   <path>Aircraft/Victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
    <offsets>
     <x-m>0.009</x-m>
     <y-m>0.06064</y-m>
@@ -28,7 +28,7 @@
   </model>
   
   <model>
-   <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+   <path>Aircraft/Victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
    <offsets>
     <x-m>0.009</x-m>
     <y-m>-0.06299</y-m>
@@ -40,7 +40,7 @@
   </model>
   
   <model>
-   <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+   <path>Aircraft/Victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
    <offsets>
     <x-m>0.009</x-m>
     <y-m>-0.008463</y-m>
@@ -52,7 +52,7 @@
   </model>
   
   <model>
-   <path>Aircraft/victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
+   <path>Aircraft/Victor/Models/Interior/Panels/pillar-light/pillar-light.xml</path>
    <offsets>
     <x-m>0.009</x-m>
     <y-m>-0.094</y-m>
