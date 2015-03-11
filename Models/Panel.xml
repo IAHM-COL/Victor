@@ -5,7 +5,7 @@
  
  <model>
   <name>Pilots Coaming Panel</name>
-  <path>Aircraft/victor/Models/Panels/pilots-coaming-panel.xml</path>
+  <path>Aircraft/Victor/Models/Panels/pilots-coaming-panel.xml</path>
   <offsets>
    <x-m>0.02</x-m>
    <y-m>0</y-m>
@@ -18,7 +18,7 @@
  
  <model>
   <name>Pilots Coaming Panel Off</name>
-  <path>Aircraft/victor/Models/Panels/pilots-coaming-panel-off.xml</path>
+  <path>Aircraft/Victor/Models/Panels/pilots-coaming-panel-off.xml</path>
   <offsets>
    <x-m>0.02</x-m>
    <y-m>0</y-m>
@@ -77,7 +77,7 @@
  
  <model>
   <name>Overhead Panel</name>
-  <path>Aircraft/victor/Models/Panels/overhead-panel.xml</path>
+  <path>Aircraft/Victor/Models/Panels/overhead-panel.xml</path>
   <offsets>
    <x-m>0.42</x-m>
    <y-m>0</y-m>
@@ -90,7 +90,7 @@
  
  <model>
   <name>External Lights Panel</name>
-  <path>Aircraft/victor/Models/Panels/external-lights-panel.xml</path>
+  <path>Aircraft/Victor/Models/Panels/external-lights-panel.xml</path>
   <offsets>
    <x-m>0.205</x-m>
    <y-m>-0.865</y-m>
@@ -103,7 +103,7 @@
  
  <model>
   <name>Left MFS Director Horizon</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/director-horizon.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/director-horizon.xml</path>
   <offsets>
    <x-m>-0.000344</x-m>
    <y-m>-0.45</y-m>
@@ -114,7 +114,7 @@
  
  <model>
   <name>Left MFS Beam Compass</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/beam-compass.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/beam-compass.xml</path>
   <offsets>
    <x-m>-0.000344</x-m>
    <y-m>-0.45015</y-m>
@@ -125,7 +125,7 @@
  
   <model>
   <name>Left Vertical Speed Indicator</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/vsi.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/vsi.xml</path>
   <offsets>
    <x-m>-0.000344</x-m>
    <y-m>-0.5500</y-m>
@@ -136,7 +136,7 @@
  
  <model>
   <name>Right MFS Director Horizon</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/director-horizon.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/director-horizon.xml</path>
   <offsets>
    <x-m>-0.000344</x-m>
    <y-m>0.54</y-m>
@@ -147,7 +147,7 @@
  
  <model>
   <name>Right MFS Beam Compass</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/beam-compass.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/beam-compass.xml</path>
   <offsets>
    <x-m>-0.000344</x-m>
    <y-m>0.55</y-m>
@@ -158,7 +158,7 @@
  
   <model>
   <name>Right Vertical Speed Indicator</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/vsi.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/vsi.xml</path>
   <offsets>
    <x-m>-0.000344</x-m>
    <y-m>0.46</y-m>
@@ -169,7 +169,7 @@
  
  <model>
   <name>Pilots Station Box</name>
-  <path>Aircraft/victor/Models/Panels/station-box.xml</path>
+  <path>Aircraft/Victor/Models/Panels/station-box.xml</path>
   <offsets>
    <x-m>0.03979</x-m>
    <y-m>-0.85361</y-m>
@@ -182,7 +182,7 @@
  
  <model>
   <name>Pilots Station Box Off</name>
-  <path>Aircraft/victor/Models/Panels/station-box-off.xml</path>
+  <path>Aircraft/Victor/Models/Panels/station-box-off.xml</path>
   <offsets>
    <x-m>0.03979</x-m>
    <y-m>-0.85361</y-m>
@@ -195,7 +195,7 @@
  
  <model>
   <name>Pilots Fuel Panel</name>
-  <path>Aircraft/victor/Models/Panels/pilots-fuel-panel.xml</path>
+  <path>Aircraft/Victor/Models/Panels/pilots-fuel-panel.xml</path>
   <offsets>
    <x-m>0.05</x-m>
    <y-m>0</y-m>
@@ -206,7 +206,7 @@
  
  <model>
   <name>Pilots UVHF Radio</name>
-  <path>Aircraft/victor/Models/Instruments/uvhf-radio-1.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/uvhf-radio-1.xml</path>
   <offsets>
    <x-m>0.372</x-m>
    <y-m>-0.86</y-m>
@@ -218,7 +218,7 @@
 
  <model>
   <name>RPM-1</name>
-  <path>Aircraft/victor/Models/Instruments/rpm-1.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/rpm-1.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -239,7 +239,7 @@
 
  <model>
   <name>RPM-2</name>
-  <path>Aircraft/victor/Models/Instruments/rpm-2.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/rpm-2.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -260,7 +260,7 @@
 
  <model>
   <name>RPM-3</name>
-  <path>Aircraft/victor/Models/Instruments/rpm-3.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/rpm-3.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -281,7 +281,7 @@
 
  <model>
   <name>RPM-4</name>
-  <path>Aircraft/victor/Models/Instruments/rpm-4.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/rpm-4.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -302,7 +302,7 @@
 
  <model>
   <name>Temp-1</name>
-  <path>Aircraft/victor/Models/Instruments/jpt-1.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/jpt-1.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -324,7 +324,7 @@
 
  <model>
   <name>Temp-2</name>
-  <path>Aircraft/victor/Models/Instruments/jpt-2.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/jpt-2.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -346,7 +346,7 @@
 
  <model>
   <name>Temp-3</name>
-  <path>Aircraft/victor/Models/Instruments/jpt-3.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/jpt-3.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -368,7 +368,7 @@
 
  <model>
   <name>Temp-4</name>
-  <path>Aircraft/victor/Models/Instruments/jpt-4.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/jpt-4.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -390,7 +390,7 @@
 
  <model>
   <name>OilPressure-1</name>
-  <path>Aircraft/victor/Models/Instruments/oil-1.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/oil-1.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -411,7 +411,7 @@
 
  <model>
   <name>OilPressure-2</name>
-  <path>Aircraft/victor/Models/Instruments/oil-2.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/oil-2.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -432,7 +432,7 @@
 
  <model>
   <name>OilPressure-3</name>
-  <path>Aircraft/victor/Models/Instruments/oil-3.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/oil-3.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -453,7 +453,7 @@
 
  <model>
   <name>OilPressure-4</name>
-  <path>Aircraft/victor/Models/Instruments/oil-4.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/oil-4.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -474,7 +474,7 @@
 
  <model>
   <name>Left ASI</name>
-  <path>Aircraft/victor/Models/Instruments/asi.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/asi.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>-0.56</y-m>
@@ -484,7 +484,7 @@
  
   <model>
   <name>Left Mach</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/mach.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/mach.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>-0.65037</y-m>
@@ -494,7 +494,7 @@
  
  <model>
   <name>Right Mach</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/mach.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/mach.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>0.34</y-m>
@@ -504,7 +504,7 @@
 
  <model>
   <name>Left Alt</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/altimeter.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/altimeter.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>-0.34</y-m>
@@ -514,7 +514,7 @@
 
  <model>
   <name>Right Alt</name>
-  <path>Aircraft/victor/Models/Instruments/Smiths/altimeter.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/Smiths/altimeter.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>0.65</y-m>
@@ -524,7 +524,7 @@
 
  <model>
   <name>Right ASI</name>
-  <path>Aircraft/victor/Models/Instruments/asi.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/asi.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>0.43</y-m>
@@ -534,7 +534,7 @@
  
  <model>
   <name>Garmin 196 GPS</name>
-  <path>Aircraft/victor/Models/Instruments/garmin196/garmin196.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/garmin196/garmin196.xml</path>
   <offsets>
    <x-m>0.08</x-m>
    <y-m>-0.725</y-m>

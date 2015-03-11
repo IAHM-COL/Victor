@@ -13,7 +13,7 @@
  
  <model>
   <name>Beam 1</name>
-  <path>Aircraft/victor/Models/lights/beacon/beacon-beam.xml</path>
+  <path>Aircraft/Victor/Models/lights/beacon/beacon-beam.xml</path>
   <offsets>
    <x-m>0.002</x-m>
    <heading-deg>-90</heading-deg>
@@ -22,7 +22,7 @@
  
   <model>
   <name>Beam 2</name>
-  <path>Aircraft/victor/Models/lights/beacon/beacon-beam.xml</path>
+  <path>Aircraft/Victor/Models/lights/beacon/beacon-beam.xml</path>
   <offsets>
    <x-m>0.065</x-m>
    <heading-deg>90</heading-deg>
