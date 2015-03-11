@@ -19,11 +19,11 @@ Started Feb 2009 by Alex Park,
     <aero archive="y">victor</aero>
 
     <startup>
-      <splash-texture>Aircraft/victor/victork2-splash.png</splash-texture>
+      <splash-texture>Aircraft/Victor/victork2-splash.png</splash-texture>
     </startup>
 
     <model>
-      <path archive="y">Aircraft/victor/Models/victor.xml</path>
+      <path archive="y">Aircraft/Victor/Models/victor.xml</path>
       <livery> 
         <file type="string"/> 
       </livery> 
@@ -35,11 +35,11 @@ Started Feb 2009 by Alex Park,
 
     <submodels>
       <serviceable type="bool">true</serviceable>
-      <path>Aircraft/victor/Models/submodels.xml</path>
+      <path>Aircraft/Victor/Models/submodels.xml</path>
     </submodels>
 
     <sound>
-      <path>Aircraft/victor/Sounds/victor-sounds.xml</path>
+      <path>Aircraft/Victor/Sounds/victor-sounds.xml</path>
     </sound>
 
     <menubar>
@@ -101,7 +101,7 @@ Started Feb 2009 by Alex Park,
     </help>
 
     <panel>
-      <path>Aircraft/victor/Panels/victor-vfr-panel.xml</path>
+      <path>Aircraft/Victor/Panels/victor-vfr-panel.xml</path>
       <visibility>false</visibility>
     </panel>
 
@@ -188,7 +188,7 @@ Started Feb 2009 by Alex Park,
 
     <systems>
       <electrical>
-        <path>Aircraft/victor/Systems/victor-electrical.xml</path>
+        <path>Aircraft/Victor/Systems/victor-electrical.xml</path>
       </electrical>
     </systems>
 
@@ -279,7 +279,7 @@ Started Feb 2009 by Alex Park,
       <minimized type="bool" archive="y">false</minimized>
     </radar>
 
-    <path>Aircraft/victor/Systems/victor-instrumentation.xml</path>
+    <path>Aircraft/Victor/Systems/victor-instrumentation.xml</path>
   </instrumentation>
 
   <!-- Key mappings -->
@@ -354,7 +354,7 @@ Started Feb 2009 by Alex Park,
   <!-- Nasal files/scripts -->
   <nasal>
     <victor>
-      <file>Aircraft/victor/Nasal/victor.nas</file>
+      <file>Aircraft/Victor/Nasal/victor.nas</file>
     </victor>
     <failures>
       <file>Aircraft/Generic/limits.nas</file>

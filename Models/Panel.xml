@@ -5,7 +5,7 @@
 
  <model>
   <name>RPM-1</name>
-  <path>Aircraft/victor/Models/Instruments/rpm-1.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/rpm-1.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -26,7 +26,7 @@
 
  <model>
   <name>RPM-2</name>
-  <path>Aircraft/victor/Models/Instruments/rpm-2.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/rpm-2.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -47,7 +47,7 @@
 
  <model>
   <name>RPM-3</name>
-  <path>Aircraft/victor/Models/Instruments/rpm-3.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/rpm-3.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -68,7 +68,7 @@
 
  <model>
   <name>RPM-4</name>
-  <path>Aircraft/victor/Models/Instruments/rpm-4.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/rpm-4.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -89,7 +89,7 @@
 
  <model>
   <name>Temp-1</name>
-  <path>Aircraft/victor/Models/Instruments/jpt-1.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/jpt-1.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -110,7 +110,7 @@
 
  <model>
   <name>Temp-2</name>
-  <path>Aircraft/victor/Models/Instruments/jpt-2.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/jpt-2.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -131,7 +131,7 @@
 
  <model>
   <name>Temp-3</name>
-  <path>Aircraft/victor/Models/Instruments/jpt-3.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/jpt-3.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -152,7 +152,7 @@
 
  <model>
   <name>Temp-4</name>
-  <path>Aircraft/victor/Models/Instruments/jpt-4.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/jpt-4.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -173,7 +173,7 @@
 
  <model>
   <name>OilPressure-1</name>
-  <path>Aircraft/victor/Models/Instruments/oil-1.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/oil-1.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -194,7 +194,7 @@
 
  <model>
   <name>OilPressure-2</name>
-  <path>Aircraft/victor/Models/Instruments/oil-2.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/oil-2.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -215,7 +215,7 @@
 
  <model>
   <name>OilPressure-3</name>
-  <path>Aircraft/victor/Models/Instruments/oil-3.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/oil-3.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -236,7 +236,7 @@
 
  <model>
   <name>OilPressure-4</name>
-  <path>Aircraft/victor/Models/Instruments/oil-4.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/oil-4.xml</path>
   <overlay>
    <animation n="1000">
     <type>scale</type>
@@ -257,7 +257,7 @@
 
  <model>
   <name>Left ASI</name>
-  <path>Aircraft/victor/Models/Instruments/asi.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/asi.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>-0.56</y-m>
@@ -267,7 +267,7 @@
 
  <model>
   <name>Left Alt</name>
-  <path>Aircraft/victor/Models/Instruments/altimeter.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/altimeter.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>-0.34</y-m>
@@ -277,7 +277,7 @@
 
  <model>
   <name>Left HSI</name>
-  <path>Aircraft/victor/Models/Instruments/hsi.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/hsi.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>-0.64</y-m>
@@ -287,7 +287,7 @@
 
  <model>
   <name>Left AI</name>
-  <path>Aircraft/victor/Models/Instruments/ai.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/ai.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>-0.37</y-m>
@@ -297,7 +297,7 @@
 
  <model>
   <name>Right Alt</name>
-  <path>Aircraft/victor/Models/Instruments/altimeter.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/altimeter.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>0.65</y-m>
@@ -307,7 +307,7 @@
 
  <model>
   <name>Right ASI</name>
-  <path>Aircraft/victor/Models/Instruments/asi.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/asi.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>0.43</y-m>
@@ -317,7 +317,7 @@
 
  <model>
   <name>Right HSI</name>
-  <path>Aircraft/victor/Models/Instruments/hsi.xml</path>
+  <path>Aircraft/Victor/Models/Instruments/hsi.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>0.64</y-m>
