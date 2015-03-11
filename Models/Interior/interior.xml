@@ -4,7 +4,7 @@
  <path>interior.ac</path>
  
  <model>
-    <path>Aircraft/victor/Models/Interior/Panels/front-panels.xml</path>
+    <path>Aircraft/Victor/Models/Interior/Panels/front-panels.xml</path>
     <offsets>
       <x-m> 2.85 </x-m>
       <y-m> 0.0 </y-m>
@@ -14,7 +14,7 @@
   
  <model>
   <name>Rear Bulkhead Panel</name>
-  <path>Aircraft/victor/Models/Interior/Panels/rear-panels.xml</path>
+  <path>Aircraft/Victor/Models/Interior/Panels/rear-panels.xml</path>
   <offsets>
    <x-m> 6.01 </x-m>
    <y-m> 0.0 </y-m>
@@ -27,7 +27,7 @@
  
  <model>
   <name>Captains Seat</name>
-  <path>Aircraft/victor/Models/Interior/ejector-seat.xml</path>
+  <path>Aircraft/Victor/Models/Interior/ejector-seat.xml</path>
   <offsets>
    <x-m> 3.6 </x-m>
    <y-m> -0.55 </y-m>
@@ -40,7 +40,7 @@
  
  <model>
   <name>CoPilots Seat</name>
-  <path>Aircraft/victor/Models/Interior/ejector-seat.xml</path>
+  <path>Aircraft/Victor/Models/Interior/ejector-seat.xml</path>
   <offsets>
    <x-m> 3.6 </x-m>
    <y-m> 0.55 </y-m>
@@ -52,7 +52,7 @@
  </model>
   
  <model>
-    <path>Aircraft/victor/Models/storm-lights.xml</path>
+    <path>Aircraft/Victor/Models/storm-lights.xml</path>
     <offsets>
       <x-m> 0 </x-m>
       <y-m> 0.0 </y-m>

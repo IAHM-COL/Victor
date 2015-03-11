@@ -29,7 +29,7 @@ var alt_switch = func(altnum, pos) {
     }
 	
 var elec = props.globals.getNode("/systems/electrical");
-var gauge_path = props.globals.getNode("/sim/model/victor/cockpit/AEO-panel/gauges", 1);
+var gauge_path = props.globals.getNode("/sim/model/Victor/cockpit/AEO-panel/gauges", 1);
 	
 var gauges = [
      { vprop: "outputs/busbars/port-busbar", animprop: "port-mv-busbar" },

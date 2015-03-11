@@ -4,7 +4,7 @@
 	<path>oil.ac</path>
 	
  <model>
-  <path>Aircraft/victor/Models/Interior/Panels/faceplate/faceplate-noplate.xml</path>
+  <path>Aircraft/Victor/Models/Interior/Panels/faceplate/faceplate-noplate.xml</path>
  </model>
 	
 	<animation>

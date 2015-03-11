@@ -11,7 +11,7 @@
 
 
 <!-- MP sound call -->
-  <sound><path>Aircraft/victor/Sounds/victor-sounds-global.xml</path></sound>
+  <sound><path>Aircraft/Victor/Sounds/victor-sounds-global.xml</path></sound>
 
 <nasal>
   <load>
@@ -24,7 +24,7 @@ var root = cmdarg();
 
 print("Initialising Victor MP lights...");
 
-var livery_update = aircraft.livery_update.new("Aircraft/victor/Models/Liveries");
+var livery_update = aircraft.livery_update.new("Aircraft/Victor/Models/Liveries");
 
 var power_path = "sim/signals/fdm-initialized"; # Path to 28V DC supply
 var rotate_path = "sim/model/lights/beacon"; # Path to beacon rotation property for animation
@@ -151,13 +151,13 @@ settimer(init, 1);
 
 <model>
  <name>Decals</name>
- <path>Aircraft/victor/Models/decals.xml</path>
+ <path>Aircraft/Victor/Models/decals.xml</path>
 </model>
 
 <model>
  <name>Interior</name>
  <nopreview/>
- <path>Aircraft/victor/Models/Interior/interior.xml</path>
+ <path>Aircraft/Victor/Models/Interior/interior.xml</path>
   <offsets>
    <x-m> 0.0345</x-m>
    <y-m> 0.000 </y-m>
@@ -174,7 +174,7 @@ settimer(init, 1);
 
  <model>
   <name>Bomb-Bay</name>
-  <path>Aircraft/victor/Models/bomb-bay.xml</path>
+  <path>Aircraft/Victor/Models/bomb-bay.xml</path>
   <offsets>
    <x-m> 20.3</x-m>
    <y-m> 0.0 </y-m>
@@ -184,7 +184,7 @@ settimer(init, 1);
   
  <model>
   <name>Boom</name>
-  <path>Aircraft/victor/Models/boom.xml</path>
+  <path>Aircraft/Victor/Models/boom.xml</path>
   <offsets>
    <x-m> 23.3324</x-m>
    <y-m> 0.0 </y-m>
@@ -195,7 +195,7 @@ settimer(init, 1);
   
  <model>
   <name>Boom-Upper</name>
-  <path>Aircraft/victor/Models/boom-upper.ac</path>
+  <path>Aircraft/Victor/Models/boom-upper.ac</path>
   <offsets>
    <x-m> 23.3324</x-m>
    <y-m> 0.0 </y-m>
@@ -205,11 +205,11 @@ settimer(init, 1);
   </model>
   
   <model>
-    <path>Aircraft/victor/Models/lights/navigation-lights/navigation-lights.xml</path>
+    <path>Aircraft/Victor/Models/lights/navigation-lights/navigation-lights.xml</path>
   </model>
   
   <model>
-    <path>Aircraft/victor/Models/lights/beacon/beacon.xml</path>
+    <path>Aircraft/Victor/Models/lights/beacon/beacon.xml</path>
     <offsets>
       <x-m> 8.8383 </x-m>
       <y-m> 0 </y-m>
@@ -219,7 +219,7 @@ settimer(init, 1);
   </model>
   
   <model>
-    <path>Aircraft/victor/Models/lights/beacon/beacon.xml</path>
+    <path>Aircraft/Victor/Models/lights/beacon/beacon.xml</path>
     <offsets>
       <x-m> 11.4925 </x-m>
       <y-m> 0 </y-m>
@@ -231,7 +231,7 @@ settimer(init, 1);
   
   <model>
     <name>Port Strobe</name>
-    <path>Aircraft/victor/Models/lights/strobe/strobe.xml</path>
+    <path>Aircraft/Victor/Models/lights/strobe/strobe.xml</path>
     <offsets>
       <x-m> 24.0924 </x-m>
       <y-m> -16.7585 </y-m>
@@ -244,7 +244,7 @@ settimer(init, 1);
   
   <model>
     <name>Port Strobe</name>
-    <path>Aircraft/victor/Models/lights/strobe/strobe.xml</path>
+    <path>Aircraft/Victor/Models/lights/strobe/strobe.xml</path>
     <offsets>
       <x-m> 24.0924 </x-m>
       <y-m> 16.7585 </y-m>
@@ -257,7 +257,7 @@ settimer(init, 1);
   
   <model>
     <name>PortLandingLight</name>
-	<path>Aircraft/victor/Models/lights/landing-lights/landing-light-port.xml</path>
+	<path>Aircraft/Victor/Models/lights/landing-lights/landing-light-port.xml</path>
     <offsets>
       <x-m> 16.5475 </x-m>
       <y-m> -5.8169 </y-m>
@@ -267,7 +267,7 @@ settimer(init, 1);
   
   <model>
     <name>StbdLandingLight</name>
-	<path>Aircraft/victor/Models/lights/landing-lights/landing-light-starboard.xml</path>
+	<path>Aircraft/Victor/Models/lights/landing-lights/landing-light-starboard.xml</path>
     <offsets>
       <x-m> 16.5475 </x-m>
       <y-m> 5.8169 </y-m>
@@ -362,7 +362,7 @@ settimer(init, 1);
   
   <!-- Transparent Surfaces for Rembrandt rendering -->
    <effect>
-       <inherits-from>Aircraft/victor/Models/Effects/glass</inherits-from>
+       <inherits-from>Aircraft/Victor/Models/Effects/glass</inherits-from>
        <object-name>cockpit.glass</object-name>
 	    
    </effect>
@@ -1530,7 +1530,7 @@ settimer(init, 1);
 
   <model>
     <name>rear_panels</name>
-    <path>Aircraft/victor/Models/rear_panels.xml</path>
+    <path>Aircraft/Victor/Models/rear_panels.xml</path>
     <offsets>
       <x-m>5.8419</x-m>
       <y-m>-0.0212</y-m>
@@ -1542,7 +1542,7 @@ settimer(init, 1);
   <!-- Effects >
 
 <model>
-    <path>Aircraft/victor/Models/Effects/smoke/smokeL.xml</path>
+    <path>Aircraft/Victor/Models/Effects/smoke/smokeL.xml</path>
     <offsets>
       <x-m>17.63</x-m>
       <y-m>-3.25</y-m>
@@ -1552,7 +1552,7 @@ settimer(init, 1);
   </model>
 
 <model>
-    <path>Aircraft/victor/Models/Effects/smoke/smokeL.xml</path>
+    <path>Aircraft/Victor/Models/Effects/smoke/smokeL.xml</path>
     <offsets>
       <x-m>17.63</x-m>
       <y-m>-2</y-m>
@@ -1561,7 +1561,7 @@ settimer(init, 1);
   </model>
 
   <model>
-    <path>Aircraft/victor/Models/Effects/smoke/smokeR.xml</path>
+    <path>Aircraft/Victor/Models/Effects/smoke/smokeR.xml</path>
     <offsets>
       <x-m>17.63</x-m>
       <y-m>2</y-m>
@@ -1571,7 +1571,7 @@ settimer(init, 1);
   </model>
 
 <model>
-    <path>Aircraft/victor/Models/Effects/smoke/smokeR.xml</path>
+    <path>Aircraft/Victor/Models/Effects/smoke/smokeR.xml</path>
     <offsets>
       <x-m>17.63</x-m>
       <y-m>3.25</y-m>
@@ -1585,7 +1585,7 @@ settimer(init, 1);
 
   <!-- Gauche -->
   <model>
-    <path>Aircraft/victor/Models/Effects/tiptrail/tiptrail.xml</path>
+    <path>Aircraft/Victor/Models/Effects/tiptrail/tiptrail.xml</path>
     <offsets>
       <x-m>21.4</x-m>
       <y-m>16.45</y-m>
@@ -1597,7 +1597,7 @@ settimer(init, 1);
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/victor/Models/Effects/tiptrail/tiptrail.xml</path>
+    <path>Aircraft/Victor/Models/Effects/tiptrail/tiptrail.xml</path>
     <offsets>
       <x-m>21.4</x-m>
       <y-m>-16.45</y-m>
@@ -1609,7 +1609,7 @@ settimer(init, 1);
 
   <!-- Gauche -->
   <model>
-    <path>Aircraft/victor/Models/Effects/trail/trailL.xml</path>
+    <path>Aircraft/Victor/Models/Effects/trail/trailL.xml</path>
     <offsets>
       <x-m>17.63</x-m>
       <y-m>-3.65</y-m>
@@ -1620,7 +1620,7 @@ settimer(init, 1);
   </model>
 
 <model>
-    <path>Aircraft/victor/Models/Effects/trail/trailL.xml</path>
+    <path>Aircraft/Victor/Models/Effects/trail/trailL.xml</path>
     <offsets>
       <x-m>17.63</x-m>
       <y-m>-2.6</y-m>
@@ -1633,7 +1633,7 @@ settimer(init, 1);
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/victor/Models/Effects/trail/trailR.xml</path>
+    <path>Aircraft/Victor/Models/Effects/trail/trailR.xml</path>
     <offsets>
       <x-m>17.63</x-m>
       <y-m>2.6</y-m>
@@ -1643,7 +1643,7 @@ settimer(init, 1);
   </model>
 
 <model>
-    <path>Aircraft/victor/Models/Effects/trail/trailR.xml</path>
+    <path>Aircraft/Victor/Models/Effects/trail/trailR.xml</path>
     <offsets>
      <x-m>17.63</x-m>
       <y-m>3.65</y-m>
@@ -1658,7 +1658,7 @@ settimer(init, 1);
 <!-- aircraft wash modeled in the lines below -->
   <model>
     <name>aircraft_wash_l</name>
-    <path>Aircraft/victor/Models/Effects/wash/aircraft_wash.xml</path>
+    <path>Aircraft/Victor/Models/Effects/wash/aircraft_wash.xml</path>
     <condition>
     <equals>
     <property>controls/state/low_level</property>
@@ -1675,7 +1675,7 @@ settimer(init, 1);
  
   <model>
     <name>aircraft_wash_r</name>
-    <path>Aircraft/victor/Models/Effects/wash/aircraft_wash.xml</path>
+    <path>Aircraft/Victor/Models/Effects/wash/aircraft_wash.xml</path>
     <condition>
       <equals>
         <property>controls/state/low_level</property>
@@ -1872,7 +1872,7 @@ settimer(init, 1);
  </animation>
  
  <model>
-		<path>Aircraft/victor/Models/Effects/Vapour/Vapour2.xml</path>
+		<path>Aircraft/Victor/Models/Effects/Vapour/Vapour2.xml</path>
 		<offsets>
 			<x-m>14.5</x-m>
 			<y-m>-7</y-m>
@@ -1884,7 +1884,7 @@ settimer(init, 1);
 	</model>
 	
 	<model>
-		<path>Aircraft/victor/Models/Effects/Vapour/Vapour2.xml</path>
+		<path>Aircraft/Victor/Models/Effects/Vapour/Vapour2.xml</path>
 		<offsets>
 			<x-m>14.5</x-m>
 			<y-m>7</y-m>
