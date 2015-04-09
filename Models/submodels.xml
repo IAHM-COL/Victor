@@ -3,12 +3,12 @@
 <PropertyList>
 <model>
      <name>Fire</name>
-     <path>Aircraft/Victor/Models/fire.xml</path>
+     <path>Aircraft/victor/Models/fire.xml</path>
    </model>  
   <!-- Black Buck 1 bombs -->
   <submodel>
     <name>bomb</name>
-    <model>Aircraft/Victor/Models/bomb.ac</model>
+    <model>Aircraft/victor/Models/bomb.ac</model>
     <trigger>/controls/armament/triggerbomb</trigger>
     <speed>0</speed>
     <repeat>true</repeat>
@@ -35,7 +35,7 @@
   <!-- Black Buck 6 Shrike missiles (4) -->
   <submodel>
     <name>shrike1</name>
-    <model>Aircraft/Victor/Models/shrike.ac</model>
+    <model>Aircraft/victor/Models/shrike.ac</model>
     <trigger>/controls/armament/triggershrike1</trigger>
     <!-- Max speed is mach4, but we'll start at mach 2-ish -->
     <speed>1000</speed>
@@ -58,7 +58,7 @@
   
   <submodel>
     <name>shrike2</name>
-    <model>Aircraft/Victor/Models/shrike.ac</model>
+    <model>Aircraft/victor/Models/shrike.ac</model>
     <trigger>/controls/armament/triggershrike2</trigger>
     <!-- Max speed is mach4, but we'll start at mach 2-ish -->
     <speed>1000</speed>
@@ -81,7 +81,7 @@
 
   <submodel>
     <name>shrike3</name>
-    <model>Aircraft/Victor/Models/shrike.ac</model>
+    <model>Aircraft/victor/Models/shrike.ac</model>
     <trigger>/controls/armament/triggershrike3</trigger>
     <!-- Max speed is mach4, but we'll start at mach 2-ish -->
     <speed>1000</speed>
@@ -104,7 +104,7 @@
 
   <submodel>
     <name>shrike4</name>
-    <model>Aircraft/Victor/Models/shrike.ac</model>
+    <model>Aircraft/victor/Models/shrike.ac</model>
     <trigger>/controls/armament/triggershrike4</trigger>
     <!-- Max speed is mach4, but we'll start at mach 2-ish -->
     <speed>1000</speed>
@@ -128,7 +128,7 @@
   <!-- Red Beard nuclear bomb -->
   <submodel>
     <name>RedBeardAi</name>
-    <model>Aircraft/Victor/Models/RedBeard.ac</model>
+    <model>Aircraft/victor/Models/RedBeard.ac</model>
     <trigger>/controls/armament/triggerredbeard</trigger>
     <speed>0</speed>
     <repeat>false</repeat>
@@ -151,7 +151,7 @@
   <!-- Blue Steel nuclear missile-->
   <submodel>
     <name>bluesteel</name>
-    <model>Aircraft/Victor/Models/BlueSteel.ac</model>
+    <model>Aircraft/victor/Models/BlueSteel.ac</model>
     <trigger>/controls/armament/triggerbluesteel</trigger>
     <!-- While this is a missile, it falls clear of the aircraft -->
     <!-- before igniting. Unfortunately we cannot model this so  -->
@@ -178,7 +178,7 @@
   <!-- WE177A nuclear bomb -->
   <submodel>
     <name>WE177A</name>
-    <model>Aircraft/Victor/Models/WE177A.ac</model>
+    <model>Aircraft/victor/Models/WE177A.ac</model>
     <trigger>/controls/armament/triggerwe177a</trigger>
     <speed>0</speed>
     <repeat>false</repeat>
@@ -202,7 +202,7 @@
   <!-- WE177B nuclear bomb -->
   <submodel>
     <name>WE177B</name>
-    <model>Aircraft/Victor/Models/WE177B.ac</model>
+    <model>Aircraft/victor/Models/WE177B.ac</model>
     <trigger>/controls/armament/triggerwe177b</trigger>
     <speed>0</speed>
     <repeat>false</repeat>

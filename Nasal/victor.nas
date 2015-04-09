@@ -1,4 +1,4 @@
-aircraft.livery.init("Aircraft/Victor/Models/Liveries"); 
+aircraft.livery.init("Aircraft/victor/Models/Liveries"); 
 var config_dialog = nil;
 setprop("controls/doors/chute-switch-pos", 0);
 
@@ -258,8 +258,8 @@ reload = func {
 
 settimer(func {
   #
-	config_dialog = gui.Dialog.new("/sim/gui/dialogs/Victor/config/dialog",
-			"Aircraft/Victor/Dialogs/config.xml");
+	config_dialog = gui.Dialog.new("/sim/gui/dialogs/victor/config/dialog",
+			"Aircraft/victor/Dialogs/config.xml");
   
   # Update the aircraft texture based on the variant    
   setlistener("sim/variant", func {
@@ -277,7 +277,7 @@ settimer(func {
       var lat = getprop(impact ~ "/impact/latitude-deg");
 
       geo.put_model(
-              "Aircraft/Victor/Models/crater.ac",
+              "Aircraft/victor/Models/crater.ac",
               lat, 
               long
             );
