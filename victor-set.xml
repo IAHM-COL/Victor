@@ -96,7 +96,7 @@ Started Feb 2009 by Alex Park,
         <desc>2 position speedbrakes</desc>
       </key>
       <key>
-        <name>Tab</name>
+        <name>=</name>
         <desc>Configuration menu</desc>
       </key>
     </help>
@@ -330,8 +330,8 @@ Started Feb 2009 by Alex Park,
   <input>
     <keyboard>
 
-      <key n="9">
-        <name>Tab</name>
+      <key n="61">
+        <name>=</name>
         <desc>Show configuration dialog</desc>
         <binding n="0">
           <command>nasal</command>
