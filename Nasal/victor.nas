@@ -258,7 +258,7 @@ reload = func {
 
 settimer(func {
   #
-	config_dialog = gui.Dialog.new("/sim/gui/dialogs/victor/config/dialog",
+	config_dialog = gui.Dialog.new("/sim/gui/dialogs/Victor/config/dialog",
 			"Aircraft/Victor/Dialogs/config.xml");
   
   # Update the aircraft texture based on the variant    
